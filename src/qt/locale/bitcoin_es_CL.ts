@@ -66,11 +66,11 @@
         <translation>Recibiendo direcciones</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Estas son tus direcciones de BitGreen para recibir pagos. Siempre revise el monto y la dirección de envío antes de enviar criptomonedas.</translation>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Estas son tus direcciones de BitCorn para recibir pagos. Siempre revise el monto y la dirección de envío antes de enviar criptomonedas.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Estas son tus direcciones para recibir pagos. Es recomendable utilizar una nueva dirección para cada transacción.</translation>
     </message>
     <message>
@@ -346,7 +346,7 @@
         <translation>Cargando el index de bloques...</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
+        <source>Send coins to a BitCorn address</source>
         <translation>Enviar monedas a una dirección bitgreen</translation>
     </message>
     <message>
@@ -370,8 +370,8 @@
         <translation>Verificar mensaje....</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -398,12 +398,12 @@
         <translation>Cifrar las claves privadas de su monedero</translation>
     </message>
     <message>
-        <source>Sign messages with your BitGreen addresses to prove you own them</source>
+        <source>Sign messages with your BitCorn addresses to prove you own them</source>
         <translation>Firmar un mensaje para provar que usted es dueño de esta dirección</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitGreen addresses</source>
-        <translation>Verificar mensajes comprobando que están firmados con direcciones BitGreen concretas</translation>
+        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
+        <translation>Verificar mensajes comprobando que están firmados con direcciones BitCorn concretas</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -442,8 +442,8 @@
         <translation>&amp;Opciones de linea de comando</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitGreen network</source>
-        <translation><numerusform>%n conexión activa hacia la red BitGreen</numerusform><numerusform>%n conexiones activas hacia la red BitGreen</numerusform></translation>
+        <source>%n active connection(s) to BitCorn network</source>
+        <translation><numerusform>%n conexión activa hacia la red BitCorn</numerusform><numerusform>%n conexiones activas hacia la red BitCorn</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -486,8 +486,8 @@
         <translation>Actualizado</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
-        <translation>Mostrar el mensaje de ayuda %1 para obtener una lista de los posibles comandos de BitGreen</translation>
+        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <translation>Mostrar el mensaje de ayuda %1 para obtener una lista de los posibles comandos de BitCorn</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -556,8 +556,8 @@
         <translation>La billetera esta &lt;b&gt;codificada&lt;/b&gt; y actualmente &lt;b&gt;bloqueda&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitGreen can no longer continue safely and will quit.</source>
-        <translation>Ha ocurrido un error fatal. BitGreen no puede seguir seguro y se cerrará.</translation>
+        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
+        <translation>Ha ocurrido un error fatal. BitCorn no puede seguir seguro y se cerrará.</translation>
     </message>
 </context>
 <context>
@@ -747,8 +747,8 @@
         <translation>Editar dirección de envio</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitGreen address.</source>
-        <translation>La dirección introducida "%1" no es una dirección BitGreen valida.</translation>
+        <source>The entered address "%1" is not a valid BitCorn address.</source>
+        <translation>La dirección introducida "%1" no es una dirección BitCorn valida.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -832,8 +832,8 @@
         <translation>usar un directorio de datos personalizado:</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -844,8 +844,8 @@
         <translation>Aproximadamente %1 GB de información será almacenado en este directorio.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the BitGreen block chain.</source>
-        <translation>%1 descargará y almacenará una copia del blockchain de BitGreen.</translation>
+        <source>%1 will download and store a copy of the BitCorn block chain.</source>
+        <translation>%1 descargará y almacenará una copia del blockchain de BitCorn.</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -1029,8 +1029,8 @@
         <translation>Gastar cambio sin confirmar</translation>
     </message>
     <message>
-        <source>Automatically open the BitGreen client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>Abre automáticamente el puerto del cliente BitGreen en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
+        <source>Automatically open the BitCorn client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>Abre automáticamente el puerto del cliente BitCorn en el router. Esto funciona solo cuando tu router es compatible con UPnP y está habilitado.</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1041,8 +1041,8 @@
         <translation>Aceptar conexiones externas.</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a SOCKS5 proxy.</source>
-        <translation>Conectar a la red de BitGreen a través de un proxy SOCKS5</translation>
+        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
+        <translation>Conectar a la red de BitCorn a través de un proxy SOCKS5</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1073,8 +1073,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Conectar a la red de BitGreen a través de un proxy SOCKS5 diferente para los servicios anónimos de Tor.</translation>
+        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Conectar a la red de BitCorn a través de un proxy SOCKS5 diferente para los servicios anónimos de Tor.</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1173,8 +1173,8 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitGreen network after a connection is established, but this process has not completed yet.</source>
-        <translation>La información entregada puede estar desactualizada. Tu billetera se sincroniza automáticamente con la red de BitGreen después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
+        <translation>La información entregada puede estar desactualizada. Tu billetera se sincroniza automáticamente con la red de BitCorn después de establecer una conexión, pero este proceso aún no se ha completado.</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1330,8 +1330,8 @@
         <translation>Cantidad</translation>
     </message>
     <message>
-        <source>Enter a BitGreen address (e.g. %1)</source>
-        <translation>Ingresa una dirección de BitGreen (Ejemplo: %1)</translation>
+        <source>Enter a BitCorn address (e.g. %1)</source>
+        <translation>Ingresa una dirección de BitCorn (Ejemplo: %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1711,8 +1711,8 @@
         <translation>&amp;mensaje</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitGreen network.</source>
-        <translation>Mensaje opcional adjunto a la solicitud de pago, que será mostrado cuando la solicitud sea abierta. Nota: Este mensaje no será enviado con el pago a través de la red BitGreen.</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitCorn network.</source>
+        <translation>Mensaje opcional adjunto a la solicitud de pago, que será mostrado cuando la solicitud sea abierta. Nota: Este mensaje no será enviado con el pago a través de la red BitCorn.</translation>
     </message>
     <message>
         <source>Use this form to request payments. All fields are &lt;b&gt;optional&lt;/b&gt;.</source>
@@ -2065,8 +2065,8 @@
         <translation>Pagar únicamente la comisión requerida de %1</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitGreen address</source>
-        <translation>Peligro: Dirección de BitGreen inválida</translation>
+        <source>Warning: Invalid BitCorn address</source>
+        <translation>Peligro: Dirección de BitCorn inválida</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2108,8 +2108,8 @@
         <translation>Este es un pago normal</translation>
     </message>
     <message>
-        <source>The BitGreen address to send the payment to</source>
-        <translation>Dirección BitGreen a enviar el pago</translation>
+        <source>The BitCorn address to send the payment to</source>
+        <translation>Dirección BitCorn a enviar el pago</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2189,8 +2189,8 @@
         <translation>&amp;Firmar Mensaje</translation>
     </message>
     <message>
-        <source>The BitGreen address to sign the message with</source>
-        <translation>Dirección BitGreen con la que firmar el mensaje</translation>
+        <source>The BitCorn address to sign the message with</source>
+        <translation>Dirección BitCorn con la que firmar el mensaje</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2221,7 +2221,7 @@
         <translation>Copiar la firma actual al portapapeles del sistema</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitGreen address</source>
+        <source>Sign the message to prove you own this BitCorn address</source>
         <translation>Firmar un mensjage para probar que usted es dueño de esta dirección</translation>
     </message>
     <message>
@@ -2241,12 +2241,12 @@
         <translation>&amp;Firmar Mensaje</translation>
     </message>
     <message>
-        <source>The BitGreen address the message was signed with</source>
-        <translation>La dirección BitGreen con la que se firmó el mensaje</translation>
+        <source>The BitCorn address the message was signed with</source>
+        <translation>La dirección BitCorn con la que se firmó el mensaje</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitGreen address</source>
-        <translation>Verifica el mensaje para asegurar que fue firmado con la dirección de BitGreen especificada.</translation>
+        <source>Verify the message to ensure it was signed with the specified BitCorn address</source>
+        <translation>Verifica el mensaje para asegurar que fue firmado con la dirección de BitCorn especificada.</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -2850,7 +2850,7 @@
         <translation>No se ha podido iniciar el servidor HTTP. Ver debug log para detalles.</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
+        <source>BitCorn Core</source>
         <translation>bitgreen core</translation>
     </message>
     <message>

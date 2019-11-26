@@ -3,10 +3,10 @@
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test deprecation of RPC calls."""
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 # from test_framework.util import assert_raises_rpc_error
 
-class DeprecatedRpcTest(BitGreenTestFramework):
+class DeprecatedRpcTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True

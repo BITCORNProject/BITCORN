@@ -53,7 +53,7 @@ private Q_SLOTS:
     /* set OK button state (enabled / disabled) */
     void setOkButtonState(bool fState);
     void on_resetButton_clicked();
-    void on_openBitGreenConfButton_clicked();
+    void on_openBitCornConfButton_clicked();
     void on_okButton_clicked();
     void on_cancelButton_clicked();
 

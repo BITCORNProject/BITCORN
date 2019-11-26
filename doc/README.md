@@ -1,15 +1,15 @@
-BitGreen Core
+BitCorn Core
 =============
 
 Setup
 ---------------------
-BitGreen Core is the original BitGreen client and it builds the backbone of the network. It downloads and, by default, stores the entire history of BitGreen transactions.
+BitCorn Core is the original BitCorn client and it builds the backbone of the network. It downloads and, by default, stores the entire history of BitCorn transactions.
 
-To download BitGreen Core, visit [bitg.org](https://bitg.org/).
+To download BitCorn Core, visit [bitg.org](https://bitg.org/).
 
 Running
 ---------------------
-The following are some helpful notes on how to run BitGreen Core on your native platform.
+The following are some helpful notes on how to run BitCorn Core on your native platform.
 
 ### Unix
 
@@ -24,7 +24,7 @@ Unpack the files into a directory, and then run bitgreen-qt.exe.
 
 ### macOS
 
-Drag BitGreen Core to your applications folder, and then run BitGreen Core.
+Drag BitCorn Core to your applications folder, and then run BitCorn Core.
 
 ### Need Help?
 
@@ -33,7 +33,7 @@ for help and more information.
 
 Building
 ---------------------
-The following are developer notes on how to build BitGreen Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
+The following are developer notes on how to build BitCorn Core on your native platform. They are not complete guides, but include notes on the necessary libraries, compile flags, etc.
 
 - [Dependencies](dependencies.md)
 - [macOS Build Notes](build-osx.md)
@@ -46,7 +46,7 @@ The following are developer notes on how to build BitGreen Core on your native p
 
 Development
 ---------------------
-The BitGreen repo's [root README](/README.md) contains relevant information on the development process and automated testing.
+The BitCorn repo's [root README](/README.md) contains relevant information on the development process and automated testing.
 
 - [Developer Notes](developer-notes.md)
 - [Productivity Notes](productivity.md)

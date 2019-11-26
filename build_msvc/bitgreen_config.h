@@ -23,10 +23,10 @@
 #define COPYRIGHT_HOLDERS "The %s developers"
 
 /* Copyright holder(s) */
-#define COPYRIGHT_HOLDERS_FINAL "The BitGreen Core developers"
+#define COPYRIGHT_HOLDERS_FINAL "The BitCorn Core developers"
 
 /* Replacement for %s in copyright holders string */
-#define COPYRIGHT_HOLDERS_SUBSTITUTION "BitGreen Core"
+#define COPYRIGHT_HOLDERS_SUBSTITUTION "BitCorn Core"
 
 /* Copyright year */
 #define COPYRIGHT_YEAR 2019
@@ -343,10 +343,10 @@
 #define PACKAGE_BUGREPORT "https://github.com/bitgreen/bitgreen/issues"
 
 /* Define to the full name of this package. */
-#define PACKAGE_NAME "BitGreen Core"
+#define PACKAGE_NAME "BitCorn Core"
 
 /* Define to the full name and version of this package. */
-#define PACKAGE_STRING "BitGreen Core 0.18.99"
+#define PACKAGE_STRING "BitCorn Core 0.18.99"
 
 /* Define to the one symbol short name of this package. */
 #define PACKAGE_TARNAME "bitgreen"

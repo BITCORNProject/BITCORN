@@ -6,10 +6,10 @@
 
 import os
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 
 
-class ConfArgsTest(BitGreenTestFramework):
+class ConfArgsTest(BitCornTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

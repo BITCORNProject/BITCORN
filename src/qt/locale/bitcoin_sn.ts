@@ -98,8 +98,8 @@
         <translation>Vhura &amp;URI</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -165,8 +165,8 @@
 <context>
     <name>Intro</name>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     </context>
 <context>
@@ -194,8 +194,8 @@
         <translation>Marii </translation>
     </message>
     <message>
-        <source>Enter a BitGreen address (e.g. %1)</source>
-        <translation>Nyora kero ye BitGreen (sekuti %1)</translation>
+        <source>Enter a BitCorn address (e.g. %1)</source>
+        <translation>Nyora kero ye BitCorn (sekuti %1)</translation>
     </message>
     <message>
         <source>%1 d</source>

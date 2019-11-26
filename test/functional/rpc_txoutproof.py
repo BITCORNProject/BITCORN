@@ -5,10 +5,10 @@
 """Test gettxoutproof and verifytxoutproof RPCs."""
 
 from test_framework.messages import CMerkleBlock, FromHex, ToHex
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import assert_equal, assert_raises_rpc_error, connect_nodes
 
-class MerkleBlockTest(BitGreenTestFramework):
+class MerkleBlockTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = True

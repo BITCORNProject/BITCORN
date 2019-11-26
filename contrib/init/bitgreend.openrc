@@ -18,8 +18,8 @@ BITCORND_BIN=${BITCORND_BIN:-/usr/bin/bitgreend}
 BITCORND_NICE=${BITCORND_NICE:-${NICELEVEL:-0}}
 BITCORND_OPTS="${BITCORND_OPTS:-${BITCORN_OPTS}}"
 
-name="BitGreen Core Daemon"
-description="BitGreen cryptocurrency P2P network daemon"
+name="BitCorn Core Daemon"
+description="BitCorn cryptocurrency P2P network daemon"
 
 command="/usr/bin/bitgreend"
 command_args="-pid=\"${BITCORND_PIDFILE}\" \
@@ -84,7 +84,7 @@ checkconfig()
 		eerror "It is recommended that you also set alertnotify so you are "
 		eerror "notified of problems:"
 		eerror ""
-		eerror "ie: alertnotify=echo %%s | mail -s \"BitGreen Alert\"" \
+		eerror "ie: alertnotify=echo %%s | mail -s \"BitCorn Alert\"" \
 			"admin@foo.com"
 		eerror ""
 		return 1

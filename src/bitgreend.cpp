@@ -31,8 +31,8 @@ const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
  *
  * \section intro_sec Introduction
  *
- * This is the developer documentation of the reference client for an experimental new digital currency called BitGreen,
- * which enables instant payments to anyone, anywhere in the world. BitGreen uses peer-to-peer technology to operate
+ * This is the developer documentation of the reference client for an experimental new digital currency called BitCorn,
+ * which enables instant payments to anyone, anywhere in the world. BitCorn uses peer-to-peer technology to operate
  * with no central authority: managing transactions and issuing money are carried out collectively by the network.
  *
  * The software is a community-driven open source project, released under the MIT license.

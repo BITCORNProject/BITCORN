@@ -61,7 +61,7 @@ public:
 };
 
 /**
- * BitGreen protocol message types. When adding new message types, don't forget
+ * BitCorn protocol message types. When adding new message types, don't forget
  * to update allNetMessageTypes in protocol.cpp.
  */
 namespace NetMsgType {
@@ -239,7 +239,7 @@ extern const char *GETBLOCKTXN;
  */
 extern const char *BLOCKTXN;
 
-// BitGreen message types
+// BitCorn message types
 extern const char *SPORK;
 extern const char *GETSPORKS;
 extern const char *SYNCSTATUSCOUNT;
@@ -275,14 +275,14 @@ enum ServiceFlags : uint64_t {
     // Nothing
     NODE_NONE = 0,
     // NODE_NETWORK means that the node is capable of serving the complete block chain. It is currently
-    // set by all BitGreen Core non pruned nodes, and is unset by SPV clients or other light clients.
+    // set by all BitCorn Core non pruned nodes, and is unset by SPV clients or other light clients.
     NODE_NETWORK = (1 << 0),
     // NODE_GETUTXO means the node is capable of responding to the getutxo protocol request.
-    // BitGreen Core does not support this but a patch set called BitGreen XT does.
+    // BitCorn Core does not support this but a patch set called BitCorn XT does.
     // See BIP 64 for details on how this is implemented.
     NODE_GETUTXO = (1 << 1),
     // NODE_BLOOM means the node is capable and willing to handle bloom-filtered connections.
-    // BitGreen Core nodes used to support this by default, without advertising this bit,
+    // BitCorn Core nodes used to support this by default, without advertising this bit,
     // but no longer do as of protocol version 70011 (= NO_BLOOM_VERSION)
     NODE_BLOOM = (1 << 2),
     // NODE_WITNESS indicates that a node can be asked for blocks and transactions including

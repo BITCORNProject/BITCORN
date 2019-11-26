@@ -1,5 +1,5 @@
 // Copyright (c) 2018 The Dash Core developers
-// Copyright (c) 2019 The BitGreen Core developers
+// Copyright (c) 2019 The BitCorn Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -105,7 +105,7 @@ RPCArg GetHelpArg(std::string strParamName)
     return it->second;
 }
 
-// Allows to specify BitGreen address or priv key. In case of BitGreen address, the priv key is taken from the wallet
+// Allows to specify BitCorn address or priv key. In case of BitCorn address, the priv key is taken from the wallet
 static CKey ParsePrivKey(const CWallet* pwallet, const std::string &strKeyOrAddress, bool allowAddresses = true) {
     CTxDestination address = DecodeDestination(strKeyOrAddress);
     if (allowAddresses && IsValidDestination(address)) {
@@ -511,7 +511,7 @@ UniValue protx_register(const JSONRPCRequest& request)
     if (request.params.size() > paramIdx + 6) {
         fundAddress = DecodeDestination(request.params[paramIdx + 6].get_str());
         if (!IsValidDestination(fundAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitGreen address: ") + request.params[paramIdx + 6].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitCorn address: ") + request.params[paramIdx + 6].get_str());
     }
 
     FundSpecialTx(pwallet, tx, ptx, fundAddress);
@@ -679,7 +679,7 @@ UniValue protx_update_service(const JSONRPCRequest& request)
     if (request.params.size() >= 6) {
         CTxDestination feeSourceAddress = DecodeDestination(request.params[5].get_str());
         if (!IsValidDestination(feeSourceAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitGreen address: ") + request.params[5].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitCorn address: ") + request.params[5].get_str());
         feeSource = feeSourceAddress;
     } else {
         if (ptx.scriptOperatorPayout != CScript()) {
@@ -775,7 +775,7 @@ UniValue protx_update_registrar(const JSONRPCRequest& request)
     if (request.params.size() > 5) {
         feeSourceAddress = DecodeDestination(request.params[5].get_str());
         if (!IsValidDestination(feeSourceAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitGreen address: ") + request.params[5].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitCorn address: ") + request.params[5].get_str());
     }
 
     FundSpecialTx(pwallet, tx, ptx, feeSourceAddress);
@@ -852,7 +852,7 @@ UniValue protx_revoke(const JSONRPCRequest& request)
     if (request.params.size() > 4) {
         CTxDestination feeSourceAddress = DecodeDestination(request.params[4].get_str());
         if (!IsValidDestination(feeSourceAddress))
-            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitGreen address: ") + request.params[4].get_str());
+            throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitCorn address: ") + request.params[4].get_str());
         FundSpecialTx(pwallet, tx, ptx, feeSourceAddress);
     // TODO:
     // } else if (dmn->pdmnState->scriptOperatorPayout != CScript()) {

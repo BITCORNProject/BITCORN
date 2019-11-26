@@ -130,8 +130,8 @@
         <translation>Kõvakettal olevate plokkide reindekseerimine...</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -265,8 +265,8 @@
         <translation>Tere tulemast</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Error</source>
@@ -760,8 +760,8 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
+        <source>BitCorn Core</source>
+        <translation>BitCorn Core</translation>
     </message>
     <message>
         <source>Information</source>

@@ -35,7 +35,7 @@ import os
 from random import randint
 import shutil
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -43,7 +43,7 @@ from test_framework.util import (
 )
 
 
-class WalletBackupTest(BitGreenTestFramework):
+class WalletBackupTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = True

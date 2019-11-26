@@ -10,7 +10,7 @@ import sys
 
 from test_framework import messages
 from test_framework.mininode import P2PDataStore, NetworkThread
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 
 
 class msg_unrecognized:
@@ -28,7 +28,7 @@ class msg_unrecognized:
         return "{}(data={})".format(self.command, self.str_data)
 
 
-class InvalidMessagesTest(BitGreenTestFramework):
+class InvalidMessagesTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

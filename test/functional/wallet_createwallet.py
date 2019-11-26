@@ -5,13 +5,13 @@
 """Test createwallet arguments.
 """
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
 
-class CreateWalletTest(BitGreenTestFramework):
+class CreateWalletTest(BitCornTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = False
         self.num_nodes = 1

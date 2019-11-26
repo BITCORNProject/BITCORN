@@ -49,7 +49,7 @@ from test_framework.script import (
     SignatureHash,
     hash160,
 )
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import assert_equal
 from data import invalid_txs
 
@@ -74,7 +74,7 @@ class CBrokenBlock(CBlock):
     def normal_serialize(self):
         return super().serialize()
 
-class FullBlockTest(BitGreenTestFramework):
+class FullBlockTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
         self.setup_clean_chain = True

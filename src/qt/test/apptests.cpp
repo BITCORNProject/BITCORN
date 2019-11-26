@@ -47,7 +47,7 @@ void TestRpcCommand(RPCConsole* console)
 }
 } // namespace
 
-//! Entry point for BitGreenApplication tests.
+//! Entry point for BitCornApplication tests.
 void AppTests::appTests()
 {
 #ifdef Q_OS_MAC
@@ -72,7 +72,7 @@ void AppTests::appTests()
         NetworkStyle::instantiate(QString::fromStdString(Params().NetworkIDString())));
     m_app.setupPlatformStyle();
     m_app.createWindow(style.data());
-    connect(&m_app, &BitGreenApplication::windowShown, this, &AppTests::guiTests);
+    connect(&m_app, &BitCornApplication::windowShown, this, &AppTests::guiTests);
     expectCallback("guiTests");
     m_app.baseInitialize();
     m_app.requestInitialize();

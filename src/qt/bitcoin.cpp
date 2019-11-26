@@ -127,18 +127,18 @@ void DebugMessageHandler(QtMsgType type, const QMessageLogContext& context, cons
     }
 }
 
-BitGreenCore::BitGreenCore(interfaces::Node& node) :
+BitCornCore::BitCornCore(interfaces::Node& node) :
     QObject(), m_node(node)
 {
 }
 
-void BitGreenCore::handleRunawayException(const std::exception *e)
+void BitCornCore::handleRunawayException(const std::exception *e)
 {
     PrintExceptionContinue(e, "Runaway exception");
     Q_EMIT runawayException(QString::fromStdString(m_node.getWarnings("gui")));
 }
 
-void BitGreenCore::initialize()
+void BitCornCore::initialize()
 {
     try
     {
@@ -153,7 +153,7 @@ void BitGreenCore::initialize()
     }
 }
 
-void BitGreenCore::shutdown()
+void BitCornCore::shutdown()
 {
     try
     {
@@ -168,7 +168,7 @@ void BitGreenCore::shutdown()
     }
 }
 
-BitGreenApplication::BitGreenApplication(interfaces::Node& node, int &argc, char **argv):
+BitCornApplication::BitCornApplication(interfaces::Node& node, int &argc, char **argv):
     QApplication(argc, argv),
     coreThread(nullptr),
     m_node(node),
@@ -182,10 +182,10 @@ BitGreenApplication::BitGreenApplication(interfaces::Node& node, int &argc, char
     setQuitOnLastWindowClosed(false);
 }
 
-void BitGreenApplication::setupPlatformStyle()
+void BitCornApplication::setupPlatformStyle()
 {
     // UI per-platform customization
-    // This must be done inside the BitGreenApplication constructor, or after it, because
+    // This must be done inside the BitCornApplication constructor, or after it, because
     // PlatformStyle::instantiate requires a QApplication
     std::string platformName;
     platformName = gArgs.GetArg("-uiplatform", BitcoinGUI::DEFAULT_UIPLATFORM);
@@ -195,7 +195,7 @@ void BitGreenApplication::setupPlatformStyle()
     assert(platformStyle);
 }
 
-BitGreenApplication::~BitGreenApplication()
+BitCornApplication::~BitCornApplication()
 {
     if(coreThread)
     {
@@ -220,18 +220,18 @@ BitGreenApplication::~BitGreenApplication()
 }
 
 #ifdef ENABLE_WALLET
-void BitGreenApplication::createPaymentServer()
+void BitCornApplication::createPaymentServer()
 {
     paymentServer = new PaymentServer(this);
 }
 #endif
 
-void BitGreenApplication::createOptionsModel(bool resetSettings)
+void BitCornApplication::createOptionsModel(bool resetSettings)
 {
     optionsModel = new OptionsModel(m_node, nullptr, resetSettings);
 }
 
-void BitGreenApplication::createWindow(const NetworkStyle *networkStyle)
+void BitCornApplication::createWindow(const NetworkStyle *networkStyle)
 {
     window = new BitcoinGUI(m_node, platformStyle, networkStyle, nullptr);
 
@@ -239,42 +239,42 @@ void BitGreenApplication::createWindow(const NetworkStyle *networkStyle)
     connect(pollShutdownTimer, &QTimer::timeout, window, &BitcoinGUI::detectShutdown);
 }
 
-void BitGreenApplication::createSplashScreen(const NetworkStyle *networkStyle)
+void BitCornApplication::createSplashScreen(const NetworkStyle *networkStyle)
 {
     SplashScreen *splash = new SplashScreen(m_node, nullptr, networkStyle);
     // We don't hold a direct pointer to the splash screen after creation, but the splash
     // screen will take care of deleting itself when finish() happens.
     splash->show();
-    connect(this, &BitGreenApplication::splashFinished, splash, &SplashScreen::finish);
-    connect(this, &BitGreenApplication::requestedShutdown, splash, &QWidget::close);
+    connect(this, &BitCornApplication::splashFinished, splash, &SplashScreen::finish);
+    connect(this, &BitCornApplication::requestedShutdown, splash, &QWidget::close);
 }
 
-bool BitGreenApplication::baseInitialize()
+bool BitCornApplication::baseInitialize()
 {
     return m_node.baseInitialize();
 }
 
-void BitGreenApplication::startThread()
+void BitCornApplication::startThread()
 {
     if(coreThread)
         return;
     coreThread = new QThread(this);
-    BitGreenCore *executor = new BitGreenCore(m_node);
+    BitCornCore *executor = new BitCornCore(m_node);
     executor->moveToThread(coreThread);
 
     /*  communication to and from thread */
-    connect(executor, &BitGreenCore::initializeResult, this, &BitGreenApplication::initializeResult);
-    connect(executor, &BitGreenCore::shutdownResult, this, &BitGreenApplication::shutdownResult);
-    connect(executor, &BitGreenCore::runawayException, this, &BitGreenApplication::handleRunawayException);
-    connect(this, &BitGreenApplication::requestedInitialize, executor, &BitGreenCore::initialize);
-    connect(this, &BitGreenApplication::requestedShutdown, executor, &BitGreenCore::shutdown);
+    connect(executor, &BitCornCore::initializeResult, this, &BitCornApplication::initializeResult);
+    connect(executor, &BitCornCore::shutdownResult, this, &BitCornApplication::shutdownResult);
+    connect(executor, &BitCornCore::runawayException, this, &BitCornApplication::handleRunawayException);
+    connect(this, &BitCornApplication::requestedInitialize, executor, &BitCornCore::initialize);
+    connect(this, &BitCornApplication::requestedShutdown, executor, &BitCornCore::shutdown);
     /*  make sure executor object is deleted in its own thread */
     connect(coreThread, &QThread::finished, executor, &QObject::deleteLater);
 
     coreThread->start();
 }
 
-void BitGreenApplication::parameterSetup()
+void BitCornApplication::parameterSetup()
 {
     // Default printtoconsole to false for the GUI. GUI programs should not
     // print to the console unnecessarily.
@@ -284,14 +284,14 @@ void BitGreenApplication::parameterSetup()
     m_node.initParameterInteraction();
 }
 
-void BitGreenApplication::requestInitialize()
+void BitCornApplication::requestInitialize()
 {
     qDebug() << __func__ << ": Requesting initialize";
     startThread();
     Q_EMIT requestedInitialize();
 }
 
-void BitGreenApplication::requestShutdown()
+void BitCornApplication::requestShutdown()
 {
     // Show a simple window indicating shutdown status
     // Do this first as some of the steps may take some time below,
@@ -319,7 +319,7 @@ void BitGreenApplication::requestShutdown()
     Q_EMIT requestedShutdown();
 }
 
-void BitGreenApplication::initializeResult(bool success)
+void BitCornApplication::initializeResult(bool success)
 {
     qDebug() << __func__ << ": Initialization result: " << success;
     // Set exit result.
@@ -377,18 +377,18 @@ void BitGreenApplication::initializeResult(bool success)
     }
 }
 
-void BitGreenApplication::shutdownResult()
+void BitCornApplication::shutdownResult()
 {
     quit(); // Exit second main loop invocation after shutdown finished
 }
 
-void BitGreenApplication::handleRunawayException(const QString &message)
+void BitCornApplication::handleRunawayException(const QString &message)
 {
-    QMessageBox::critical(nullptr, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. BitGreen can no longer continue safely and will quit.") + QString("\n\n") + message);
+    QMessageBox::critical(nullptr, "Runaway exception", BitcoinGUI::tr("A fatal error occurred. BitCorn can no longer continue safely and will quit.") + QString("\n\n") + message);
     ::exit(EXIT_FAILURE);
 }
 
-WId BitGreenApplication::getMainWinId() const
+WId BitCornApplication::getMainWinId() const
 {
     if (!window)
         return 0;
@@ -441,7 +441,7 @@ int GuiMain(int argc, char* argv[])
     QApplication::setAttribute(Qt::AA_DontShowIconsInMenus);
 #endif
 
-    BitGreenApplication app(*node, argc, argv);
+    BitCornApplication app(*node, argc, argv);
 
     // Register meta types used for QMetaObject::invokeMethod
     qRegisterMetaType< bool* >();

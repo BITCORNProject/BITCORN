@@ -10,11 +10,11 @@
 - Verify that bitgreend AbortNode's.
 """
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import wait_until, get_datadir_path, connect_nodes
 import os
 
-class AbortNodeTest(BitGreenTestFramework):
+class AbortNodeTest(BitCornTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

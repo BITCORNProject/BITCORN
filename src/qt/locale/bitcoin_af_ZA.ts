@@ -62,12 +62,12 @@
         <translation>Ontvang adresse</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Dit is jou BitGreen-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Dit is jou BitCorn-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat u munte stuur.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Dit is jou BitGreen-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat jy munte stuur.</translation>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Dit is jou BitCorn-adresse vir die stuur van betalings. Kontroleer altyd die bedrag en die ontvangsadres voordat jy munte stuur.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -342,8 +342,8 @@
         <translation>Herindekseer blokke op skyf...</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
-        <translation>Stuur muntstukke na 'n BitGreen adres</translation>
+        <source>Send coins to a BitCorn address</source>
+        <translation>Stuur muntstukke na 'n BitCorn adres</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -366,8 +366,8 @@
         <translation>&amp;Verifieer boodskap...</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -394,12 +394,12 @@
         <translation>Versleutel die private sleutels wat aan u beursie behoort</translation>
     </message>
     <message>
-        <source>Sign messages with your BitGreen addresses to prove you own them</source>
-        <translation>Teken boodskappe met u BitGreen adresse om te bewys dat u hul besit</translation>
+        <source>Sign messages with your BitCorn addresses to prove you own them</source>
+        <translation>Teken boodskappe met u BitCorn adresse om te bewys dat u hul besit</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitGreen addresses</source>
-        <translation>Bevestig boodskappe om te verseker dat hulle geteken was met gespesifiseerde BitGreen adresse</translation>
+        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
+        <translation>Bevestig boodskappe om te verseker dat hulle geteken was met gespesifiseerde BitCorn adresse</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -474,8 +474,8 @@
         <translation>Op datum</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
-        <translation>Wys die %1 hulpboodskap om 'n lys met moontlike BitGreen bevel-lyn opsies te verkry</translation>
+        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <translation>Wys die %1 hulpboodskap om 'n lys met moontlike BitCorn bevel-lyn opsies te verkry</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -544,8 +544,8 @@
         <translation>Beursie is &lt;b&gt;versleutel&lt;/b&gt; en is tans &lt;b&gt;gesluit&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitGreen can no longer continue safely and will quit.</source>
-        <translation>'n Noodlottige fout het voorgekom. BitGreen kan nie langer voortgaan nie en sal afsluit.</translation>
+        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
+        <translation>'n Noodlottige fout het voorgekom. BitCorn kan nie langer voortgaan nie en sal afsluit.</translation>
     </message>
 </context>
 <context>
@@ -734,8 +734,8 @@
         <translation>Wysig stuurende adres</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitGreen address.</source>
-        <translation>Die ingeskrewe adres "%1" is nie 'n geldige BitGreen adres nie.</translation>
+        <source>The entered address "%1" is not a valid BitCorn address.</source>
+        <translation>Die ingeskrewe adres "%1" is nie 'n geldige BitCorn adres nie.</translation>
     </message>
     <message>
         <source>Could not unlock wallet.</source>
@@ -799,8 +799,8 @@
         <translation>Welkom by %1.</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>

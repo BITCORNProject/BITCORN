@@ -66,11 +66,11 @@
         <translation>받을 주소</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>이것은 비트코인 전송을 위한 주소입니다. 코인을 보내기 전에 항상 받는 주소와 수량을 확인하세요</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>이것은 비트코인 수신을 위한 주소입니다. 코인을 받을 때 마다 항상 다른 주소를 사용 하시는 것을 권장합니다.</translation>
     </message>
     <message>
@@ -334,7 +334,7 @@
         <translation>디스크에서 블럭 불러오는 중</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
+        <source>Send coins to a BitCorn address</source>
         <translation>비트코인 주소로 코인 보내기</translation>
     </message>
     <message>

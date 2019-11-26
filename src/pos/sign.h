@@ -1,5 +1,5 @@
 // Copyright (c) 2012-2019 The Peercoin developers
-// Copyright (c) 2019 The BitGreen Core developers
+// Copyright (c) 2019 The BitCorn Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 #ifndef BITCORN_POS_SIGN_H

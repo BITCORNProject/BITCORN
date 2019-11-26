@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2013 The Bitcoin Core developers
-// Copyright (c) 2019 The BitGreen Core developers
+// Copyright (c) 2019 The BitCorn Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.bitg.BitGreen-Qt";
+        return @"org.bitg.BitCorn-Qt";
     } else {
         return [self __bundleIdentifier];
     }

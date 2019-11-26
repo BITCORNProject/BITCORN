@@ -10,7 +10,7 @@
 #include <string>
 #include <utility>
 
-class BitGreenApplication;
+class BitCornApplication;
 class BitcoinGUI;
 class RPCConsole;
 
@@ -18,7 +18,7 @@ class AppTests : public QObject
 {
     Q_OBJECT
 public:
-    explicit AppTests(BitGreenApplication& app) : m_app(app) {}
+    explicit AppTests(BitCornApplication& app) : m_app(app) {}
 
 private Q_SLOTS:
     void appTests();
@@ -37,8 +37,8 @@ private:
         ~HandleCallback();
     };
 
-    //! BitGreen application.
-    BitGreenApplication& m_app;
+    //! BitCorn application.
+    BitCornApplication& m_app;
 
     //! Set of pending callback names. Used to track expected callbacks and shut
     //! down the app after the last callback has been handled and all tests have

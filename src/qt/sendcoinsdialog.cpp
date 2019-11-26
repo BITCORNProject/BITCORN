@@ -809,7 +809,7 @@ void SendCoinsDialog::coinControlChangeEdited(const QString& text)
         }
         else if (!IsValidDestination(dest)) // Invalid address
         {
-            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid BitGreen address"));
+            ui->labelCoinControlChangeLabel->setText(tr("Warning: Invalid BitCorn address"));
         }
         else // Valid address
         {

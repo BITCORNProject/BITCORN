@@ -122,7 +122,7 @@ public:
     }
 };
 
-/** Interface to BitGreen wallet from Qt view code. */
+/** Interface to BitCorn wallet from Qt view code. */
 class WalletModel : public QObject
 {
     Q_OBJECT

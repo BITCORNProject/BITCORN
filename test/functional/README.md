@@ -29,7 +29,7 @@ don't have test cases for.
 - Avoid wildcard imports
 - Use a module-level docstring to describe what the test is testing, and how it
   is testing it.
-- When subclassing the BitGreenTestFramwork, place overrides for the
+- When subclassing the BitCornTestFramwork, place overrides for the
   `set_test_params()`, `add_options()` and `setup_xxxx()` methods at the top of
   the subclass, then locally-defined helper methods, then the `run_test()` method.
 - Use `'{}'.format(x)` for string formatting, not `'%s' % x`.
@@ -92,7 +92,7 @@ implements the test logic.
 
 - `P2PConnection` is the class used to connect to a bitgreend.  `P2PInterface`
 contains the higher level logic for processing P2P payloads and connecting to
-the BitGreen Core node application logic. For custom behaviour, subclass the
+the BitCorn Core node application logic. For custom behaviour, subclass the
 P2PInterface object and override the callback methods.
 
 - Can be used to write tests where specific P2P protocol behavior is tested.

@@ -31,11 +31,11 @@ import random
 import time
 
 from test_framework.messages import COIN, COutPoint, CTransaction, CTxIn, CTxOut, ToHex
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import assert_equal, create_confirmed_utxos, hex_str_to_bytes
 
 
-class ChainstateWriteCrashTest(BitGreenTestFramework):
+class ChainstateWriteCrashTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 4
         self.setup_clean_chain = False

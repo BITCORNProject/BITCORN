@@ -84,9 +84,9 @@ OpenRC).
 ### macOS
 
 Binary:              `/usr/local/bin/bitgreend`
-Configuration file:  `~/Library/Application Support/BitGreen/bitgreen.conf`
-Data directory:      `~/Library/Application Support/BitGreen`
-Lock file:           `~/Library/Application Support/BitGreen/.lock`
+Configuration file:  `~/Library/Application Support/BitCorn/bitgreen.conf`
+Data directory:      `~/Library/Application Support/BitCorn`
+Lock file:           `~/Library/Application Support/BitCorn/.lock`
 
 Installing Service Configuration
 -----------------------------------

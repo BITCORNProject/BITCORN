@@ -90,8 +90,8 @@
         <translation>&amp;செய்தியை சரிசெய்...</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -225,8 +225,8 @@
         <translation>நல்வரவு</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Error</source>
@@ -712,8 +712,8 @@
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen மையம்</translation>
+        <source>BitCorn Core</source>
+        <translation>BitCorn மையம்</translation>
     </message>
     <message>
         <source>Information</source>

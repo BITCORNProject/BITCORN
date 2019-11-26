@@ -62,9 +62,9 @@ QString BitcoinUnits::description(int unit)
 {
     switch(unit)
     {
-    case BITG: return QString("BitGreens");
-    case mBITG: return QString("Milli-BitGreens (1 / 1" THIN_SP_UTF8 "000)");
-    case uBITG: return QString("Micro-BitGreens (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
+    case BITG: return QString("BitCorns");
+    case mBITG: return QString("Milli-BitCorns (1 / 1" THIN_SP_UTF8 "000)");
+    case uBITG: return QString("Micro-BitCorns (bits) (1 / 1" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     case SAT: return QString("Satoshi (sat) (1 / 100" THIN_SP_UTF8 "000" THIN_SP_UTF8 "000)");
     default: return QString("???");
     }

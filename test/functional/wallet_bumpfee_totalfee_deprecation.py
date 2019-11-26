@@ -6,10 +6,10 @@
 from decimal import Decimal
 
 from test_framework.messages import BIP125_SEQUENCE_NUMBER
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import assert_raises_rpc_error
 
-class BumpFeeWithTotalFeeArgumentDeprecationTest(BitGreenTestFramework):
+class BumpFeeWithTotalFeeArgumentDeprecationTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.extra_args = [[

@@ -62,12 +62,12 @@
         <translation>Địa chỉ nhận</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Đây là các địa chỉ BitGreen để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ bitgreen của người nhận.</translation>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Đây là các địa chỉ BitCorn để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ bitgreen của người nhận.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Đây là các địa chỉ BitGreen để bạn nhận tiền. Với mỗi giao dịch, bạn nên dùng một địa chỉ BitGreen mới để nhận tiền.</translation>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Đây là các địa chỉ BitCorn để bạn nhận tiền. Với mỗi giao dịch, bạn nên dùng một địa chỉ BitCorn mới để nhận tiền.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -331,8 +331,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Đánh chỉ số (indexing) lại các khối (blocks) trên ổ đĩa ...</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
-        <translation>Gửi coins đến tài khoản BitGreen</translation>
+        <source>Send coins to a BitCorn address</source>
+        <translation>Gửi coins đến tài khoản BitCorn</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -355,8 +355,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>&amp;Tin nhắn xác thực</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -383,12 +383,12 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Mã hoá các khoá bí mật trong Ví của bạn.</translation>
     </message>
     <message>
-        <source>Sign messages with your BitGreen addresses to prove you own them</source>
-        <translation>Dùng địa chỉ BitGreen của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
+        <source>Sign messages with your BitCorn addresses to prove you own them</source>
+        <translation>Dùng địa chỉ BitCorn của bạn ký các tin nhắn để xác minh những nội dung tin nhắn đó là của bạn.</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitGreen addresses</source>
-        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ BitGreen xác định.</translation>
+        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
+        <translation>Kiểm tra các tin nhắn để chắc chắn rằng chúng được ký bằng các địa chỉ BitCorn xác định.</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -408,7 +408,7 @@ Ví của bạn chưa được mã hóa.</translation>
     </message>
     <message>
         <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ BitGreen: URLs)</translation>
+        <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ BitCorn: URLs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -427,8 +427,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>7Tùy chọn dòng lệnh</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitGreen network</source>
-        <translation><numerusform>%n liên kết hoạt động với mạng lưới BitGreen</numerusform></translation>
+        <source>%n active connection(s) to BitCorn network</source>
+        <translation><numerusform>%n liên kết hoạt động với mạng lưới BitCorn</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -471,8 +471,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Đã cập nhật</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
-        <translation>Hiển thị tin nhắn trợ giúp %1 để có được danh sách với các tùy chọn dòng lệnh BitGreen.</translation>
+        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <translation>Hiển thị tin nhắn trợ giúp %1 để có được danh sách với các tùy chọn dòng lệnh BitCorn.</translation>
     </message>
     <message>
         <source>Connecting to peers...</source>
@@ -636,8 +636,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Sử dụng vị trí dữ liệu mặc định</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Error</source>
@@ -689,8 +689,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Ví</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a SOCKS5 proxy.</source>
-        <translation>Kết nối đến máy chủ BitGreen thông qua SOCKS5 proxy.</translation>
+        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
+        <translation>Kết nối đến máy chủ BitCorn thông qua SOCKS5 proxy.</translation>
     </message>
     <message>
         <source>Proxy &amp;IP:</source>
@@ -1203,8 +1203,8 @@ Ví của bạn chưa được mã hóa.</translation>
 <context>
     <name>bitgreen-core</name>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
+        <source>BitCorn Core</source>
+        <translation>BitCorn Core</translation>
     </message>
     <message>
         <source>Information</source>

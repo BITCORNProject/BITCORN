@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2018 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The BitGreen Core developers
+// Copyright (c) 2018-2019 The BitCorn Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -37,7 +37,7 @@ class QUrl;
 class QWidget;
 QT_END_NAMESPACE
 
-/** Utility functions used by the BitGreen Qt UI.
+/** Utility functions used by the BitCorn Qt UI.
  */
 namespace GUIUtil
 {
@@ -52,9 +52,9 @@ namespace GUIUtil
     void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent);
 
     // Parse "bitgreen:" URI into recipient object, return true on successful parsing
-    bool parseBitGreenURI(const QUrl &uri, SendCoinsRecipient *out);
-    bool parseBitGreenURI(QString uri, SendCoinsRecipient *out);
-    QString formatBitGreenURI(const SendCoinsRecipient &info);
+    bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out);
+    bool parseBitCornURI(QString uri, SendCoinsRecipient *out);
+    QString formatBitCornURI(const SendCoinsRecipient &info);
 
     // Returns true if given address+amount meets "dust" definition
     bool isDust(interfaces::Node& node, const QString& address, const CAmount& amount);
@@ -129,7 +129,7 @@ namespace GUIUtil
     void openDebugLogfile();
 
     // Open the config file
-    bool openBitGreenConf();
+    bool openBitCornConf();
 
     /** Qt event filter that intercepts ToolTipChange events, and replaces the tooltip with a rich text
       representation if needed. This assures that Qt can word-wrap long tooltip messages.

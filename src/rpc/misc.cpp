@@ -690,7 +690,7 @@ static const CRPCCommand commands[] =
     { "util",               "verifymessage",          &verifymessage,          {"address","signature","message"} },
     { "util",               "signmessagewithprivkey", &signmessagewithprivkey, {"privkey","message"} },
 
-    /* BitGreen features */
+    /* BitCorn features */
     { "bitgreen",           "mnsync",                 &mnsync,                 {} },
     { "bitgreen",           "spork",                  &spork,                  {"mode"} },
 

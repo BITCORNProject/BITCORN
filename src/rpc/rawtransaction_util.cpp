@@ -111,7 +111,7 @@ CMutableTransaction ConstructTransaction(const UniValue& inputs_in, const UniVal
         } else {
             CTxDestination destination = DecodeDestination(name_);
             if (!IsValidDestination(destination)) {
-                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitGreen address: ") + name_);
+                throw JSONRPCError(RPC_INVALID_ADDRESS_OR_KEY, std::string("Invalid BitCorn address: ") + name_);
             }
 
             if (!destinations.insert(destination).second) {

@@ -4,13 +4,13 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test using named arguments for RPCs."""
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
 )
 
-class NamedArgumentTest(BitGreenTestFramework):
+class NamedArgumentTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 1
 

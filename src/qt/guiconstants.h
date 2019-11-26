@@ -40,11 +40,11 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 /* Number of frames in spinner animation */
 #define SPINNER_FRAMES 36
 
-#define QAPP_ORG_NAME "BitGreen"
+#define QAPP_ORG_NAME "BitCorn"
 #define QAPP_ORG_DOMAIN "bitg.org"
-#define QAPP_APP_NAME_DEFAULT "BitGreen-Qt"
-#define QAPP_APP_NAME_TESTNET "BitGreen-Qt-testnet"
-#define QAPP_APP_NAME_REGTEST "BitGreen-Qt-regtest"
+#define QAPP_APP_NAME_DEFAULT "BitCorn-Qt"
+#define QAPP_APP_NAME_TESTNET "BitCorn-Qt-testnet"
+#define QAPP_APP_NAME_REGTEST "BitCorn-Qt-regtest"
 
 /* One gigabyte (GB) in bytes */
 static constexpr uint64_t GB_BYTES{1000000000};

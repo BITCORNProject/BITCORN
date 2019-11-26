@@ -43,7 +43,7 @@ static bool WalletAppInit(int argc, char* argv[])
     }
     if (argc < 2 || HelpRequested(gArgs)) {
         std::string usage = strprintf("%s bitgreen-wallet version", PACKAGE_NAME) + " " + FormatFullVersion() + "\n\n" +
-                                      "wallet-tool is an offline tool for creating and interacting with BitGreen Core wallet files.\n" +
+                                      "wallet-tool is an offline tool for creating and interacting with BitCorn Core wallet files.\n" +
                                       "By default wallet-tool will act on wallets in the default mainnet wallet directory in the datadir.\n" +
                                       "To change the target wallet, use the -datadir, -wallet and -testnet/-regtest arguments.\n\n" +
                                       "Usage:\n" +

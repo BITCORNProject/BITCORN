@@ -70,8 +70,8 @@ int main(int argc, char *argv[])
 
     // Don't remove this, it's needed to access
     // QApplication:: and QCoreApplication:: in the tests
-    BitGreenApplication app(*node, argc, argv);
-    app.setApplicationName("BitGreen-Qt-test");
+    BitCornApplication app(*node, argc, argv);
+    app.setApplicationName("BitCorn-Qt-test");
 
     SSL_library_init();
 

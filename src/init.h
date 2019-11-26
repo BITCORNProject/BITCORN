@@ -59,7 +59,7 @@ bool AppInitSanityChecks();
  */
 bool AppInitLockDataDirectory();
 /**
- * BitGreen core main initialization.
+ * BitCorn core main initialization.
  * @note This should only be done after daemonization. Call Shutdown() if this function fails.
  * @pre Parameters should be parsed and config file should be read, AppInitLockDataDirectory should have been called.
  */

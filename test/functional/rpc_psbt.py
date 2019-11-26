@@ -6,7 +6,7 @@
 """
 
 from decimal import Decimal
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import (
     assert_equal,
     assert_greater_than,
@@ -22,7 +22,7 @@ import os
 MAX_BIP125_RBF_SEQUENCE = 0xfffffffd
 
 # Create one-input, one-output, no-fee transaction:
-class PSBTTest(BitGreenTestFramework):
+class PSBTTest(BitCornTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = False

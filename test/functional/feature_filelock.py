@@ -5,10 +5,10 @@
 """Check that it's not possible to start a second bitgreend instance using the same datadir or wallet."""
 import os
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.test_node import ErrorMatch
 
-class FilelockTest(BitGreenTestFramework):
+class FilelockTest(BitCornTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 2

@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The BitGreen Core developers
+// Copyright (c) 2018-2019 The BitCorn Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -59,7 +59,7 @@ class ClickableProgressBar;
 }
 
 /**
-  BitGreen GUI main class. This class represents the main window of the BitGreen UI. It communicates with both the client and
+  BitCorn GUI main class. This class represents the main window of the BitCorn UI. It communicates with both the client and
   wallet models to give the user an up-to-date view of the current core state.
 */
 class BitcoinGUI : public QMainWindow

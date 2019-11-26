@@ -9,7 +9,7 @@ import time
 
 from test_framework.messages import msg_feefilter
 from test_framework.mininode import mininode_lock, P2PInterface
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 
 
 def hashToHex(hash):
@@ -38,7 +38,7 @@ class TestP2PConn(P2PInterface):
         with mininode_lock:
             self.txinvs = []
 
-class FeeFilterTest(BitGreenTestFramework):
+class FeeFilterTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 

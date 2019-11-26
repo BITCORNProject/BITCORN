@@ -1,6 +1,6 @@
 // Copyright (c) 2009-2010 Satoshi Nakamoto
 // Copyright (c) 2009-2019 The Bitcoin Core developers
-// Copyright (c) 2019 The BitGreen Core developers
+// Copyright (c) 2019 The BitCorn Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -683,13 +683,13 @@ void PrintExceptionContinue(const std::exception* pex, const char* pszThread)
 
 fs::path GetDefaultDataDir()
 {
-    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BitGreen
-    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BitGreen
-    // Mac: ~/Library/Application Support/BitGreen
+    // Windows < Vista: C:\Documents and Settings\Username\Application Data\BitCorn
+    // Windows >= Vista: C:\Users\Username\AppData\Roaming\BitCorn
+    // Mac: ~/Library/Application Support/BitCorn
     // Unix: ~/.bitgreen
 #ifdef WIN32
     // Windows
-    return GetSpecialFolderPath(CSIDL_APPDATA) / "BitGreen";
+    return GetSpecialFolderPath(CSIDL_APPDATA) / "BitCorn";
 #else
     fs::path pathRet;
     char* pszHome = getenv("HOME");
@@ -699,7 +699,7 @@ fs::path GetDefaultDataDir()
         pathRet = fs::path(pszHome);
 #ifdef MAC_OSX
     // Mac
-    return pathRet / "Library/Application Support/BitGreen";
+    return pathRet / "Library/Application Support/BitCorn";
 #else
     // Unix
     return pathRet / ".bitgreen";

@@ -5,7 +5,7 @@
 """Test node disconnect and ban behavior"""
 import time
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import (
     assert_equal,
     assert_raises_rpc_error,
@@ -13,7 +13,7 @@ from test_framework.util import (
     wait_until,
 )
 
-class DisconnectBanTest(BitGreenTestFramework):
+class DisconnectBanTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 

@@ -1,5 +1,5 @@
 /*
-* Copyright (c) 2018-2019 The BitGreen Core developers
+* Copyright (c) 2018-2019 The BitCorn Core developers
 *
 * Global Qt Stylesheet
 *
@@ -842,12 +842,12 @@ QDialog#HelpMessageDialog QScrollBar:vertical, QDialog#HelpMessageDialog QScroll
 	border:0;
 }
 
-/* About BitGreen Dialog */
-QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About BitGreen Contents */
+/* About BitCorn Dialog */
+QDialog#AboutDialog QLabel#label, QDialog#AboutDialog QLabel#copyrightLabel, QDialog#AboutDialog QLabel#label_2 { /* About BitCorn Contents */
 	margin-left:10px;
 }
 
-QDialog#AboutDialog QLabel#label_2 { /* Margin for About BitGreen text */
+QDialog#AboutDialog QLabel#label_2 { /* Margin for About BitCorn text */
 	margin-right:10px;
 }
 

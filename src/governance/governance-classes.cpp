@@ -507,7 +507,7 @@ void CSuperblock::ParsePaymentSchedule(const std::string& strPaymentAddresses, c
         const CTxDestination &address = DecodeDestination(vecParsed1[i]);
         if (!IsValidDestination(address)) {
             std::ostringstream ostr;
-            ostr << "CSuperblock::ParsePaymentSchedule -- Invalid BitGreen Address : " << vecParsed1[i];
+            ostr << "CSuperblock::ParsePaymentSchedule -- Invalid BitCorn Address : " << vecParsed1[i];
             LogPrint(BCLog::GOBJECT, "%s\n", ostr.str());
             throw std::runtime_error(ostr.str());
         }

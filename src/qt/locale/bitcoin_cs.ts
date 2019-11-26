@@ -66,11 +66,11 @@
         <translation>Přijímací adresy</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
         <translation>Tohle jsou tvé bitgreenové adresy pro posílání plateb. Před odesláním mincí si vždy zkontroluj částku a cílovou adresu.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
         <translation>Tohle jsou tvé bitgreenové adresy pro příjem plateb. Nezapomeň si pro každou transakci vždy vygenerovat novou adresu.</translation>
     </message>
     <message>
@@ -358,7 +358,7 @@
         <translation>Proxy je &lt;b&gt;zapnutá&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
+        <source>Send coins to a BitCorn address</source>
         <translation>Pošli mince na bitgreenovou adresu</translation>
     </message>
     <message>
@@ -382,8 +382,8 @@
         <translation>&amp;Ověř zprávu...</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -410,11 +410,11 @@
         <translation>Zašifruj soukromé klíče ve své peněžence</translation>
     </message>
     <message>
-        <source>Sign messages with your BitGreen addresses to prove you own them</source>
+        <source>Sign messages with your BitCorn addresses to prove you own them</source>
         <translation>Podepiš zprávy svými bitgreenovými adresami, čímž prokážeš, že jsi jejich vlastníkem</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitGreen addresses</source>
+        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
         <translation>Ověř zprávy, aby ses ujistil, že byly podepsány danými bitgreenovými adresami</translation>
     </message>
     <message>
@@ -454,7 +454,7 @@
         <translation>Ar&amp;gumenty příkazové řádky</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitGreen network</source>
+        <source>%n active connection(s) to BitCorn network</source>
         <translation><numerusform>%n aktivní spojení do bitgreenové sítě</numerusform><numerusform>%n aktivní spojení do bitgreenové sítě</numerusform><numerusform>%n aktivních spojení do bitgreenové sítě</numerusform><numerusform>%n aktivních spojení do bitgreenové sítě</numerusform></translation>
     </message>
     <message>
@@ -498,8 +498,8 @@
         <translation>Aktuální</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
-        <translation>Seznam argumentů BitGreenu pro příkazovou řádku získáš v nápovědě %1</translation>
+        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <translation>Seznam argumentů BitCornu pro příkazovou řádku získáš v nápovědě %1</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -574,8 +574,8 @@
         <translation>Peněženka je &lt;b&gt;zašifrovaná&lt;/b&gt; a momentálně &lt;b&gt;zamčená&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitGreen can no longer continue safely and will quit.</source>
-        <translation>Stala se fatální chyba. BitGreen nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
+        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
+        <translation>Stala se fatální chyba. BitCorn nemůže bezpečně pokračovat v činnosti, a proto skončí.</translation>
     </message>
 </context>
 <context>
@@ -764,7 +764,7 @@
         <translation>Uprav odesílací adresu</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitGreen address.</source>
+        <source>The entered address "%1" is not a valid BitCorn address.</source>
         <translation>Zadaná adresa „%1“ není platná bitgreenová adresa.</translation>
     </message>
     <message>
@@ -861,8 +861,8 @@
         <translation>Použij tento adresář pro data:</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -873,7 +873,7 @@
         <translation>Bude proto potřebovat do tohoto adresáře uložit přibližně %1 GB dat.</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the BitGreen block chain.</source>
+        <source>%1 will download and store a copy of the BitCorn block chain.</source>
         <translation>%1 bude stahovat kopii bločenky.</translation>
     </message>
     <message>
@@ -1094,7 +1094,7 @@
         <translation>&amp;Utrácet i ještě nepotvrzené drobné</translation>
     </message>
     <message>
-        <source>Automatically open the BitGreen client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <source>Automatically open the BitCorn client port on the router. This only works when your router supports UPnP and it is enabled.</source>
         <translation>Automaticky otevře potřebný port na routeru. Tohle funguje jen za předpokladu, že tvůj router podporuje UPnP a že je UPnP povolené.</translation>
     </message>
     <message>
@@ -1110,7 +1110,7 @@
         <translation>Přijí&amp;mat příchozí spojení</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a SOCKS5 proxy.</source>
+        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
         <translation>Připojí se do bitgreenové sítě přes SOCKS5 proxy.</translation>
     </message>
     <message>
@@ -1146,7 +1146,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Připojí se do bitgreenové sítě přes SOCKS5 proxy vyhrazenou pro skryté služby v Tor síti.</translation>
     </message>
     <message>
@@ -1253,7 +1253,7 @@
         <translation>Formulář</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitGreen network after a connection is established, but this process has not completed yet.</source>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
         <translation>Zobrazené informace nemusí být aktuální. Tvá peněženka se automaticky sesynchronizuje s bitgreenovou sítí, jakmile se s ní spojí. Zatím ale ještě není synchronizace dokončena.</translation>
     </message>
     <message>
@@ -1348,7 +1348,7 @@
         <translation>Neplatná platební adresa %1</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid BitGreen address or malformed URI parameters.</source>
+        <source>URI cannot be parsed! This can be caused by an invalid BitCorn address or malformed URI parameters.</source>
         <translation>Nepodařilo se analyzovat URI! Důvodem může být neplatná bitgreenová adresa nebo poškozené parametry URI.</translation>
     </message>
     <message>
@@ -1450,7 +1450,7 @@
         <translation>Částka</translation>
     </message>
     <message>
-        <source>Enter a BitGreen address (e.g. %1)</source>
+        <source>Enter a BitCorn address (e.g. %1)</source>
         <translation>Zadej bitgreenovou adresu (např. %1)</translation>
     </message>
     <message>
@@ -1898,7 +1898,7 @@
         <translation>&amp;Zpráva:</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitGreen network.</source>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitCorn network.</source>
         <translation>Volitelná zpráva, která se připojí k platebnímu požadavku a která se zobrazí, když se požadavek otevře. Poznámka: tahle zpráva se neposílá s platbou po bitgreenové síti.</translation>
     </message>
     <message>
@@ -2331,7 +2331,7 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation><numerusform>Potvrzování by podle odhadu mělo začít během %n bloku.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform><numerusform>Potvrzování by podle odhadu mělo začít během %n bloků.</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid BitGreen address</source>
+        <source>Warning: Invalid BitCorn address</source>
         <translation>Upozornění: Neplatná bitgreenová adresa</translation>
     </message>
     <message>
@@ -2374,8 +2374,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Tohle je normální platba.</translation>
     </message>
     <message>
-        <source>The BitGreen address to send the payment to</source>
-        <translation>BitGreenová adresa příjemce</translation>
+        <source>The BitCorn address to send the payment to</source>
+        <translation>BitCornová adresa příjemce</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2422,7 +2422,7 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Zadej označení této adresy; obojí se ti pak uloží do adresáře</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitGreen network.</source>
+        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
         <translation>Zpráva, která byla připojena k bitgreen: URI a která se ti pro přehled uloží k transakci. Poznámka: Tahle zpráva se neposílá s platbou po bitgreenové síti.</translation>
     </message>
     <message>
@@ -2471,8 +2471,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Podepsáním zprávy/smlouvy svými adresami můžeš prokázat, že jsi na ně schopen přijmout bitgreeny. Buď opatrný a nepodepisuj nic vágního nebo náhodného; například při phishingových útocích můžeš být lákán, abys něco takového podepsal. Podepisuj pouze naprosto úplná a detailní prohlášení, se kterými souhlasíš.</translation>
     </message>
     <message>
-        <source>The BitGreen address to sign the message with</source>
-        <translation>BitGreenová adresa, kterou se zpráva podepíše</translation>
+        <source>The BitCorn address to sign the message with</source>
+        <translation>BitCornová adresa, kterou se zpráva podepíše</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2503,7 +2503,7 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Zkopíruj tento podpis do schránky</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitGreen address</source>
+        <source>Sign the message to prove you own this BitCorn address</source>
         <translation>Podepiš zprávu, čímž prokážeš, že jsi vlastníkem této bitgreenové adresy</translation>
     </message>
     <message>
@@ -2527,11 +2527,11 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>K ověření podpisu zprávy zadej adresu příjemce, zprávu (ověř si, že správně kopíruješ zalomení řádků, mezery, tabulátory apod.) a podpis. Dávej pozor na to, abys nezkopíroval do podpisu víc, než co je v samotné podepsané zprávě, abys nebyl napálen man-in-the-middle útokem. Poznamenejme však, že takto lze pouze prokázat, že podepisující je schopný na dané adrese přijmout platbu, ale není možnéprokázat, že odeslal jakoukoli transakci!</translation>
     </message>
     <message>
-        <source>The BitGreen address the message was signed with</source>
-        <translation>BitGreenová adresa, kterou je zpráva podepsána</translation>
+        <source>The BitCorn address the message was signed with</source>
+        <translation>BitCornová adresa, kterou je zpráva podepsána</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitGreen address</source>
+        <source>Verify the message to ensure it was signed with the specified BitCorn address</source>
         <translation>Ověř zprávu, aby ses ujistil, že byla podepsána danou bitgreenovou adresou</translation>
     </message>
     <message>
@@ -3180,8 +3180,8 @@ Poznámka: Jelikož je poplatek počítaný za bajt, poplatek o hodnotě "100 sa
         <translation>Nemohu spustit HTTP server. Detaily viz v debug.log.</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
+        <source>BitCorn Core</source>
+        <translation>BitCorn Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

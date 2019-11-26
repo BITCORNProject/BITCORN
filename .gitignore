@@ -87,7 +87,7 @@ src/qt/bitgreen-qt.includes
 *.qm
 Makefile
 bitgreen-qt
-BitGreen-Qt.app
+BitCorn-Qt.app
 background.tiff*
 
 # Unit-tests

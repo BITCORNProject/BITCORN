@@ -53,27 +53,27 @@ class SkipTest(Exception):
         self.message = message
 
 
-class BitGreenTestMetaClass(type):
-    """Metaclass for BitGreenTestFramework.
+class BitCornTestMetaClass(type):
+    """Metaclass for BitCornTestFramework.
 
-    Ensures that any attempt to register a subclass of `BitGreenTestFramework`
+    Ensures that any attempt to register a subclass of `BitCornTestFramework`
     adheres to a standard whereby the subclass overrides `set_test_params` and
     `run_test` but DOES NOT override either `__init__` or `main`. If any of
     those standards are violated, a ``TypeError`` is raised."""
 
     def __new__(cls, clsname, bases, dct):
-        if not clsname == 'BitGreenTestFramework':
+        if not clsname == 'BitCornTestFramework':
             if not ('run_test' in dct and 'set_test_params' in dct):
-                raise TypeError("BitGreenTestFramework subclasses must override "
+                raise TypeError("BitCornTestFramework subclasses must override "
                                 "'run_test' and 'set_test_params'")
             if '__init__' in dct or 'main' in dct:
-                raise TypeError("BitGreenTestFramework subclasses may not override "
+                raise TypeError("BitCornTestFramework subclasses may not override "
                                 "'__init__' or 'main'")
 
         return super().__new__(cls, clsname, bases, dct)
 
 
-class BitGreenTestFramework(metaclass=BitGreenTestMetaClass):
+class BitCornTestFramework(metaclass=BitCornTestMetaClass):
     """Base class for a bitgreen test script.
 
     Individual bitgreen test scripts should subclass this class and override the set_test_params() and run_test() methods.
@@ -458,7 +458,7 @@ class BitGreenTestFramework(metaclass=BitGreenTestMetaClass):
         self.log.addHandler(ch)
 
         if self.options.trace_rpc:
-            rpc_logger = logging.getLogger("BitGreenRPC")
+            rpc_logger = logging.getLogger("BitCornRPC")
             rpc_logger.setLevel(logging.DEBUG)
             rpc_handler = logging.StreamHandler(sys.stdout)
             rpc_handler.setLevel(logging.DEBUG)

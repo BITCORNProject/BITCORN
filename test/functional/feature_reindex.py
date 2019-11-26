@@ -9,10 +9,10 @@
 - Stop the node and restart it with -reindex-chainstate. Verify that the node has reindexed up to block 3.
 """
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import wait_until
 
-class ReindexTest(BitGreenTestFramework):
+class ReindexTest(BitCornTestFramework):
 
     def set_test_params(self):
         self.setup_clean_chain = True

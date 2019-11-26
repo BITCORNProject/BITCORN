@@ -595,7 +595,7 @@ void SetupServerArgs()
 #endif
 
     gArgs.AddArg("-staking", "Enable staking while working with wallet, default is 1", false, OptionsCategory::OPTIONS);
-    gArgs.AddArg("-litemode", strprintf("Disable all BitGreen specific functionality (Masternodes, Governance) (default: %u)", false), false, OptionsCategory::OPTIONS);
+    gArgs.AddArg("-litemode", strprintf("Disable all BitCorn specific functionality (Masternodes, Governance) (default: %u)", false), false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-sporkaddr=<bitgreenaddress>", "Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-minsporkkeys=<n>", "Overrides minimum spork signers to change spork value. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-sporkkey", "Private key to send spork messages", false, OptionsCategory::OPTIONS);
@@ -788,7 +788,7 @@ static void ThreadImport(std::vector<fs::path> vImportFiles)
     }
     } // End scope of CImportingNow
 
-    // TODO: BitGreen
+    // TODO: BitCorn
     // force UpdatedBlockTip to initialize nCachedBlockHeight for DS, MN payments and budgets
     // but don't call it directly to prevent triggering of other listeners like zmq etc.
     g_mn_notification_interface->InitializeCurrentBlockTip();
@@ -810,7 +810,7 @@ static void ThreadImport(std::vector<fs::path> vImportFiles)
 }
 
 /** Sanity checks
- *  Ensure that BitGreen is running in a usable environment with all
+ *  Ensure that BitCorn is running in a usable environment with all
  *  necessary library support.
  */
 static bool InitSanityCheck()
@@ -1249,7 +1249,7 @@ bool AppInitParameterInteraction()
 
 static bool LockDataDirectory(bool probeOnly)
 {
-    // Make sure only a single BitGreen process is using the data directory.
+    // Make sure only a single BitCorn process is using the data directory.
     fs::path datadir = GetDataDir();
     if (!DirIsWritable(datadir)) {
         return InitError(strprintf(_("Cannot write to data directory '%s'; check permissions.").translated, datadir.string()));
@@ -1786,7 +1786,7 @@ bool AppInitMain(InitInterfaces& interfaces)
     LogPrintf("fLiteMode %d\n", fLiteMode);
 
     if (fLiteMode)
-        InitWarning(_("You are starting in lite mode, all BitGreen-specific functionality is disabled.").translated);
+        InitWarning(_("You are starting in lite mode, all BitCorn-specific functionality is disabled.").translated);
 
     if ((!fLiteMode && !g_txindex)
        && chainparams.NetworkIDString() != CBaseChainParams::REGTEST) {
@@ -1894,7 +1894,7 @@ bool AppInitMain(InitInterfaces& interfaces)
         }
     }
 
-    // ********************************************************* Step 10-C: schedule BitGreen-specific tasks
+    // ********************************************************* Step 10-C: schedule BitCorn-specific tasks
 
     if (!fLiteMode) {
         scheduler.scheduleEvery(boost::bind(&CNetFulfilledRequestManager::DoMaintenance, boost::ref(netfulfilledman)), 60 * 1000);

@@ -4,7 +4,7 @@
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 """Test multiple RPC users."""
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.util import (
     assert_equal,
     get_datadir_path,
@@ -32,7 +32,7 @@ def call_with_auth(node, user, password):
     return resp
 
 
-class HTTPBasicsTest(BitGreenTestFramework):
+class HTTPBasicsTest(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 

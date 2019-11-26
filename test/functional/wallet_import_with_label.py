@@ -10,11 +10,11 @@ with or without a label and then its private key is imported with importprivkey
 with and without a label.
 """
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.wallet_util import test_address
 
 
-class ImportWithLabel(BitGreenTestFramework):
+class ImportWithLabel(BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
         self.setup_clean_chain = True

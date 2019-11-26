@@ -6,7 +6,7 @@
 import struct
 
 from test_framework.address import ADDRESS_BCRT1_UNSPENDABLE
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 from test_framework.messages import CTransaction
 from test_framework.util import (
     assert_equal,
@@ -35,7 +35,7 @@ class ZMQSubscriber:
         return body
 
 
-class ZMQTest (BitGreenTestFramework):
+class ZMQTest (BitCornTestFramework):
     def set_test_params(self):
         self.num_nodes = 2
 

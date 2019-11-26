@@ -51,7 +51,7 @@
 #include <memory>
 
 #if defined(NDEBUG)
-# error "BitGreen cannot be compiled without assertions."
+# error "BitCorn cannot be compiled without assertions."
 #endif
 
 /** Expiration time for orphan transactions in seconds */
@@ -838,7 +838,7 @@ void RequestTx(CNodeState* state, const uint256& txid, int64_t nNow) EXCLUSIVE_L
     peer_download_state.m_tx_process_time.emplace(process_time, txid);
 }
 
-// Specific BitGreen get custom data
+// Specific BitCorn get custom data
 void EraseDataRequest(const CInv& inv) EXCLUSIVE_LOCKS_REQUIRED(cs_main)
 {
     g_already_data_asked_for.erase(inv);
@@ -1493,7 +1493,7 @@ bool static AlreadyHave(const CInv& inv) EXCLUSIVE_LOCKS_REQUIRED(cs_main)
         return LookupBlockIndex(inv.hash) != nullptr;
 
     /*
-        BitGreen Related Inventory Messages
+        BitCorn Related Inventory Messages
 
         --
 
@@ -3603,7 +3603,7 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         return true;
     }
     else {
-        // BitGreen: manage protocol extensions
+        // BitCorn: manage protocol extensions
         bool found = false;
         const std::vector<std::string> &allMessages = getAllNetMessageTypes();
         for (const std::string msg : allMessages) {
@@ -4493,7 +4493,7 @@ bool PeerLogicValidation::SendMessages(CNode* pto)
         }
 
         //
-        // Message: getdata (BitGreen specific inventory)
+        // Message: getdata (BitCorn specific inventory)
         //
         if (state.m_inv_download.m_check_expiry_timer <= nNow) {
             for (auto it=state.m_inv_download.m_inv_in_flight.begin(); it != state.m_inv_download.m_inv_in_flight.end();) {

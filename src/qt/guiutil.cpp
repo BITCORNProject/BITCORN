@@ -1,5 +1,5 @@
 // Copyright (c) 2011-2019 The Bitcoin Core developers
-// Copyright (c) 2018-2019 The BitGreen Core developers
+// Copyright (c) 2018-2019 The BitCorn Core developers
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
@@ -106,13 +106,13 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
     widget->setFont(fixedPitchFont());
     // We don't want translators to use own addresses in translations
     // and this is the only place, where this address is supplied.
-    widget->setPlaceholderText(QObject::tr("Enter a BitGreen address (e.g. %1)").arg(
+    widget->setPlaceholderText(QObject::tr("Enter a BitCorn address (e.g. %1)").arg(
         QString::fromStdString(DummyAddress(Params()))));
     widget->setValidator(new BitcoinAddressEntryValidator(parent));
     widget->setCheckValidator(new BitcoinAddressCheckValidator(parent));
 }
 
-bool parseBitGreenURI(const QUrl &uri, SendCoinsRecipient *out)
+bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out)
 {
     // return if URI is not valid or is no bitgreen: URI
     if(!uri.isValid() || uri.scheme() != QString("bitgreen"))
@@ -169,13 +169,13 @@ bool parseBitGreenURI(const QUrl &uri, SendCoinsRecipient *out)
     return true;
 }
 
-bool parseBitGreenURI(QString uri, SendCoinsRecipient *out)
+bool parseBitCornURI(QString uri, SendCoinsRecipient *out)
 {
     QUrl uriInstance(uri);
-    return parseBitGreenURI(uriInstance, out);
+    return parseBitCornURI(uriInstance, out);
 }
 
-QString formatBitGreenURI(const SendCoinsRecipient &info)
+QString formatBitCornURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
@@ -388,7 +388,7 @@ void openDebugLogfile()
         QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathDebug)));
 }
 
-bool openBitGreenConf()
+bool openBitCornConf()
 {
     fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITCORN_CONF_FILENAME));
 
@@ -556,15 +556,15 @@ fs::path static StartupShortcutPath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitGreen.lnk";
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitCorn.lnk";
     if (chain == CBaseChainParams::TESTNET) // Remove this special case when CBaseChainParams::TESTNET = "testnet4"
-        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitGreen (testnet).lnk";
-    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("BitGreen (%s).lnk", chain);
+        return GetSpecialFolderPath(CSIDL_STARTUP) / "BitCorn (testnet).lnk";
+    return GetSpecialFolderPath(CSIDL_STARTUP) / strprintf("BitCorn (%s).lnk", chain);
 }
 
 bool GetStartOnSystemStartup()
 {
-    // check for BitGreen*.lnk
+    // check for BitCorn*.lnk
     return fs::exists(StartupShortcutPath());
 }
 
@@ -684,9 +684,9 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
-            optionFile << "Name=BitGreen\n";
+            optionFile << "Name=BitCorn\n";
         else
-            optionFile << strprintf("Name=BitGreen (%s)\n", chain);
+            optionFile << strprintf("Name=BitCorn (%s)\n", chain);
         optionFile << "Exec=" << pszExePath << strprintf(" -min -testnet=%d -regtest=%d\n", gArgs.GetBoolArg("-testnet", false), gArgs.GetBoolArg("-regtest", false));
         optionFile << "Terminal=false\n";
         optionFile << "Hidden=false\n";

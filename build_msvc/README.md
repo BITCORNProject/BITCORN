@@ -1,15 +1,15 @@
-Building BitGreen Core with Visual Studio
+Building BitCorn Core with Visual Studio
 ========================================
 
 Introduction
 ---------------------
-Solution and project files to build the BitGreen Core applications (except Qt dependent ones) with Visual Studio 2017 can be found in the build_msvc directory.
+Solution and project files to build the BitCorn Core applications (except Qt dependent ones) with Visual Studio 2017 can be found in the build_msvc directory.
 
 Building with Visual Studio is an alternative to the Linux based [cross-compiler build](https://github.com/bitgreen/bitgreen/blob/master/doc/build-windows.md).
 
 Dependencies
 ---------------------
-A number of [open source libraries](https://github.com/bitgreen/bitgreen/blob/master/doc/dependencies.md) are required in order to be able to build BitGreen.
+A number of [open source libraries](https://github.com/bitgreen/bitgreen/blob/master/doc/dependencies.md) are required in order to be able to build BitCorn.
 
 Options for installing the dependencies in a Visual Studio compatible manner are:
 

@@ -25,14 +25,14 @@ from time import sleep
 
 from test_framework.messages import msg_ping
 from test_framework.mininode import P2PInterface
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 
 class TestP2PConn(P2PInterface):
     def on_version(self, message):
         # Don't send a verack in response
         pass
 
-class TimeoutsTest(BitGreenTestFramework):
+class TimeoutsTest(BitCornTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = True
         self.num_nodes = 1

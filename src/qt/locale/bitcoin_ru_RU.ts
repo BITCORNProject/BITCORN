@@ -66,12 +66,12 @@
         <translation>Адреса получения</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Это ваши BitGreen адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>Это ваши BitCorn адреса для отправки платежа. Всегда проверяйте сумму и адрес получателя перед отправкой платежа.</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>Это ваши BitGreen адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>Это ваши BitCorn адреса для получения платежей. Настоятельно рекомендуем использовать новые адреса для получения каждой транзакции.</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -354,7 +354,7 @@
         <translation>Прокси &lt;b&gt;включен&lt;/b&gt;: %1</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
+        <source>Send coins to a BitCorn address</source>
         <translation>Послать средства на биткойн адрес</translation>
     </message>
     <message>
@@ -378,8 +378,8 @@
         <translation>&amp;Проверить сообщение...</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen Core</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn Core</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -406,12 +406,12 @@
         <translation>Зашифровать приватные ключи, принадлежащие вашему кошельку</translation>
     </message>
     <message>
-        <source>Sign messages with your BitGreen addresses to prove you own them</source>
-        <translation>Подписывайте сообщения BitGreen адресами чтобы подтвердить что это написали именно Вы</translation>
+        <source>Sign messages with your BitCorn addresses to prove you own them</source>
+        <translation>Подписывайте сообщения BitCorn адресами чтобы подтвердить что это написали именно Вы</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitGreen addresses</source>
-        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными BitGreen адресами</translation>
+        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
+        <translation>Проверяйте сообщения чтобы убедиться что они подписаны конкретными BitCorn адресами</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -450,8 +450,8 @@
         <translation>Опции командной строки</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitGreen network</source>
-        <translation><numerusform>%n активное подключение к сети BitGreen</numerusform><numerusform>%n активных подключения к сети BitGreen</numerusform><numerusform>%n активных подключений к сети BitGreen</numerusform><numerusform>%n активных подключений к сети BitGreen</numerusform></translation>
+        <source>%n active connection(s) to BitCorn network</source>
+        <translation><numerusform>%n активное подключение к сети BitCorn</numerusform><numerusform>%n активных подключения к сети BitCorn</numerusform><numerusform>%n активных подключений к сети BitCorn</numerusform><numerusform>%n активных подключений к сети BitCorn</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -554,8 +554,8 @@
         <translation>Кошелек &lt;b&gt;зашифрован&lt;/b&gt; и сейчас &lt;b&gt;заблокирован&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitGreen can no longer continue safely and will quit.</source>
-        <translation>Произошла критическая ошибка. BitGreen больше не может продолжать безопасную работу и будет закрыт.</translation>
+        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
+        <translation>Произошла критическая ошибка. BitCorn больше не может продолжать безопасную работу и будет закрыт.</translation>
     </message>
 </context>
 <context>
@@ -797,8 +797,8 @@
         <translation>Использовать пользовательскую директорию данных</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen Core</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn Core</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -982,8 +982,8 @@
         <translation>Разрешить входящие соединения</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a SOCKS5 proxy.</source>
-        <translation>Подключится к сети BitGreen через SOCKS5 прокси.</translation>
+        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
+        <translation>Подключится к сети BitCorn через SOCKS5 прокси.</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1018,7 +1018,7 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
         <translation>Соединяться к Биткоин-сети через отдельные SOCKS5 прокси через Tor hidden services:</translation>
     </message>
     <message>
@@ -1214,7 +1214,7 @@
         <translation>Количество</translation>
     </message>
     <message>
-        <source>Enter a BitGreen address (e.g. %1)</source>
+        <source>Enter a BitCorn address (e.g. %1)</source>
         <translation>Введите биткоин-адрес (напр. %1)</translation>
     </message>
     <message>
@@ -1815,8 +1815,8 @@
         <translation>Истекло время ожидания запроса платежа</translation>
     </message>
     <message>
-        <source>Warning: Invalid BitGreen address</source>
-        <translation>Предупреждение: Неверный BitGreen адрес</translation>
+        <source>Warning: Invalid BitCorn address</source>
+        <translation>Предупреждение: Неверный BitCorn адрес</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2268,8 +2268,8 @@
         <translation>Невозможно запустить HTTP-сервер. Для получения более детальной информации необходимо обратиться к журналу отладки.</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen Core</translation>
+        <source>BitCorn Core</source>
+        <translation>BitCorn Core</translation>
     </message>
     <message>
         <source>The %s developers</source>

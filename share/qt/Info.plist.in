@@ -29,16 +29,16 @@
   <string>????</string>
 
   <key>CFBundleExecutable</key>
-  <string>BitGreen-Qt</string>
+  <string>BitCorn-Qt</string>
 
   <key>CFBundleName</key>
-  <string>BitGreen-Qt</string>
+  <string>BitCorn-Qt</string>
 
   <key>LSHasLocalizedDisplayName</key>
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.bitg.BitGreen-Qt</string>
+  <string>org.bitg.BitCorn-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.bitg.BitGreenPayment</string>
+      <string>org.bitg.BitCornPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>bitgreen</string>
@@ -60,7 +60,7 @@
       <key>UTTypeIdentifier</key>
       <string>org.bitg.paymentrequest</string>
       <key>UTTypeDescription</key>
-      <string>BitGreen payment request</string>
+      <string>BitCorn payment request</string>
       <key>UTTypeConformsTo</key>
       <array>
         <string>public.data</string>

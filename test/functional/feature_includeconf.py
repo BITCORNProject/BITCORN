@@ -16,9 +16,9 @@ Verify that:
 """
 import os
 
-from test_framework.test_framework import BitGreenTestFramework
+from test_framework.test_framework import BitCornTestFramework
 
-class IncludeConfTest(BitGreenTestFramework):
+class IncludeConfTest(BitCornTestFramework):
     def set_test_params(self):
         self.setup_clean_chain = False
         self.num_nodes = 1

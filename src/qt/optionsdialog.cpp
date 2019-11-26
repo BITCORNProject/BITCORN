@@ -90,7 +90,7 @@ OptionsDialog::OptionsDialog(QWidget *parent, bool enableWallet) :
     ui->bitgreenAtStartup->setToolTip(ui->bitgreenAtStartup->toolTip().arg(PACKAGE_NAME));
     ui->bitgreenAtStartup->setText(ui->bitgreenAtStartup->text().arg(PACKAGE_NAME));
 
-    ui->openBitGreenConfButton->setToolTip(ui->openBitGreenConfButton->toolTip().arg(PACKAGE_NAME));
+    ui->openBitCornConfButton->setToolTip(ui->openBitCornConfButton->toolTip().arg(PACKAGE_NAME));
 
     ui->lang->setToolTip(ui->lang->toolTip().arg(PACKAGE_NAME));
     ui->lang->addItem(QString("(") + tr("default") + QString(")"), QVariant(""));
@@ -262,7 +262,7 @@ void OptionsDialog::on_resetButton_clicked()
     }
 }
 
-void OptionsDialog::on_openBitGreenConfButton_clicked()
+void OptionsDialog::on_openBitCornConfButton_clicked()
 {
     /* explain the purpose of the config file */
     QMessageBox::information(this, tr("Configuration options"),
@@ -270,7 +270,7 @@ void OptionsDialog::on_openBitGreenConfButton_clicked()
            "Additionally, any command-line options will override this configuration file."));
 
     /* show an error if there was some problem opening the file */
-    if (!GUIUtil::openBitGreenConf())
+    if (!GUIUtil::openBitCornConf())
         QMessageBox::critical(this, tr("Error"), tr("The configuration file could not be opened."));
 }
 

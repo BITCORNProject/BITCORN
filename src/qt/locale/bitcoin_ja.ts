@@ -66,12 +66,12 @@
         <translation>受取用アドレス</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>これらは、あなたが知っている支払い送り先の BitGreen アドレスです。コインを送る前に、必ず金額と送金先アドレスを確認してください。</translation>
+        <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
+        <translation>これらは、あなたが知っている支払い送り先の BitCorn アドレスです。コインを送る前に、必ず金額と送金先アドレスを確認してください。</translation>
     </message>
     <message>
-        <source>These are your BitGreen addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
-        <translation>これらは支払いを受け取るための、あなたの BitGreen アドレスです。トランザクションごとに新しい受け取り用アドレスを作成することが推奨されます。</translation>
+        <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
+        <translation>これらは支払いを受け取るための、あなたの BitCorn アドレスです。トランザクションごとに新しい受け取り用アドレスを作成することが推奨されます。</translation>
     </message>
     <message>
         <source>&amp;Copy Address</source>
@@ -177,7 +177,7 @@
     </message>
     <message>
         <source>Warning: If you encrypt your wallet and lose your passphrase, you will &lt;b&gt;LOSE ALL OF YOUR BITCOINS&lt;/b&gt;!</source>
-        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを忘れてしまったら、&lt;b&gt;あなたの BitGreen はすべて失われます&lt;/b&gt;!</translation>
+        <translation>警告: もしもあなたのウォレットを暗号化してパスフレーズを忘れてしまったら、&lt;b&gt;あなたの BitCorn はすべて失われます&lt;/b&gt;!</translation>
     </message>
     <message>
         <source>Are you sure you wish to encrypt your wallet?</source>
@@ -189,7 +189,7 @@
     </message>
     <message>
         <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>暗号化処理を完了させるため %1 をいますぐ終了します。ウォレットを暗号化しても、コンピュータに感染したマルウェアなどによる BitGreen の盗難を完全に防ぐことはできないことにご注意ください。</translation>
+        <translation>暗号化処理を完了させるため %1 をいますぐ終了します。ウォレットを暗号化しても、コンピュータに感染したマルウェアなどによる BitCorn の盗難を完全に防ぐことはできないことにご注意ください。</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -358,8 +358,8 @@
         <translation>プロキシは &lt;b&gt;有効&lt;/b&gt;です: %1</translation>
     </message>
     <message>
-        <source>Send coins to a BitGreen address</source>
-        <translation>BitGreen アドレスにコインを送る</translation>
+        <source>Send coins to a BitCorn address</source>
+        <translation>BitCorn アドレスにコインを送る</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -382,8 +382,8 @@
         <translation>メッセージの検証... (&amp;V)</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>Wallet</source>
@@ -410,12 +410,12 @@
         <translation>あなたのウォレットの秘密鍵を暗号化します</translation>
     </message>
     <message>
-        <source>Sign messages with your BitGreen addresses to prove you own them</source>
-        <translation>BitGreen アドレスをあなたが所有していることを証明するために、そのアドレスでメッセージに署名してください</translation>
+        <source>Sign messages with your BitCorn addresses to prove you own them</source>
+        <translation>BitCorn アドレスをあなたが所有していることを証明するために、そのアドレスでメッセージに署名してください</translation>
     </message>
     <message>
-        <source>Verify messages to ensure they were signed with specified BitGreen addresses</source>
-        <translation>指定された BitGreen アドレスで署名されたことを確認するために、メッセージを検証してください</translation>
+        <source>Verify messages to ensure they were signed with specified BitCorn addresses</source>
+        <translation>指定された BitCorn アドレスで署名されたことを確認するために、メッセージを検証してください</translation>
     </message>
     <message>
         <source>&amp;File</source>
@@ -454,8 +454,8 @@
         <translation>コマンドラインオプション (&amp;C)</translation>
     </message>
     <message numerus="yes">
-        <source>%n active connection(s) to BitGreen network</source>
-        <translation><numerusform>BitGreen ネットワークへのアクティブな接続は %n 個</numerusform></translation>
+        <source>%n active connection(s) to BitCorn network</source>
+        <translation><numerusform>BitCorn ネットワークへのアクティブな接続は %n 個</numerusform></translation>
     </message>
     <message>
         <source>Indexing blocks on disk...</source>
@@ -498,8 +498,8 @@
         <translation>バージョンは最新です</translation>
     </message>
     <message>
-        <source>Show the %1 help message to get a list with possible BitGreen command-line options</source>
-        <translation>有効な BitGreen のコマンドライン オプションを見るために %1 のヘルプメッセージを表示します。</translation>
+        <source>Show the %1 help message to get a list with possible BitCorn command-line options</source>
+        <translation>有効な BitCorn のコマンドライン オプションを見るために %1 のヘルプメッセージを表示します。</translation>
     </message>
     <message>
         <source>%1 client</source>
@@ -574,8 +574,8 @@
         <translation>ウォレットは&lt;b&gt;暗号化されて、ロックされています&lt;/b&gt;</translation>
     </message>
     <message>
-        <source>A fatal error occurred. BitGreen can no longer continue safely and will quit.</source>
-        <translation>致命的なエラーが発生しました。BitGreen を安全に動作し続けることができないため終了します。</translation>
+        <source>A fatal error occurred. BitCorn can no longer continue safely and will quit.</source>
+        <translation>致命的なエラーが発生しました。BitCorn を安全に動作し続けることができないため終了します。</translation>
     </message>
 </context>
 <context>
@@ -764,8 +764,8 @@
         <translation>送金用アドレスを編集</translation>
     </message>
     <message>
-        <source>The entered address "%1" is not a valid BitGreen address.</source>
-        <translation>入力されたアドレス "%1" は無効な BitGreen アドレスです。</translation>
+        <source>The entered address "%1" is not a valid BitCorn address.</source>
+        <translation>入力されたアドレス "%1" は無効な BitCorn アドレスです。</translation>
     </message>
     <message>
         <source>Address "%1" already exists as a receiving address with label "%2" and so cannot be added as a sending address.</source>
@@ -861,8 +861,8 @@
         <translation>カスタムのデータ ディレクトリを使用:</translation>
     </message>
     <message>
-        <source>BitGreen</source>
-        <translation>BitGreen</translation>
+        <source>BitCorn</source>
+        <translation>BitCorn</translation>
     </message>
     <message>
         <source>At least %1 GB of data will be stored in this directory, and it will grow over time.</source>
@@ -873,8 +873,8 @@
         <translation>おおむね%1GBのデータがこのディレクトリに保存されます。</translation>
     </message>
     <message>
-        <source>%1 will download and store a copy of the BitGreen block chain.</source>
-        <translation>%1はBitGreenのブロックチェーンの複製をダウンロードし保存します。</translation>
+        <source>%1 will download and store a copy of the BitCorn block chain.</source>
+        <translation>%1はBitCornのブロックチェーンの複製をダウンロードし保存します。</translation>
     </message>
     <message>
         <source>The wallet will also be stored in this directory.</source>
@@ -905,11 +905,11 @@
     </message>
     <message>
         <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitgreen network, as detailed below.</source>
-        <translation>最近のトランザクションがまだ表示されていない可能性があります。そのため、ウォレットの残高が正しく表示されていないかもしれません。この情報は、ウォレットが BitGreen ネットワークへの同期が完了すると正確なものとなります。詳細は下記を参照してください。</translation>
+        <translation>最近のトランザクションがまだ表示されていない可能性があります。そのため、ウォレットの残高が正しく表示されていないかもしれません。この情報は、ウォレットが BitCorn ネットワークへの同期が完了すると正確なものとなります。詳細は下記を参照してください。</translation>
     </message>
     <message>
         <source>Attempting to spend bitgreens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>まだ表示されていないトランザクションが影響する BitGreen を使用しようとすると、ネットワークから認証を受けられません。</translation>
+        <translation>まだ表示されていないトランザクションが影響する BitCorn を使用しようとすると、ネットワークから認証を受けられません。</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1094,8 +1094,8 @@
         <translation>未検証のおつりを使用する (&amp;S)</translation>
     </message>
     <message>
-        <source>Automatically open the BitGreen client port on the router. This only works when your router supports UPnP and it is enabled.</source>
-        <translation>自動的にルーター上の BitGreen クライアントのポートを開きます。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動します。</translation>
+        <source>Automatically open the BitCorn client port on the router. This only works when your router supports UPnP and it is enabled.</source>
+        <translation>自動的にルーター上の BitCorn クライアントのポートを開きます。あなたのルーターが UPnP に対応していて、それが有効になっている場合に作動します。</translation>
     </message>
     <message>
         <source>Map port using &amp;UPnP</source>
@@ -1110,8 +1110,8 @@
         <translation>外部からの接続を許可する (&amp;G)</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a SOCKS5 proxy.</source>
-        <translation>SOCKS5 プロキシ経由でBitGreenネットワークに接続する</translation>
+        <source>Connect to the BitCorn network through a SOCKS5 proxy.</source>
+        <translation>SOCKS5 プロキシ経由でBitCornネットワークに接続する</translation>
     </message>
     <message>
         <source>&amp;Connect through SOCKS5 proxy (default proxy):</source>
@@ -1146,8 +1146,8 @@
         <translation>Tor</translation>
     </message>
     <message>
-        <source>Connect to the BitGreen network through a separate SOCKS5 proxy for Tor hidden services.</source>
-        <translation>Tor秘匿サービスを利用するため、独立なSOCKS5プロキシ経由でBitGreenネットワークに接続する</translation>
+        <source>Connect to the BitCorn network through a separate SOCKS5 proxy for Tor hidden services.</source>
+        <translation>Tor秘匿サービスを利用するため、独立なSOCKS5プロキシ経由でBitCornネットワークに接続する</translation>
     </message>
     <message>
         <source>&amp;Window</source>
@@ -1253,8 +1253,8 @@
         <translation>フォーム</translation>
     </message>
     <message>
-        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitGreen network after a connection is established, but this process has not completed yet.</source>
-        <translation>表示された情報は古いかもしれません。接続が確立されると、あなたのウォレットは BitGreen ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
+        <source>The displayed information may be out of date. Your wallet automatically synchronizes with the BitCorn network after a connection is established, but this process has not completed yet.</source>
+        <translation>表示された情報は古いかもしれません。接続が確立されると、あなたのウォレットは BitCorn ネットワークと自動的に同期しますが、このプロセスはまだ完了していません。</translation>
     </message>
     <message>
         <source>Watch-only:</source>
@@ -1329,7 +1329,7 @@
     </message>
     <message>
         <source>Cannot start bitgreen: click-to-pay handler</source>
-        <translation>BitGreen を起動できません: click-to-pay handler</translation>
+        <translation>BitCorn を起動できません: click-to-pay handler</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1348,8 +1348,8 @@
         <translation>支払いのアドレス「%1」は無効です</translation>
     </message>
     <message>
-        <source>URI cannot be parsed! This can be caused by an invalid BitGreen address or malformed URI parameters.</source>
-        <translation>URI を解析できません! これは無効な BitGreen アドレスあるいは不正な形式の URI パラメーターによって引き起こされる場合があります。</translation>
+        <source>URI cannot be parsed! This can be caused by an invalid BitCorn address or malformed URI parameters.</source>
+        <translation>URI を解析できません! これは無効な BitCorn アドレスあるいは不正な形式の URI パラメーターによって引き起こされる場合があります。</translation>
     </message>
     <message>
         <source>Payment request file handling</source>
@@ -1450,8 +1450,8 @@
         <translation>総額</translation>
     </message>
     <message>
-        <source>Enter a BitGreen address (e.g. %1)</source>
-        <translation>BitGreenアドレスを入力してください (例 %1)</translation>
+        <source>Enter a BitCorn address (e.g. %1)</source>
+        <translation>BitCornアドレスを入力してください (例 %1)</translation>
     </message>
     <message>
         <source>%1 d</source>
@@ -1898,8 +1898,8 @@
         <translation>メッセージ (&amp;M):</translation>
     </message>
     <message>
-        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitGreen network.</source>
-        <translation>支払リクエストが開始された時に表示される、支払リクエストに添える任意のメッセージです。注意：メッセージはBitGreenネットワークを通じて、支払と共に送られるわけではありません。</translation>
+        <source>An optional message to attach to the payment request, which will be displayed when the request is opened. Note: The message will not be sent with the payment over the BitCorn network.</source>
+        <translation>支払リクエストが開始された時に表示される、支払リクエストに添える任意のメッセージです。注意：メッセージはBitCornネットワークを通じて、支払と共に送られるわけではありません。</translation>
     </message>
     <message>
         <source>An optional label to associate with the new receiving address.</source>
@@ -2331,8 +2331,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation><numerusform>%n ブロック以内に検証が開始されると予想されます。</numerusform></translation>
     </message>
     <message>
-        <source>Warning: Invalid BitGreen address</source>
-        <translation>警告：無効なBitGreenアドレスです</translation>
+        <source>Warning: Invalid BitCorn address</source>
+        <translation>警告：無効なBitCornアドレスです</translation>
     </message>
     <message>
         <source>Warning: Unknown change address</source>
@@ -2374,8 +2374,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>これは通常の支払です。</translation>
     </message>
     <message>
-        <source>The BitGreen address to send the payment to</source>
-        <translation>支払の送金先BitGreenアドレス</translation>
+        <source>The BitCorn address to send the payment to</source>
+        <translation>支払の送金先BitCornアドレス</translation>
     </message>
     <message>
         <source>Alt+A</source>
@@ -2422,8 +2422,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>このアドレスに対するラベルを入力することで、使用済みアドレスの一覧に追加することができます</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitGreen network.</source>
-        <translation>bitgreen: URIに添付されていたメッセージです。これは参照用としてトランザクションとともに保存されます。注意：このメッセージはBitGreenネットワークを通して送信されるわけではありません。</translation>
+        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
+        <translation>bitgreen: URIに添付されていたメッセージです。これは参照用としてトランザクションとともに保存されます。注意：このメッセージはBitCornネットワークを通して送信されるわけではありません。</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2471,8 +2471,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>あなたの所有しているアドレスによりメッセージや合意書に署名をすることで、それらアドレスに対して送られたビットコインを受け取ることができることを証明できます。フィッシング攻撃により不正にあなたの識別情報を署名させられてしまうことを防ぐために、不明確なものやランダムなものに対して署名しないよう注意してください。あなたが同意した、よく詳細の記された文言にのみ署名するようにしてください。</translation>
     </message>
     <message>
-        <source>The BitGreen address to sign the message with</source>
-        <translation>メッセージを署名するBitGreenアドレス</translation>
+        <source>The BitCorn address to sign the message with</source>
+        <translation>メッセージを署名するBitCornアドレス</translation>
     </message>
     <message>
         <source>Choose previously used address</source>
@@ -2503,8 +2503,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>現在の署名をシステムのクリップボードにコピーする</translation>
     </message>
     <message>
-        <source>Sign the message to prove you own this BitGreen address</source>
-        <translation>この BitGreen アドレスを所有していることを証明するためにメッセージに署名</translation>
+        <source>Sign the message to prove you own this BitCorn address</source>
+        <translation>この BitCorn アドレスを所有していることを証明するためにメッセージに署名</translation>
     </message>
     <message>
         <source>Sign &amp;Message</source>
@@ -2527,12 +2527,12 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>受取人のアドレスとメッセージ（改行やスペース、タブなども完全に一致するよう注意してください）および署名を以下に入力し、メッセージの署名を検証してください。中間者攻撃により騙されるのを防ぐため、署名対象のメッセージに書かれていること以上の意味を署名から読み取ろうとしないよう注意してください。これは署名作成者がこのアドレスで受け取ったことを証明するだけであり、トランザクションの送信権限を証明するものではないことに注意してください！</translation>
     </message>
     <message>
-        <source>The BitGreen address the message was signed with</source>
-        <translation>メッセージの署名に使われたBitGreenアドレス</translation>
+        <source>The BitCorn address the message was signed with</source>
+        <translation>メッセージの署名に使われたBitCornアドレス</translation>
     </message>
     <message>
-        <source>Verify the message to ensure it was signed with the specified BitGreen address</source>
-        <translation>指定された BitGreen アドレスで署名されたことを保証するメッセージを検証</translation>
+        <source>Verify the message to ensure it was signed with the specified BitCorn address</source>
+        <translation>指定された BitCorn アドレスで署名されたことを保証するメッセージを検証</translation>
     </message>
     <message>
         <source>Verify &amp;Message</source>
@@ -3180,8 +3180,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>HTTPサーバを開始できませんでした。詳細はデバッグログをご確認ください。</translation>
     </message>
     <message>
-        <source>BitGreen Core</source>
-        <translation>BitGreen のコア</translation>
+        <source>BitCorn Core</source>
+        <translation>BitCorn のコア</translation>
     </message>
     <message>
         <source>The %s developers</source>

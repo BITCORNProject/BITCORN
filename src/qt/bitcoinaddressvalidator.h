@@ -20,7 +20,7 @@ public:
     State validate(QString &input, int &pos) const;
 };
 
-/** BitGreen address widget validator, checks for a valid bitgreen address.
+/** BitCorn address widget validator, checks for a valid bitgreen address.
  */
 class BitcoinAddressCheckValidator : public QValidator
 {

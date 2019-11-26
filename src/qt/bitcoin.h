@@ -26,14 +26,14 @@ class Handler;
 class Node;
 } // namespace interfaces
 
-/** Class encapsulating BitGreen Core startup and shutdown.
+/** Class encapsulating BitCorn Core startup and shutdown.
  * Allows running startup and shutdown in a different thread from the UI thread.
  */
-class BitGreenCore: public QObject
+class BitCornCore: public QObject
 {
     Q_OBJECT
 public:
-    explicit BitGreenCore(interfaces::Node& node);
+    explicit BitCornCore(interfaces::Node& node);
 
 public Q_SLOTS:
     void initialize();
@@ -51,13 +51,13 @@ private:
     interfaces::Node& m_node;
 };
 
-/** Main BitGreen application object */
-class BitGreenApplication: public QApplication
+/** Main BitCorn application object */
+class BitCornApplication: public QApplication
 {
     Q_OBJECT
 public:
-    explicit BitGreenApplication(interfaces::Node& node, int &argc, char **argv);
-    ~BitGreenApplication();
+    explicit BitCornApplication(interfaces::Node& node, int &argc, char **argv);
+    ~BitCornApplication();
 
 #ifdef ENABLE_WALLET
     /// Create payment server

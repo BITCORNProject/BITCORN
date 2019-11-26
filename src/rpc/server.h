@@ -116,7 +116,7 @@ public:
 };
 
 /**
- * BitGreen RPC command dispatcher.
+ * BitCorn RPC command dispatcher.
  */
 class CRPCTable
 {

@@ -10,7 +10,7 @@
 
 /**
  * CBaseChainParams defines the base parameters (shared between bitgreen-cli and bitgreend)
- * of a given instance of the BitGreen system.
+ * of a given instance of the BitCorn system.
  */
 class CBaseChainParams
 {
