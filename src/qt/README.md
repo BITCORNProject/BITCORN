@@ -60,7 +60,7 @@ Represents the view to a single wallet.
 
 * UI elements like BitcoinAmountField, which inherit from QWidget.
 * `bitcornstrings.cpp`: automatically generated
-* `bitcoinunits.(h/cpp)`: BITG / mBITG / etc handling
+* `bitcoinunits.(h/cpp)`: CORN / mCORN / etc handling
 * `callback.h`
 * `guiconstants.h`: UI colors, app name, etc
 * `guiutil.h`: several helper functions

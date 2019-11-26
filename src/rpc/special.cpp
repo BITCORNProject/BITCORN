@@ -307,7 +307,7 @@ void protx_register_fund_help(const CWallet* pwallet)
 {
     throw std::runtime_error(
         RPCHelpMan{"protx register_fund",
-            "\nCreates, funds and sends a ProTx to the network. The resulting transaction will move 2500 BITG\n"
+            "\nCreates, funds and sends a ProTx to the network. The resulting transaction will move 2500 CORN\n"
             "to the address specified by collateralAddress and will then function as the collateral of your\n"
             "masternode.\n",
             {

@@ -846,7 +846,7 @@ static bool AcceptToMemoryPoolWorker(const CChainParams& chainparams, CTxMemPool
         // Remove conflicting transactions from the mempool
         for (CTxMemPool::txiter it : allConflicting)
         {
-            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s BITG additional fees, %d delta bytes\n",
+            LogPrint(BCLog::MEMPOOL, "replacing tx %s with %s for %s CORN additional fees, %d delta bytes\n",
                     it->GetTx().GetHash().ToString(),
                     hash.ToString(),
                     FormatMoney(nModifiedFees - nConflictingFees),
@@ -1069,7 +1069,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     /*
     1 - old chain supply: 9,851,721
     <= 7500 - zero rewards
-    <= 175000 - 10 BITG
+    <= 175000 - 10 CORN
     > 175000 - halving every 525,600 blocks (~2 years)
     */
 

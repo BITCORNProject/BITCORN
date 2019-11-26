@@ -55,9 +55,9 @@ public:
      */
     enum Unit
     {
-        BITG,
-        mBITG,
-        uBITG,
+        CORN,
+        mCORN,
+        uCORN,
         SAT
     };
 
