@@ -17,7 +17,7 @@ import os
 
 EXCLUDE = [
     # auto generated:
-    'src/qt/bitgreenstrings.cpp',
+    'src/qt/bitcornstrings.cpp',
     'src/chainparamsseeds.h',
     # other external copyrights:
     'src/tinyformat.h',
@@ -270,7 +270,7 @@ Usage:
     $ ./copyright_header.py report <base_directory> [verbose]
 
 Arguments:
-    <base_directory> - The base directory of a bitgreen source code repository.
+    <base_directory> - The base directory of a bitcorn source code repository.
     [verbose] - Includes a list of every file of each subcategory in the report.
 """
 
@@ -423,7 +423,7 @@ Usage:
     $ ./copyright_header.py update <base_directory>
 
 Arguments:
-    <base_directory> - The base directory of a bitgreen source code repository.
+    <base_directory> - The base directory of a bitcorn source code repository.
 """
 
 def print_file_action_message(filename, action):
@@ -545,7 +545,7 @@ Usage:
     $ ./copyright_header.py insert <file>
 
 Arguments:
-    <file> - A source file in the bitgreen repository.
+    <file> - A source file in the bitcorn repository.
 """
 
 def insert_cmd(argv):

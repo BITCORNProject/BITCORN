@@ -188,8 +188,8 @@
         <translation>Πορτοφόλι κρυπτογραφήθηκε</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 θα κλείσει τώρα για να τελειώσει η διαδικασία κρυπτογράφησης. Να θυμάστε ότι κρυπτογραφόντας το πορτοφόλι σας δεν μπορείτε να προστατεύσετε πλήρως τα bitgreen σας απο κλοπή μέσω malware που μπορεί να προσβάλει τον υπολογιστή σας.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <translation>%1 θα κλείσει τώρα για να τελειώσει η διαδικασία κρυπτογράφησης. Να θυμάστε ότι κρυπτογραφόντας το πορτοφόλι σας δεν μπορείτε να προστατεύσετε πλήρως τα bitcorn σας απο κλοπή μέσω malware που μπορεί να προσβάλει τον υπολογιστή σας.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -355,7 +355,7 @@
     </message>
     <message>
         <source>Send coins to a BitCorn address</source>
-        <translation>Στείλε νομίσματα σε μια διεύθυνση bitgreen</translation>
+        <translation>Στείλε νομίσματα σε μια διεύθυνση bitcorn</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -430,8 +430,8 @@
         <translation>Εργαλειοθήκη καρτελών</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις bitgreen: )</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Αίτηση πληρωμών (δημιουργεί QR codes και διευθύνσεις bitcorn: )</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -442,8 +442,8 @@
         <translation>Προβολή της λίστας των χρησιμοποιημένων διευθύνσεων και ετικετών λήψεως</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Άνοιγμα bitgreen: URI αίτησης πληρωμής</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Άνοιγμα bitcorn: URI αίτησης πληρωμής</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1100,8 +1100,8 @@
         <translation>Σφάλμα αίτησης πληρωμής</translation>
     </message>
     <message>
-        <source>Cannot start bitgreen: click-to-pay handler</source>
-        <translation>Δεν είναι δυνατή η εκκίνηση του bitgreen: χειριστής click-to-pay</translation>
+        <source>Cannot start bitcorn: click-to-pay handler</source>
+        <translation>Δεν είναι δυνατή η εκκίνηση του bitcorn: χειριστής click-to-pay</translation>
     </message>
     <message>
         <source>URI handling</source>
@@ -1978,7 +1978,7 @@
     </message>
 </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>BitCorn Core</source>
         <translation>BitCorn Core</translation>

@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <qt/paymentserver.h>
@@ -48,15 +48,15 @@
 #include <QUrlQuery>
 
 const int BITCORN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITCORN_IPC_PREFIX("bitgreen:");
+const QString BITCORN_IPC_PREFIX("bitcorn:");
 #ifdef ENABLE_BIP70
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
 const char* BIP70_MESSAGE_PAYMENTREQUEST = "PaymentRequest";
 // BIP71 payment protocol media types
-const char* BIP71_MIMETYPE_PAYMENT = "application/bitgreen-payment";
-const char* BIP71_MIMETYPE_PAYMENTACK = "application/bitgreen-paymentack";
-const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/bitgreen-paymentrequest";
+const char* BIP71_MIMETYPE_PAYMENT = "application/bitcorn-payment";
+const char* BIP71_MIMETYPE_PAYMENTACK = "application/bitcorn-paymentack";
+const char* BIP71_MIMETYPE_PAYMENTREQUEST = "application/bitcorn-paymentrequest";
 #endif
 
 //
@@ -101,11 +101,11 @@ void PaymentServer::ipcParseCommandLine(interfaces::Node& node, int argc, char* 
         if (arg.startsWith("-"))
             continue;
 
-        // If the bitgreen: URI contains a payment request, we are not able to detect the
+        // If the bitcorn: URI contains a payment request, we are not able to detect the
         // network as that would require fetching and parsing the payment request.
         // That means clicking such an URI which contains a testnet payment request
         // will start a mainnet instance and throw a "wrong network" error.
-        if (arg.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitgreen: URI
+        if (arg.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcorn: URI
         {
             savedPaymentRequests.append(arg);
 
@@ -207,7 +207,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
 #endif
 
     // Install global event filter to catch QFileOpenEvents
-    // on Mac: sent when you click bitgreen: links
+    // on Mac: sent when you click bitcorn: links
     // other OSes: helpful when dealing with payment request files
     if (parent)
         parent->installEventFilter(this);
@@ -224,7 +224,7 @@ PaymentServer::PaymentServer(QObject* parent, bool startLocalServer) :
         if (!uriServer->listen(name)) {
             // constructor is called early in init, so don't use "Q_EMIT message()" here
             QMessageBox::critical(nullptr, tr("Payment request error"),
-                tr("Cannot start bitgreen: click-to-pay handler"));
+                tr("Cannot start bitcorn: click-to-pay handler"));
         }
         else {
             connect(uriServer, &QLocalServer::newConnection, this, &PaymentServer::handleURIConnection);
@@ -243,7 +243,7 @@ PaymentServer::~PaymentServer()
 }
 
 //
-// OSX-specific way of handling bitgreen: URIs and PaymentRequest mime types.
+// OSX-specific way of handling bitcorn: URIs and PaymentRequest mime types.
 // Also used by paymentservertests.cpp and when opening a payment request file
 // via "Open URI..." menu entry.
 //
@@ -284,12 +284,12 @@ void PaymentServer::handleURIOrFile(const QString& s)
         return;
     }
 
-    if (s.startsWith("bitgreen://", Qt::CaseInsensitive))
+    if (s.startsWith("bitcorn://", Qt::CaseInsensitive))
     {
-        Q_EMIT message(tr("URI handling"), tr("'bitgreen://' is not a valid URI. Use 'bitgreen:' instead."),
+        Q_EMIT message(tr("URI handling"), tr("'bitcorn://' is not a valid URI. Use 'bitcorn:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
-    else if (s.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitgreen: URI
+    else if (s.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitcorn: URI
     {
         QUrlQuery uri((QUrl(s)));
 #ifdef ENABLE_BIP70
@@ -506,7 +506,7 @@ void PaymentServer::initNetManager()
         return;
     delete netManager;
 
-    // netManager is used to fetch paymentrequests given in bitgreen: URIs
+    // netManager is used to fetch paymentrequests given in bitcorn: URIs
     netManager = new QNetworkAccessManager(this);
 
     QNetworkProxy proxy;
@@ -591,7 +591,7 @@ bool PaymentServer::processPaymentRequest(const PaymentRequestPlus& request, Sen
             addresses.append(QString::fromStdString(EncodeDestination(dest)));
         }
         else if (!recipient.authenticatedMerchant.isEmpty()) {
-            // Unauthenticated payment requests to custom bitgreen addresses are not supported
+            // Unauthenticated payment requests to custom bitcorn addresses are not supported
             // (there is no good way to tell the user where they are paying in a way they'd
             // have a chance of understanding).
             Q_EMIT message(tr("Payment request rejected"),

@@ -35,7 +35,7 @@ class Wallet;
 //! estimate fees, and submit transactions.
 //!
 //! TODO: Current chain methods are too low level, exposing too much of the
-//! internal workings of the bitgreen node, and not being very convenient to use.
+//! internal workings of the bitcorn node, and not being very convenient to use.
 //! Chain methods should be cleaned up and simplified over time. Examples:
 //!
 //! * The Chain::lock() method, which lets clients delay chain tip updates

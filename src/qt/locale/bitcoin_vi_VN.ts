@@ -63,7 +63,7 @@
     </message>
     <message>
         <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Đây là các địa chỉ BitCorn để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ bitgreen của người nhận.</translation>
+        <translation>Đây là các địa chỉ BitCorn để gửi bạn gửi tiền. Trước khi gửi bạn nên kiểm tra lại số tiền bạn muốn gửi và địa chỉ bitcorn của người nhận.</translation>
     </message>
     <message>
         <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -407,7 +407,7 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Thanh công cụ (toolbar)</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
         <translation>Yêu cầu thanh toán(tạo mã QR và địa chỉ BitCorn: URLs)</translation>
     </message>
     <message>
@@ -419,8 +419,8 @@ Ví của bạn chưa được mã hóa.</translation>
         <translation>Hiện thỉ danh sách các địa chỉ và nhãn đã dùng để nhận.</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Mở bitgreen:URL hoặc yêu cầu thanh toán</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Mở bitcorn:URL hoặc yêu cầu thanh toán</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1201,7 +1201,7 @@ Ví của bạn chưa được mã hóa.</translation>
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>BitCorn Core</source>
         <translation>BitCorn Core</translation>

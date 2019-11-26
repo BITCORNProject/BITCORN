@@ -11,7 +11,7 @@
 #include <mutex>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <boost/test/unit_test.hpp>

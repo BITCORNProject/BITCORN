@@ -188,8 +188,8 @@
         <translation>Wallet encrypted</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <translation>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -434,8 +434,8 @@
         <translation>Tabs toolbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Request payments (generates QR codes and bitgreen: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Request payments (generates QR codes and bitcorn: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,8 +446,8 @@
         <translation>Show the list of used receiving addresses and labels</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Open a bitgreen: URI or payment request</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Open a bitcorn: URI or payment request</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -904,11 +904,11 @@
         <translation>Form</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitgreen network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
         <translation>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronising with the BitCorn network, as detailed below.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitgreens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation>Attempting to spend BitCorns that are affected by not-yet-displayed transactions will not be accepted by the network.</translation>
     </message>
     <message>
@@ -1328,7 +1328,7 @@
         <translation>Payment request error</translation>
     </message>
     <message>
-        <source>Cannot start bitgreen: click-to-pay handler</source>
+        <source>Cannot start bitcorn: click-to-pay handler</source>
         <translation>Cannot start BitCorn: click-to-pay handler</translation>
     </message>
     <message>
@@ -1336,8 +1336,8 @@
         <translation>URI handling</translation>
     </message>
     <message>
-        <source>'bitgreen://' is not a valid URI. Use 'bitgreen:' instead.</source>
-        <translation>'bitgreen://' is not a valid URI. Use 'bitgreen:' instead.</translation>
+        <source>'bitcorn://' is not a valid URI. Use 'bitcorn:' instead.</source>
+        <translation>'bitcorn://' is not a valid URI. Use 'bitcorn:' instead.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2151,8 +2151,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Hide</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</source>
+        <translation>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2394,8 +2394,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Remove this entry</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitgreens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>The fee will be deducted from the amount being sent. The recipient will receive less bitgreens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2422,8 +2422,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>Enter a label for this address to add it to the list of used addresses</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
-        <translation>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</translation>
+        <source>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
+        <translation>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2467,8 +2467,8 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
         <translation>&amp;Sign Message</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitgreens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>You can sign messages/agreements with your addresses to prove you can receive bitgreens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive bitcorns sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>You can sign messages/agreements with your addresses to prove you can receive bitcorns sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</translation>
     </message>
     <message>
         <source>The BitCorn address to sign the message with</source>
@@ -3150,7 +3150,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of "100 satoshis p
     </message>
 </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distributed under the MIT software license, see the accompanying file %s or %s.</translation>

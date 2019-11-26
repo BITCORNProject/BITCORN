@@ -210,8 +210,8 @@
         <translation>Barra de ferramentas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Solicitar pagos (xenera códigos QR e bitgreen: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Solicitar pagos (xenera códigos QR e bitcorn: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -222,8 +222,8 @@
         <translation>Amosar a listaxe de etiquetas e direccións para recibir empregadas</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Abrir un bitgreen: URI ou solicitude de pago</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Abrir un bitcorn: URI ou solicitude de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -998,7 +998,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>BitCorn Core</source>
         <translation>Core de BitCorn</translation>

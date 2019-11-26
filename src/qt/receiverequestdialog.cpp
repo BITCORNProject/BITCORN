@@ -13,7 +13,7 @@
 #include <QPixmap>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h> /* for USE_QRCODE */
+#include <config/bitcorn-config.h> /* for USE_QRCODE */
 #endif
 
 ReceiveRequestDialog::ReceiveRequestDialog(QWidget *parent) :

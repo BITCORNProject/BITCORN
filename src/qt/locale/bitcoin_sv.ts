@@ -67,7 +67,7 @@
     </message>
     <message>
         <source>These are your BitCorn addresses for sending payments. Always check the amount and the receiving address before sending coins.</source>
-        <translation>Detta är dina BitCorn-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar bitgreen.</translation>
+        <translation>Detta är dina BitCorn-adresser för att skicka betalningar. Kontrollera alltid summan och den mottagande adressen innan du skickar bitcorn.</translation>
     </message>
     <message>
         <source>These are your BitCorn addresses for receiving payments. It is recommended to use a new receiving address for each transaction.</source>
@@ -189,7 +189,7 @@ Var vänlig och försök igen.</translation>
         <translation>Plånbok krypterad</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
         <translation>%1 kommer nu att stänga ner för att slutföra krypteringen. Tänk på att en krypterad plånbok inte skyddar mot stöld om din dator är infekterad med en keylogger.</translation>
     </message>
     <message>
@@ -360,7 +360,7 @@ Var vänlig och försök igen.</translation>
     </message>
     <message>
         <source>Send coins to a BitCorn address</source>
-        <translation>Skicka bitgreen till en BitCorn-adress</translation>
+        <translation>Skicka bitcorn till en BitCorn-adress</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -435,8 +435,8 @@ Var vänlig och försök igen.</translation>
         <translation>Verktygsfält för tabbar</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Begär betalningar (skapar QR-koder och bitgreen: -URIer)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Begär betalningar (skapar QR-koder och bitcorn: -URIer)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -447,8 +447,8 @@ Var vänlig och försök igen.</translation>
         <translation>Visa listan med använda mottagningsadresser och etiketter</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Öppna en bitgreen: URI eller betalningsbegäran</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Öppna en bitcorn: URI eller betalningsbegäran</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -905,12 +905,12 @@ Var vänlig och försök igen.</translation>
         <translation>Formulär</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitgreen network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
         <translation>Nyligen gjorda transaktioner visas inte korrekt och därför kan din plånboks saldo visas felaktigt. Denna information kommer att visas korrekt så snart din plånbok har synkroniserat klart med BitCorn-nätverket enligt detaljer nedan.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitgreens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Att försöka spendera bitgreen som påverkas av transaktioner som ännu inte visas kommer inte accepteras av nätverket. </translation>
+        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Att försöka spendera bitcorn som påverkas av transaktioner som ännu inte visas kommer inte accepteras av nätverket. </translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1329,16 +1329,16 @@ Var vänlig och försök igen.</translation>
         <translation>Fel vid betalningsbegäran</translation>
     </message>
     <message>
-        <source>Cannot start bitgreen: click-to-pay handler</source>
-        <translation>Kan inte starta bitgreen: klicka-och-betala hanteraren</translation>
+        <source>Cannot start bitcorn: click-to-pay handler</source>
+        <translation>Kan inte starta bitcorn: klicka-och-betala hanteraren</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>URI-hantering</translation>
     </message>
     <message>
-        <source>'bitgreen://' is not a valid URI. Use 'bitgreen:' instead.</source>
-        <translation>'bitgreen://' är inte en accepterad URI. Använd 'bitgreen:' istället.</translation>
+        <source>'bitcorn://' is not a valid URI. Use 'bitcorn:' instead.</source>
+        <translation>'bitcorn://' är inte en accepterad URI. Använd 'bitcorn:' istället.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2152,8 +2152,8 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Göm</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
-        <translation>Att bara betala den minsta avgiften är helt ok så länge transaktionsvolymen är mindre än ledigt utrymme i blocken. Men tänk på att det kan bli en en transaktion som aldrig bekräftas om efterfrågan på bitgreen-transaktioner är större än vad nätverket kan hantera.</translation>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</source>
+        <translation>Att bara betala den minsta avgiften är helt ok så länge transaktionsvolymen är mindre än ledigt utrymme i blocken. Men tänk på att det kan bli en en transaktion som aldrig bekräftas om efterfrågan på bitcorn-transaktioner är större än vad nätverket kan hantera.</translation>
     </message>
     <message>
         <source>(read the tooltip)</source>
@@ -2395,8 +2395,8 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Radera denna post</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitgreens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Avgiften dras från beloppet som skickas. Mottagaren kommer att ta emot mindre bitgreen än du angivit i beloppsfältet. Om flera mottagare valts kommer avgiften att fördelas jämt.</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Avgiften dras från beloppet som skickas. Mottagaren kommer att ta emot mindre bitcorn än du angivit i beloppsfältet. Om flera mottagare valts kommer avgiften att fördelas jämt.</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2423,8 +2423,8 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>Ange en etikett för denna adress för att lägga till den i listan med använda adresser</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
-        <translation>Ett meddelande som bifogades bitgreen: -URIn och som lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över BitCorn-nätverket.</translation>
+        <source>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
+        <translation>Ett meddelande som bifogades bitcorn: -URIn och som lagras med transaktionen som referens. NB: Meddelandet kommer inte att sändas över BitCorn-nätverket.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2468,8 +2468,8 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
         <translation>&amp;Signera Meddelande</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitgreens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Du kan signera meddelanden/avtal med dina adresser för att bevisa att du kan ta emot bitgreen som skickats till dem. Var försiktig så du inte signerar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att signera över din identitet till dem. Signera endast väldetaljerade meddelanden som du godkänner.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive bitcorns sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Du kan signera meddelanden/avtal med dina adresser för att bevisa att du kan ta emot bitcorn som skickats till dem. Var försiktig så du inte signerar något oklart eller konstigt, eftersom phishing-angrepp kan försöka få dig att signera över din identitet till dem. Signera endast väldetaljerade meddelanden som du godkänner.</translation>
     </message>
     <message>
         <source>The BitCorn address to sign the message with</source>
@@ -3151,7 +3151,7 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     </message>
 </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distribuerad under MIT mjukvarulicens, se den bifogade filen %s eller %s</translation>
@@ -3630,7 +3630,7 @@ Notera: Då avgiften beräknas per byte kommer en avgift på 50 satoshi tas ut f
     </message>
     <message>
         <source>Insufficient funds</source>
-        <translation>Otillräckligt med bitgreens</translation>
+        <translation>Otillräckligt med bitcorns</translation>
     </message>
     <message>
         <source>Can't generate a change-address key. Private keys are disabled for this wallet.</source>

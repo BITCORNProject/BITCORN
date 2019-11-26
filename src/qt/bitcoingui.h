@@ -7,7 +7,7 @@
 #define BITCORN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <qt/optionsdialog.h>
@@ -82,7 +82,7 @@ public:
 
 #ifdef ENABLE_WALLET
     /** Set the wallet model.
-        The wallet model represents a bitgreen wallet, and offers access to the list of transactions, address book and sending
+        The wallet model represents a bitcorn wallet, and offers access to the list of transactions, address book and sending
         functionality.
     */
     void addWallet(WalletModel* walletModel);

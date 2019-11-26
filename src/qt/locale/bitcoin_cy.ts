@@ -176,8 +176,8 @@
         <translation>Waled Wedi Amgryptio</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>Bydd %1 nawr yn gorffen y broses amgryptio. Cofiwch nad ydy amgryptio eich waled yn llawn amddiffyn eich bitgreens rhag cael eu dwyn gan afiechyd yn heintio eich cyfrifiadur.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <translation>Bydd %1 nawr yn gorffen y broses amgryptio. Cofiwch nad ydy amgryptio eich waled yn llawn amddiffyn eich bitcorns rhag cael eu dwyn gan afiechyd yn heintio eich cyfrifiadur.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -406,8 +406,8 @@
         <translation>Bar offer tabiau</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Gofyn taliadau (creu côd QR a bitgreen: URIs)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Gofyn taliadau (creu côd QR a bitcorn: URIs)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -418,7 +418,7 @@
         <translation>Dangos rhestr o gyfeiriadau derbyn a labelau wedi eu defnyddio</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
+        <source>Open a bitcorn: URI or payment request</source>
         <translation>Agor BitCorn: URI neu ofyn taliad</translation>
     </message>
     <message>
@@ -1036,7 +1036,7 @@
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>BitCorn Core</source>
         <translation>Craidd BitCorn</translation>

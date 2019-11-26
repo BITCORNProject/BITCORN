@@ -18,7 +18,7 @@ class ConfArgsTest(BitCornTestFramework):
         # Assume node is stopped
 
         inc_conf_file_path = os.path.join(self.nodes[0].datadir, 'include.conf')
-        with open(os.path.join(self.nodes[0].datadir, 'bitgreen.conf'), 'a', encoding='utf-8') as conf:
+        with open(os.path.join(self.nodes[0].datadir, 'bitcorn.conf'), 'a', encoding='utf-8') as conf:
             conf.write('includeconf={}\n'.format(inc_conf_file_path))
 
         self.nodes[0].assert_start_raises_init_error(
@@ -61,7 +61,7 @@ class ConfArgsTest(BitCornTestFramework):
         self.nodes[0].assert_start_raises_init_error(expected_msg='Error: Error reading configuration file: parse error on line 4, using # in rpcpassword can be ambiguous and should be avoided')
 
         inc_conf_file2_path = os.path.join(self.nodes[0].datadir, 'include2.conf')
-        with open(os.path.join(self.nodes[0].datadir, 'bitgreen.conf'), 'a', encoding='utf-8') as conf:
+        with open(os.path.join(self.nodes[0].datadir, 'bitcorn.conf'), 'a', encoding='utf-8') as conf:
             conf.write('includeconf={}\n'.format(inc_conf_file2_path))
 
         with open(inc_conf_file_path, 'w', encoding='utf-8') as conf:
@@ -100,7 +100,7 @@ class ConfArgsTest(BitCornTestFramework):
         self.nodes[0].assert_start_raises_init_error(['-datadir=' + new_data_dir], 'Error: Specified data directory "' + new_data_dir + '" does not exist.')
 
         # Check that using non-existent datadir in conf file fails
-        conf_file = os.path.join(default_data_dir, "bitgreen.conf")
+        conf_file = os.path.join(default_data_dir, "bitcorn.conf")
 
         # datadir needs to be set before [regtest] section
         conf_file_contents = open(conf_file, encoding='utf8').read()
@@ -108,12 +108,12 @@ class ConfArgsTest(BitCornTestFramework):
             f.write("datadir=" + new_data_dir + "\n")
             f.write(conf_file_contents)
 
-        # Temporarily disabled, because this test would access the user's home dir (~/.bitgreen)
+        # Temporarily disabled, because this test would access the user's home dir (~/.bitcorn)
         #self.nodes[0].assert_start_raises_init_error(['-conf=' + conf_file], 'Error reading configuration file: specified data directory "' + new_data_dir + '" does not exist.')
 
         # Create the directory and ensure the config file now works
         os.mkdir(new_data_dir)
-        # Temporarily disabled, because this test would access the user's home dir (~/.bitgreen)
+        # Temporarily disabled, because this test would access the user's home dir (~/.bitcorn)
         #self.start_node(0, ['-conf='+conf_file, '-wallet=w1'])
         #self.stop_node(0)
         #assert os.path.exists(os.path.join(new_data_dir, 'regtest', 'blocks'))

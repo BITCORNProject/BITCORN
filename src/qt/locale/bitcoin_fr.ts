@@ -188,8 +188,8 @@
         <translation>Le porte-monnaie est chiffré</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 va maintenant se fermer pour terminer le processus de chiffrement. Souvenez-vous que le chiffrement de votre porte-monnaie ne peut pas protéger entièrement vos bitgreens contre le vol par des logiciels malveillants qui infecteraient votre ordinateur.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <translation>%1 va maintenant se fermer pour terminer le processus de chiffrement. Souvenez-vous que le chiffrement de votre porte-monnaie ne peut pas protéger entièrement vos bitcorns contre le vol par des logiciels malveillants qui infecteraient votre ordinateur.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -434,8 +434,8 @@
         <translation>Barre d’outils des onglets</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Demander des paiements (génère des codes QR et des URI bitgreen:)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Demander des paiements (génère des codes QR et des URI bitcorn:)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -446,8 +446,8 @@
         <translation>Afficher la liste d’adresses de réception et d’étiquettes utilisées</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Ouvrir une URI bitgreen: ou une demande de paiement</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Ouvrir une URI bitcorn: ou une demande de paiement</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -904,12 +904,12 @@
         <translation>Formulaire</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitgreen network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
         <translation>Les transactions récentes ne sont peut-être pas encore visibles et par conséquent le solde de votre porte-monnaie est peut-être erroné. Cette information sera juste quand votre porte-monnaie aura fini de se synchroniser avec le réseau BitCorn, comme décrit ci-dessous.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitgreens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>Toute tentative de dépense de bitgreens affectés par des transactions qui ne sont pas encore affichées ne sera pas acceptée par le réseau.</translation>
+        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>Toute tentative de dépense de bitcorns affectés par des transactions qui ne sont pas encore affichées ne sera pas acceptée par le réseau.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -1328,16 +1328,16 @@
         <translation>Erreur de demande de paiement</translation>
     </message>
     <message>
-        <source>Cannot start bitgreen: click-to-pay handler</source>
-        <translation>Impossible de démarrer le gestionnaire de cliquer-pour-payer bitgreen:</translation>
+        <source>Cannot start bitcorn: click-to-pay handler</source>
+        <translation>Impossible de démarrer le gestionnaire de cliquer-pour-payer bitcorn:</translation>
     </message>
     <message>
         <source>URI handling</source>
         <translation>Gestion des URI</translation>
     </message>
     <message>
-        <source>'bitgreen://' is not a valid URI. Use 'bitgreen:' instead.</source>
-        <translation>'bitgreen://' n’est pas une URI valide. Utilisez plutôt 'bitgreen:'.</translation>
+        <source>'bitcorn://' is not a valid URI. Use 'bitcorn:' instead.</source>
+        <translation>'bitcorn://' n’est pas une URI valide. Utilisez plutôt 'bitcorn:'.</translation>
     </message>
     <message>
         <source>Payment request fetch URL is invalid: %1</source>
@@ -2151,7 +2151,7 @@ Note : Les frais étant calculés par octet, des frais de « 100 satoshis par
         <translation>Cacher</translation>
     </message>
     <message>
-        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
+        <source>Paying only the minimum fee is just fine as long as there is less transaction volume than space in the blocks. But be aware that this can end up in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</source>
         <translation>Il est correct de payer les frais minimum tant que le volume transactionnel est inférieur à l’espace dans les blocs. Mais soyez conscient que cela pourrait résulter en une transaction n’étant jamais confirmée une fois qu’il y aura plus de transactions que le réseau ne pourra en traiter.</translation>
     </message>
     <message>
@@ -2394,8 +2394,8 @@ Note : Les frais étant calculés par octet, des frais de « 100 satoshis par
         <translation>Retirer cette entrée</translation>
     </message>
     <message>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitgreens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
-        <translation>Les frais seront déduits du montant envoyé. Le destinataire recevra moins de bitgreens que le montant saisi dans le champ de montant. Si plusieurs destinataires sont sélectionnés, les frais seront partagés également..</translation>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <translation>Les frais seront déduits du montant envoyé. Le destinataire recevra moins de bitcorns que le montant saisi dans le champ de montant. Si plusieurs destinataires sont sélectionnés, les frais seront partagés également..</translation>
     </message>
     <message>
         <source>S&amp;ubtract fee from amount</source>
@@ -2422,8 +2422,8 @@ Note : Les frais étant calculés par octet, des frais de « 100 satoshis par
         <translation>Saisir une étiquette pour cette adresse afin de l’ajouter à la liste d’adresses utilisées</translation>
     </message>
     <message>
-        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
-        <translation>Un message qui était joint à l’URI bitgreen: et qui sera stocké avec la transaction pour référence. Note : ce message ne sera pas envoyé par le réseau BitCorn.</translation>
+        <source>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
+        <translation>Un message qui était joint à l’URI bitcorn: et qui sera stocké avec la transaction pour référence. Note : ce message ne sera pas envoyé par le réseau BitCorn.</translation>
     </message>
     <message>
         <source>Pay To:</source>
@@ -2467,8 +2467,8 @@ Note : Les frais étant calculés par octet, des frais de « 100 satoshis par
         <translation>&amp;Signer un message</translation>
     </message>
     <message>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitgreens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
-        <translation>Vous pouvez signer des messages ou des accords avec vos adresses pour prouver que vous pouvez recevoir des bitgreens à ces dernières. Faites attention de ne rien signer de vague ou au hasard, car des attaques d’hameçonnage pourraient essayer de vous faire signer avec votre identité afin de l’usurper. Ne signez que des déclarations entièrement détaillées et avec lesquelles vous êtes d’accord.</translation>
+        <source>You can sign messages/agreements with your addresses to prove you can receive bitcorns sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <translation>Vous pouvez signer des messages ou des accords avec vos adresses pour prouver que vous pouvez recevoir des bitcorns à ces dernières. Faites attention de ne rien signer de vague ou au hasard, car des attaques d’hameçonnage pourraient essayer de vous faire signer avec votre identité afin de l’usurper. Ne signez que des déclarations entièrement détaillées et avec lesquelles vous êtes d’accord.</translation>
     </message>
     <message>
         <source>The BitCorn address to sign the message with</source>
@@ -3150,7 +3150,7 @@ Note : Les frais étant calculés par octet, des frais de « 100 satoshis par
     </message>
 </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distribué sous la licence MIT d’utilisation d’un logiciel. Consulter le fichier joint %s ou %s</translation>

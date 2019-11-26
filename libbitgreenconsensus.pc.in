@@ -6,6 +6,6 @@ includedir=@includedir@
 Name: @PACKAGE_NAME@ consensus library
 Description: Library for the BitCorn consensus protocol.
 Version: @PACKAGE_VERSION@
-Libs: -L${libdir} -lbitgreenconsensus
+Libs: -L${libdir} -lbitcornconsensus
 Cflags: -I${includedir}
 Requires.private: libcrypto

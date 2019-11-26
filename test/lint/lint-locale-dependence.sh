@@ -2,8 +2,8 @@
 
 export LC_ALL=C
 KNOWN_VIOLATIONS=(
-    "src/bitgreen-tx.cpp.*stoul"
-    "src/bitgreen-tx.cpp.*trim_right"
+    "src/bitcorn-tx.cpp.*stoul"
+    "src/bitcorn-tx.cpp.*trim_right"
     "src/dbwrapper.cpp.*stoul"
     "src/dbwrapper.cpp:.*vsnprintf"
     "src/httprpc.cpp.*trim"

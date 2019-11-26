@@ -114,8 +114,8 @@ void setupAddressWidget(QValidatedLineEdit *widget, QWidget *parent)
 
 bool parseBitCornURI(const QUrl &uri, SendCoinsRecipient *out)
 {
-    // return if URI is not valid or is no bitgreen: URI
-    if(!uri.isValid() || uri.scheme() != QString("bitgreen"))
+    // return if URI is not valid or is no bitcorn: URI
+    if(!uri.isValid() || uri.scheme() != QString("bitcorn"))
         return false;
 
     SendCoinsRecipient rv;
@@ -179,7 +179,7 @@ QString formatBitCornURI(const SendCoinsRecipient &info)
 {
     bool bech_32 = info.address.startsWith(QString::fromStdString(Params().Bech32HRP() + "1"));
 
-    QString ret = QString("bitgreen:%1").arg(bech_32 ? info.address.toUpper() : info.address);
+    QString ret = QString("bitcorn:%1").arg(bech_32 ? info.address.toUpper() : info.address);
     int paramCount = 0;
 
     if (info.amount)
@@ -400,7 +400,7 @@ bool openBitCornConf()
 
     configFile.close();
 
-    /* Open bitgreen.conf with the associated application */
+    /* Open bitcorn.conf with the associated application */
     bool res = QDesktopServices::openUrl(QUrl::fromLocalFile(boostPathToQString(pathConfig)));
 #ifdef Q_OS_MAC
     // Workaround for macOS-specific behavior; see #15409.
@@ -639,8 +639,8 @@ fs::path static GetAutostartFilePath()
 {
     std::string chain = gArgs.GetChainName();
     if (chain == CBaseChainParams::MAIN)
-        return GetAutostartDir() / "bitgreen.desktop";
-    return GetAutostartDir() / strprintf("bitgreen-%s.desktop", chain);
+        return GetAutostartDir() / "bitcorn.desktop";
+    return GetAutostartDir() / strprintf("bitcorn-%s.desktop", chain);
 }
 
 bool GetStartOnSystemStartup()
@@ -680,7 +680,7 @@ bool SetStartOnSystemStartup(bool fAutoStart)
         if (!optionFile.good())
             return false;
         std::string chain = gArgs.GetChainName();
-        // Write a bitgreen.desktop file to the autostart directory:
+        // Write a bitcorn.desktop file to the autostart directory:
         optionFile << "[Desktop Entry]\n";
         optionFile << "Type=Application\n";
         if (chain == CBaseChainParams::MAIN)
@@ -705,7 +705,7 @@ LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedF
         return nullptr;
     }
 
-    // loop through the list of startup items and try to find the bitgreen app
+    // loop through the list of startup items and try to find the bitcorn app
     for(int i = 0; i < CFArrayGetCount(listSnapshot); i++) {
         LSSharedFileListItemRef item = (LSSharedFileListItemRef)CFArrayGetValueAtIndex(listSnapshot, i);
         UInt32 resolutionFlags = kLSSharedFileListNoUserInteraction | kLSSharedFileListDoNotMountVolumes;
@@ -736,15 +736,15 @@ LSSharedFileListItemRef findStartupItemInList(CFArrayRef listSnapshot, LSSharedF
 
 bool GetStartOnSystemStartup()
 {
-    CFURLRef bitgreenAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (bitgreenAppUrl == nullptr) {
+    CFURLRef bitcornAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (bitcornAppUrl == nullptr) {
         return false;
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
-    bool res = (findStartupItemInList(listSnapshot, loginItems, bitgreenAppUrl) != nullptr);
-    CFRelease(bitgreenAppUrl);
+    bool res = (findStartupItemInList(listSnapshot, loginItems, bitcornAppUrl) != nullptr);
+    CFRelease(bitcornAppUrl);
     CFRelease(loginItems);
     CFRelease(listSnapshot);
     return res;
@@ -752,25 +752,25 @@ bool GetStartOnSystemStartup()
 
 bool SetStartOnSystemStartup(bool fAutoStart)
 {
-    CFURLRef bitgreenAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
-    if (bitgreenAppUrl == nullptr) {
+    CFURLRef bitcornAppUrl = CFBundleCopyBundleURL(CFBundleGetMainBundle());
+    if (bitcornAppUrl == nullptr) {
         return false;
     }
 
     LSSharedFileListRef loginItems = LSSharedFileListCreate(nullptr, kLSSharedFileListSessionLoginItems, nullptr);
     CFArrayRef listSnapshot = LSSharedFileListCopySnapshot(loginItems, nullptr);
-    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, bitgreenAppUrl);
+    LSSharedFileListItemRef foundItem = findStartupItemInList(listSnapshot, loginItems, bitcornAppUrl);
 
     if(fAutoStart && !foundItem) {
-        // add bitgreen app to startup item list
-        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, bitgreenAppUrl, nullptr, nullptr);
+        // add bitcorn app to startup item list
+        LSSharedFileListInsertItemURL(loginItems, kLSSharedFileListItemBeforeFirst, nullptr, nullptr, bitcornAppUrl, nullptr, nullptr);
     }
     else if(!fAutoStart && foundItem) {
         // remove item
         LSSharedFileListItemRemove(loginItems, foundItem);
     }
 
-    CFRelease(bitgreenAppUrl);
+    CFRelease(bitcornAppUrl);
     CFRelease(loginItems);
     CFRelease(listSnapshot);
     return true;

@@ -237,7 +237,7 @@
     </message>
     <message>
         <location line="-56"/>
-        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
+        <source>Your wallet is now encrypted. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -521,7 +521,7 @@
     </message>
     <message>
         <location line="-271"/>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -536,7 +536,7 @@
     </message>
     <message>
         <location line="+3"/>
-        <source>Open a bitgreen: URI or payment request</source>
+        <source>Open a bitcorn: URI or payment request</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1200,12 +1200,12 @@
     </message>
     <message>
         <location line="+119"/>
-        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitgreen network, as detailed below.</source>
+        <source>Recent transactions may not yet be visible, and therefore your wallet&apos;s balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
         <location line="+19"/>
-        <source>Attempting to spend bitgreens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1744,7 +1744,7 @@
     </message>
     <message>
         <location line="-529"/>
-        <source>Cannot start bitgreen: click-to-pay handler</source>
+        <source>Cannot start bitcorn: click-to-pay handler</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1759,7 +1759,7 @@
     </message>
     <message>
         <location line="-53"/>
-        <source>&apos;bitgreen://&apos; is not a valid URI. Use &apos;bitgreen:&apos; instead.</source>
+        <source>&apos;bitcorn://&apos; is not a valid URI. Use &apos;bitcorn:&apos; instead.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -2896,7 +2896,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+543"/>
-        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitgreen transactions than the network can process.</source>
+        <source>When there is less transaction volume than space in the blocks, miners as well as relaying nodes may enforce a minimum fee. Paying only this minimum fee is just fine, but be aware that this can result in a never confirming transaction once there is more demand for bitcorn transactions than the network can process.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3178,7 +3178,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="-1028"/>
-        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitgreens than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
+        <source>The fee will be deducted from the amount being sent. The recipient will receive less bitcorns than you enter in the amount field. If multiple recipients are selected, the fee is split equally.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3213,7 +3213,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+54"/>
-        <source>A message that was attached to the bitgreen: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
+        <source>A message that was attached to the bitcorn: URI which will be stored with the transaction for your reference. Note: This message will not be sent over the BitCorn network.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -3270,7 +3270,7 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
     <message>
         <location line="+6"/>
-        <source>You can sign messages/agreements with your addresses to prove you can receive bitgreens sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
+        <source>You can sign messages/agreements with your addresses to prove you can receive bitcorns sent to them. Be careful not to sign anything vague or random, as phishing attacks may try to trick you into signing your identity over to them. Only sign fully-detailed statements you agree to.</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -4173,9 +4173,9 @@ Note:  Since the fee is calculated on a per-byte basis, a fee of &quot;100 satos
     </message>
 </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
-        <location filename="../bitgreenstrings.cpp" line="+28"/>
+        <location filename="../bitcornstrings.cpp" line="+28"/>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation type="unfinished"></translation>
     </message>

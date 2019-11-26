@@ -34,7 +34,7 @@ BEGIN_FOLD distdir
 DOCKER_EXEC make distdir VERSION=$HOST
 END_FOLD
 
-cd "bitgreen-$HOST" || (echo "could not enter distdir bitgreen-$HOST"; exit 1)
+cd "bitcorn-$HOST" || (echo "could not enter distdir bitcorn-$HOST"; exit 1)
 
 BEGIN_FOLD configure
 DOCKER_EXEC ./configure --cache-file=../config.cache $BITCORN_CONFIG_ALL $BITCORN_CONFIG || ( cat config.log && false)

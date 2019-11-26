@@ -15,7 +15,7 @@ QT_BEGIN_NAMESPACE
 class QValueComboBox;
 QT_END_NAMESPACE
 
-/** Widget for entering bitgreen amounts.
+/** Widget for entering bitcorn amounts.
   */
 class BitcoinAmountField: public QWidget
 {

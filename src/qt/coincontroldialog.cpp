@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <qt/coincontroldialog.h>
@@ -659,7 +659,7 @@ void CoinControlDialog::updateView()
             {
                 sAddress = QString::fromStdString(EncodeDestination(outputAddress));
 
-                // if listMode or change => show bitgreen address. In tree mode, address is not shown again for direct wallet address outputs
+                // if listMode or change => show bitcorn address. In tree mode, address is not shown again for direct wallet address outputs
                 if (!treeMode || (!(sAddress == sWalletAddress)))
                     itemOutput->setText(COLUMN_ADDRESS, sAddress);
             }

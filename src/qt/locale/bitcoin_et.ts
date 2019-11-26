@@ -370,12 +370,12 @@
         <translation>Vahelehe tööriistariba</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Loo maksepäring (genereerib QR koodid ja bitgreeni: URId)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Loo maksepäring (genereerib QR koodid ja bitcorni: URId)</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Ava bitgreeni: URI või maksepäring</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Ava bitcorni: URI või maksepäring</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -1916,7 +1916,7 @@
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>BitCorn Core</source>
         <translation>BitCorni tuumik</translation>

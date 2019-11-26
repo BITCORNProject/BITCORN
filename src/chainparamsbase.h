@@ -9,7 +9,7 @@
 #include <string>
 
 /**
- * CBaseChainParams defines the base parameters (shared between bitgreen-cli and bitgreend)
+ * CBaseChainParams defines the base parameters (shared between bitcorn-cli and bitcornd)
  * of a given instance of the BitCorn system.
  */
 class CBaseChainParams

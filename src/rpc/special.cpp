@@ -38,7 +38,7 @@ RPCArg GetHelpArg(std::string strParamName)
 {
     static const std::map<std::string, RPCArg> mapParamHelp = {
         {"collateralAddress",
-            {"collateralAddress", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitgreen address to send the collateral to"},
+            {"collateralAddress", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcorn address to send the collateral to"},
         },
         {"collateralHash",
             {"collateralHash", RPCArg::Type::STR, RPCArg::Optional::NO, "The collateral transaction hash."}
@@ -78,12 +78,12 @@ RPCArg GetHelpArg(std::string strParamName)
             "                              between 0.00 and 100.00."}
         },
         {"ownerAddress",
-            {"ownerAddress", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitgreen address to use for payee updates and proposal voting.\n"
+            {"ownerAddress", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcorn address to use for payee updates and proposal voting.\n"
             "                              The private key belonging to this address must be known in your wallet. The address must\n"
             "                              be unused and must differ from the collateralAddress."}
         },
         {"payoutAddress",
-            {"payoutAddress", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitgreen address to use for masternode reward payments."}
+            {"payoutAddress", RPCArg::Type::STR, RPCArg::Optional::NO, "The bitcorn address to use for masternode reward payments."}
         },
         {"proTxHash",
             {"proTxHash", RPCArg::Type::STR, RPCArg::Optional::NO, "The hash of the initial ProRegTx."}

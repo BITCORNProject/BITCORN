@@ -1,31 +1,31 @@
-# /etc/conf.d/bitgreend: config file for /etc/init.d/bitgreend
+# /etc/conf.d/bitcornd: config file for /etc/init.d/bitcornd
 
 # Config file location
-#BITCORND_CONFIGFILE="/etc/bitgreen/bitgreen.conf"
+#BITCORND_CONFIGFILE="/etc/bitcorn/bitcorn.conf"
 
 # What directory to write pidfile to?  (created and owned by $BITCORND_USER)
-#BITCORND_PIDDIR="/var/run/bitgreend"
+#BITCORND_PIDDIR="/var/run/bitcornd"
 
 # What filename to give the pidfile
-#BITCORND_PIDFILE="${BITCORND_PIDDIR}/bitgreend.pid"
+#BITCORND_PIDFILE="${BITCORND_PIDDIR}/bitcornd.pid"
 
-# Where to write bitgreend data (be mindful that the blockchain is large)
-#BITCORND_DATADIR="/var/lib/bitgreend"
+# Where to write bitcornd data (be mindful that the blockchain is large)
+#BITCORND_DATADIR="/var/lib/bitcornd"
 
-# User and group to own bitgreend process
-#BITCORND_USER="bitgreen"
-#BITCORND_GROUP="bitgreen"
+# User and group to own bitcornd process
+#BITCORND_USER="bitcorn"
+#BITCORND_GROUP="bitcorn"
 
-# Path to bitgreend executable
-#BITCORND_BIN="/usr/bin/bitgreend"
+# Path to bitcornd executable
+#BITCORND_BIN="/usr/bin/bitcornd"
 
-# Nice value to run bitgreend under
+# Nice value to run bitcornd under
 #BITCORND_NICE=0
 
 # Additional options (avoid -conf and -datadir, use flags above)
 #BITCORND_OPTS=""
 
-# The timeout in seconds OpenRC will wait for bitgreend to terminate
+# The timeout in seconds OpenRC will wait for bitcornd to terminate
 # after a SIGTERM has been raised.
 # Note that this will be mapped as argument to start-stop-daemon's
 # '--retry' option, which means you can specify a retry schedule

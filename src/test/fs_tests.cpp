@@ -18,13 +18,13 @@ BOOST_AUTO_TEST_CASE(fsbridge_fstream)
     fs::path tmpfile2 = tmpfolder / L"fs_tests_₿_🏃";
     {
         fsbridge::ofstream file(tmpfile1);
-        file << "bitgreen";
+        file << "bitcorn";
     }
     {
         fsbridge::ifstream file(tmpfile2);
         std::string input_buffer;
         file >> input_buffer;
-        BOOST_CHECK_EQUAL(input_buffer, "bitgreen");
+        BOOST_CHECK_EQUAL(input_buffer, "bitcorn");
     }
     {
         fsbridge::ifstream file(tmpfile1, std::ios_base::in | std::ios_base::ate);
@@ -40,17 +40,17 @@ BOOST_AUTO_TEST_CASE(fsbridge_fstream)
         fsbridge::ifstream file(tmpfile1);
         std::string input_buffer;
         file >> input_buffer;
-        BOOST_CHECK_EQUAL(input_buffer, "bitgreentests");
+        BOOST_CHECK_EQUAL(input_buffer, "bitcorntests");
     }
     {
         fsbridge::ofstream file(tmpfile2, std::ios_base::out | std::ios_base::trunc);
-        file << "bitgreen";
+        file << "bitcorn";
     }
     {
         fsbridge::ifstream file(tmpfile1);
         std::string input_buffer;
         file >> input_buffer;
-        BOOST_CHECK_EQUAL(input_buffer, "bitgreen");
+        BOOST_CHECK_EQUAL(input_buffer, "bitcorn");
     }
 }
 

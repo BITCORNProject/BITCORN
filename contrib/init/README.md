@@ -1,11 +1,11 @@
 Sample configuration files for:
 ```
-SystemD: bitgreend.service
-Upstart: bitgreend.conf
-OpenRC:  bitgreend.openrc
-         bitgreend.openrcconf
-CentOS:  bitgreend.init
-macOS:   org.bitg.bitgreend.plist
+SystemD: bitcornd.service
+Upstart: bitcornd.conf
+OpenRC:  bitcornd.openrc
+         bitcornd.openrcconf
+CentOS:  bitcornd.init
+macOS:   org.bitg.bitcornd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

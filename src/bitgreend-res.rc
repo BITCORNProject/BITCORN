@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "BitCorn"
-            VALUE "FileDescription",    "bitgreend (BitCorn node with a JSON-RPC server)"
+            VALUE "FileDescription",    "bitcornd (BitCorn node with a JSON-RPC server)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "bitgreend"
+            VALUE "InternalName",       "bitcornd"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "bitgreend.exe"
-            VALUE "ProductName",        "bitgreend"
+            VALUE "OriginalFilename",   "bitcornd.exe"
+            VALUE "ProductName",        "bitcornd"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

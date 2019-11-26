@@ -6,7 +6,7 @@
 #define BITCORN_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
-// bitgreen: URIs
+// bitcorn: URIs
 //
 // This is somewhat tricky, because we have to deal with
 // the situation where the user clicks on a link during
@@ -33,7 +33,7 @@
 //
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #ifdef ENABLE_BIP70

@@ -483,8 +483,8 @@ static const CRPCCommand commands[] =
     {
         //  category              name                      actor (function)          argNames
         //  --------------------- ------------------------  -----------------------   ----------
-        {"bitgreen", "masternode", &masternode, {}},
-        {"bitgreen", "masternodelist", &masternodelist, {}},
+        {"bitcorn", "masternode", &masternode, {}},
+        {"bitcorn", "masternodelist", &masternodelist, {}},
 };
 
 void RegisterMasternodeRPCCommands(CRPCTable& t)

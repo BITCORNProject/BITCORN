@@ -15,12 +15,12 @@ The following are some helpful notes on how to run BitCorn Core on your native p
 
 Unpack the files into a directory and run:
 
-- `bin/bitgreen-qt` (GUI) or
-- `bin/bitgreend` (headless)
+- `bin/bitcorn-qt` (GUI) or
+- `bin/bitcornd` (headless)
 
 ### Windows
 
-Unpack the files into a directory, and then run bitgreen-qt.exe.
+Unpack the files into a directory, and then run bitcorn-qt.exe.
 
 ### macOS
 
@@ -65,7 +65,7 @@ The BitCorn repo's [root README](/README.md) contains relevant information on th
 
 ### Miscellaneous
 - [Assets Attribution](assets-attribution.md)
-- [bitgreen.conf Configuration File](bitgreen-conf.md)
+- [bitcorn.conf Configuration File](bitcorn-conf.md)
 - [Files](files.md)
 - [Fuzz-testing](fuzzing.md)
 - [Reduce Memory](reduce-memory.md)

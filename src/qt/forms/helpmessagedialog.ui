@@ -32,7 +32,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap resource="../bitgreen.qrc">:/images/about</pixmap>
+      <pixmap resource="../bitcorn.qrc">:/images/about</pixmap>
      </property>
      <property name="alignment">
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
@@ -123,7 +123,7 @@
   </layout>
  </widget>
  <resources>
-  <include location="../bitgreen.qrc"/>
+  <include location="../bitcorn.qrc"/>
  </resources>
  <connections>
   <connection>

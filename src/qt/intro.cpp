@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <fs.h>
@@ -204,7 +204,7 @@ bool Intro::pickDataDirectory(interfaces::Node& node)
         /* If current default data directory does not exist, let the user choose one */
         Intro intro(0, node.getAssumedBlockchainSize(), node.getAssumedChainStateSize());
         intro.setDataDirectory(dataDir);
-        intro.setWindowIcon(QIcon(":icons/bitgreen"));
+        intro.setWindowIcon(QIcon(":icons/bitcorn"));
 
         while(true)
         {
@@ -231,8 +231,8 @@ bool Intro::pickDataDirectory(interfaces::Node& node)
         settings.setValue("fReset", false);
     }
     /* Only override -datadir if different from the default, to make it possible to
-     * override -datadir in the bitgreen.conf file in the default data directory
-     * (to be consistent with bitgreend behavior)
+     * override -datadir in the bitcorn.conf file in the default data directory
+     * (to be consistent with bitcornd behavior)
      */
     if(dataDir != GUIUtil::getDefaultDataDirectory()) {
         node.softSetArg("-datadir", GUIUtil::qstringToBoostPath(dataDir).string()); // use OS locale for path setting

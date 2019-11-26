@@ -26,7 +26,7 @@ for host in ${HOSTS=i686-linux-gnu x86_64-linux-gnu arm-linux-gnueabihf aarch64-
                      --container \
                      --pure \
                      --no-cwd \
-                     --share="$PWD"=/bitgreen \
+                     --share="$PWD"=/bitcorn \
                      ${SOURCES_PATH:+--share="$SOURCES_PATH"} \
                      ${ADDITIONAL_GUIX_ENVIRONMENT_FLAGS} \
                      -- env HOST="$host" \
@@ -34,6 +34,6 @@ for host in ${HOSTS=i686-linux-gnu x86_64-linux-gnu arm-linux-gnueabihf aarch64-
                             SOURCE_DATE_EPOCH="${SOURCE_DATE_EPOCH:?unable to determine value}" \
                             ${V:+V=1} \
                             ${SOURCES_PATH:+SOURCES_PATH="$SOURCES_PATH"} \
-                          bash -c "cd /bitgreen && bash contrib/guix/libexec/build.sh"
+                          bash -c "cd /bitcorn && bash contrib/guix/libexec/build.sh"
 
 done

@@ -69,7 +69,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITCORN_CONF_FILENAME = "bitgreen.conf";
+const char * const BITCORN_CONF_FILENAME = "bitcorn.conf";
 
 ArgsManager gArgs;
 
@@ -219,7 +219,7 @@ public:
         std::pair<bool,std::string> found_result(false, std::string());
 
         // We pass "true" to GetArgHelper in order to return the last
-        // argument value seen from the command line (so "bitgreend -foo=bar
+        // argument value seen from the command line (so "bitcornd -foo=bar
         // -foo=baz" gives GetArg(am,"foo")=={true,"baz"}
         found_result = GetArgHelper(am.m_override_args, arg, true);
         if (found_result.first) {
@@ -664,7 +664,7 @@ static std::string FormatException(const std::exception* pex, const char* pszThr
     char pszModule[MAX_PATH] = "";
     GetModuleFileNameA(nullptr, pszModule, sizeof(pszModule));
 #else
-    const char* pszModule = "bitgreen";
+    const char* pszModule = "bitcorn";
 #endif
     if (pex)
         return strprintf(
@@ -686,7 +686,7 @@ fs::path GetDefaultDataDir()
     // Windows < Vista: C:\Documents and Settings\Username\Application Data\BitCorn
     // Windows >= Vista: C:\Users\Username\AppData\Roaming\BitCorn
     // Mac: ~/Library/Application Support/BitCorn
-    // Unix: ~/.bitgreen
+    // Unix: ~/.bitcorn
 #ifdef WIN32
     // Windows
     return GetSpecialFolderPath(CSIDL_APPDATA) / "BitCorn";
@@ -702,7 +702,7 @@ fs::path GetDefaultDataDir()
     return pathRet / "Library/Application Support/BitCorn";
 #else
     // Unix
-    return pathRet / ".bitgreen";
+    return pathRet / ".bitcorn";
 #endif
 #endif
 }

@@ -96,7 +96,7 @@ make -C depends --jobs="$MAX_JOBS" HOST="$HOST" \
                                    x86_64_linux_RANLIB=x86_64-linux-gnu-ranlib \
                                    x86_64_linux_NM=x86_64-linux-gnu-nm \
                                    x86_64_linux_STRIP=x86_64-linux-gnu-strip \
-                                   qt_config_opts_i686_linux='-platform linux-g++ -xplatform bitgreen-linux-g++'
+                                   qt_config_opts_i686_linux='-platform linux-g++ -xplatform bitcorn-linux-g++'
 
 
 ###########################
@@ -104,17 +104,17 @@ make -C depends --jobs="$MAX_JOBS" HOST="$HOST" \
 ###########################
 
 # Create the source tarball and move it to "${OUTDIR}/src" if not already there
-if [ -z "$(find "${OUTDIR}/src" -name 'bitgreen-*.tar.gz')" ]; then
+if [ -z "$(find "${OUTDIR}/src" -name 'bitcorn-*.tar.gz')" ]; then
     ./autogen.sh
     env CONFIG_SITE="${BASEPREFIX}/${HOST}/share/config.site" ./configure --prefix=/
     make dist GZIP_ENV='-9n' ${V:+V=1}
     mkdir -p "${OUTDIR}/src"
-    mv "$(find "${PWD}" -name 'bitgreen-*.tar.gz')" "${OUTDIR}/src/"
+    mv "$(find "${PWD}" -name 'bitcorn-*.tar.gz')" "${OUTDIR}/src/"
 fi
 
 # Determine the full path to our source tarball
-SOURCEDIST="$(find "${OUTDIR}/src" -name 'bitgreen-*.tar.gz')"
-# Determine our distribution name (e.g. bitgreen-0.18.0)
+SOURCEDIST="$(find "${OUTDIR}/src" -name 'bitcorn-*.tar.gz')"
+# Determine our distribution name (e.g. bitcorn-0.18.0)
 DISTNAME="$(basename "$SOURCEDIST" '.tar.gz')"
 
 ###########################

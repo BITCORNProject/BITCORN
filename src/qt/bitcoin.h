@@ -6,7 +6,7 @@
 #define BITCORN_QT_BITCOIN_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <QApplication>

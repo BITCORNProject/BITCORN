@@ -9,14 +9,14 @@ SOURCE_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'src'
 DEFAULT_PLATFORM_TOOLSET = R'v141'
 
 libs = [
-    'libbitgreen_cli',
-    'libbitgreen_common',
-    'libbitgreen_crypto',
-    'libbitgreen_server',
-    'libbitgreen_util',
-    'libbitgreen_wallet_tool',
-    'libbitgreen_wallet',
-    'libbitgreen_zmq',
+    'libbitcorn_cli',
+    'libbitcorn_common',
+    'libbitcorn_crypto',
+    'libbitcorn_server',
+    'libbitcorn_util',
+    'libbitcorn_wallet_tool',
+    'libbitcorn_wallet',
+    'libbitcorn_zmq',
 ]
 
 ignore_list = [
@@ -74,7 +74,7 @@ def main():
             with open(vcxproj_filename, 'w', encoding='utf-8') as vcxproj_file:
                 vcxproj_file.write(vcxproj_in_file.read().replace(
                     '@SOURCE_FILES@\n', content))
-    copyfile(os.path.join(SOURCE_DIR,'../build_msvc/bitgreen_config.h'), os.path.join(SOURCE_DIR, 'config/bitgreen-config.h'))
+    copyfile(os.path.join(SOURCE_DIR,'../build_msvc/bitcorn_config.h'), os.path.join(SOURCE_DIR, 'config/bitcorn-config.h'))
     copyfile(os.path.join(SOURCE_DIR,'../build_msvc/libsecp256k1_config.h'), os.path.join(SOURCE_DIR, 'secp256k1/src/libsecp256k1-config.h'))
 
 if __name__ == '__main__':

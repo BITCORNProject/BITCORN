@@ -17,13 +17,13 @@ BEGIN
         BLOCK "040904E4" // U.S. English - multilingual (hex)
         BEGIN
             VALUE "CompanyName",        "BitCorn"
-            VALUE "FileDescription",    "bitgreen-wallet (CLI tool for " PACKAGE_NAME " wallets)"
+            VALUE "FileDescription",    "bitcorn-wallet (CLI tool for " PACKAGE_NAME " wallets)"
             VALUE "FileVersion",        VER_FILEVERSION_STR
-            VALUE "InternalName",       "bitgreen-wallet"
+            VALUE "InternalName",       "bitcorn-wallet"
             VALUE "LegalCopyright",     COPYRIGHT_STR
             VALUE "LegalTrademarks1",   "Distributed under the MIT software license, see the accompanying file COPYING or http://www.opensource.org/licenses/mit-license.php."
-            VALUE "OriginalFilename",   "bitgreen-wallet.exe"
-            VALUE "ProductName",        "bitgreen-wallet"
+            VALUE "OriginalFilename",   "bitcorn-wallet.exe"
+            VALUE "ProductName",        "bitcorn-wallet"
             VALUE "ProductVersion",     VER_PRODUCTVERSION_STR
         END
     END

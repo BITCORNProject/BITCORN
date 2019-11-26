@@ -1,36 +1,36 @@
 #!/usr/bin/env bash
 #
-#  bitgreend The bitgreen core server.
+#  bitcornd The bitcorn core server.
 #
 #
 # chkconfig: 345 80 20
-# description: bitgreend
-# processname: bitgreend
+# description: bitcornd
+# processname: bitcornd
 #
 
 # Source function library.
 . /etc/init.d/functions
 
-# you can override defaults in /etc/sysconfig/bitgreend, see below
-if [ -f /etc/sysconfig/bitgreend ]; then
-        . /etc/sysconfig/bitgreend
+# you can override defaults in /etc/sysconfig/bitcornd, see below
+if [ -f /etc/sysconfig/bitcornd ]; then
+        . /etc/sysconfig/bitcornd
 fi
 
 RETVAL=0
 
-prog=bitgreend
-# you can override the lockfile via BITCORND_LOCKFILE in /etc/sysconfig/bitgreend
-lockfile=${BITCORND_LOCKFILE-/var/lock/subsys/bitgreend}
+prog=bitcornd
+# you can override the lockfile via BITCORND_LOCKFILE in /etc/sysconfig/bitcornd
+lockfile=${BITCORND_LOCKFILE-/var/lock/subsys/bitcornd}
 
-# bitgreend defaults to /usr/bin/bitgreend, override with BITCORND_BIN
-bitgreend=${BITCORND_BIN-/usr/bin/bitgreend}
+# bitcornd defaults to /usr/bin/bitcornd, override with BITCORND_BIN
+bitcornd=${BITCORND_BIN-/usr/bin/bitcornd}
 
-# bitgreend opts default to -disablewallet, override with BITCORND_OPTS
-bitgreend_opts=${BITCORND_OPTS--disablewallet}
+# bitcornd opts default to -disablewallet, override with BITCORND_OPTS
+bitcornd_opts=${BITCORND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "
-    daemon $DAEMONOPTS $bitgreend $bitgreend_opts
+    daemon $DAEMONOPTS $bitcornd $bitcornd_opts
     RETVAL=$?
     echo
     [ $RETVAL -eq 0 ] && touch $lockfile

@@ -33,7 +33,7 @@ namespace interfaces {
 class Handler;
 class Wallet;
 
-//! Top-level interface for a bitgreen node (bitgreend process).
+//! Top-level interface for a bitcorn node (bitcornd process).
 class Node
 {
 public:

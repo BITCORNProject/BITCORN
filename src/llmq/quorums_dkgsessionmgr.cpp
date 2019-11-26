@@ -41,7 +41,7 @@ void CDKGSessionManager::StartMessageHandlerPool()
     }
 
     messageHandlerPool.resize(2);
-    RenameThreadPool(messageHandlerPool, "bitgreen-q-msg");
+    RenameThreadPool(messageHandlerPool, "bitcorn-q-msg");
 }
 
 void CDKGSessionManager::StopMessageHandlerPool()

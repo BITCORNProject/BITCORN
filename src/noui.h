@@ -14,7 +14,7 @@ bool noui_ThreadSafeQuestion(const std::string& /* ignored interactive message *
 /** Non-GUI handler, which only logs a message. */
 void noui_InitMessage(const std::string& message);
 
-/** Connect all bitgreend signal handlers */
+/** Connect all bitcornd signal handlers */
 void noui_connect();
 
 #endif // BITCORN_NOUI_H

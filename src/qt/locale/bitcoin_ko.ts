@@ -168,7 +168,7 @@
         <translation>지갑 암호화</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
         <translation>%1 이(가) 암호화 작업을 위해 종료됩니다. 이 암호화 작업이 바이러스로부터 비트코인을 완전히 지키지 못한다는 점을 기억하십시요.</translation>
     </message>
     <message>
@@ -462,7 +462,7 @@
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Transaction amounts must not be negative</source>
         <translation>송금액은 마이너스가 될 수 없습니다</translation>

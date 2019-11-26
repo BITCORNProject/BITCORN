@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <clientversion.h>
@@ -100,9 +100,9 @@ static int AppInitRawTx(int argc, char* argv[])
 
     if (argc < 2 || HelpRequested(gArgs)) {
         // First part of help message is specific to this utility
-        std::string strUsage = PACKAGE_NAME " bitgreen-tx utility version " + FormatFullVersion() + "\n\n" +
-            "Usage:  bitgreen-tx [options] <hex-tx> [commands]  Update hex-encoded bitgreen transaction\n" +
-            "or:     bitgreen-tx [options] -create [commands]   Create hex-encoded bitgreen transaction\n" +
+        std::string strUsage = PACKAGE_NAME " bitcorn-tx utility version " + FormatFullVersion() + "\n\n" +
+            "Usage:  bitcorn-tx [options] <hex-tx> [commands]  Update hex-encoded bitcorn transaction\n" +
+            "or:     bitcorn-tx [options] -create [commands]   Create hex-encoded bitcorn transaction\n" +
             "\n";
         strUsage += gArgs.GetHelpMessage();
 
@@ -792,7 +792,7 @@ static int CommandLineRawTx(int argc, char* argv[])
             if (argc < 2)
                 throw std::runtime_error("too few parameters");
 
-            // param: hex-encoded bitgreen transaction
+            // param: hex-encoded bitcorn transaction
             std::string strHexTx(argv[1]);
             if (strHexTx == "-")                 // "-" implies standard input
                 strHexTx = readStdin();

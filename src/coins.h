@@ -299,7 +299,7 @@ public:
     size_t DynamicMemoryUsage() const;
 
     /**
-     * Amount of bitgreens coming in to a transaction
+     * Amount of bitcorns coming in to a transaction
      * Note that lightweight clients may not know anything besides the hash of previous transactions,
      * so may not be able to calculate this.
      *
@@ -336,7 +336,7 @@ const Coin& AccessByTxid(const CCoinsViewCache& cache, const uint256& txid);
 /**
  * This is a minimally invasive approach to shutdown on LevelDB read errors from the
  * chainstate, while keeping user interface out of the common library, which is shared
- * between bitgreend, and bitgreen-qt and non-server tools.
+ * between bitcornd, and bitcorn-qt and non-server tools.
  *
  * Writes do not need similar protection, as failure to write is handled by the caller.
 */

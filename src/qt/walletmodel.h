@@ -11,7 +11,7 @@
 #include <script/standard.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #ifdef ENABLE_BIP70

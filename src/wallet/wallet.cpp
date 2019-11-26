@@ -3039,7 +3039,7 @@ bool CWallet::CreateTransaction(interfaces::Chain::Lock& locked_chain, const std
 
             // Create change script that will be used if we need change
             // TODO: pass in scriptChange instead of reservedest so
-            // change transaction isn't always pay-to-bitgreen-address
+            // change transaction isn't always pay-to-bitcorn-address
             CScript scriptChange;
 
             // coin control: send change to custom address

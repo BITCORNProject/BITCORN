@@ -43,7 +43,7 @@ TEST_EXIT_PASSED = 0
 TEST_EXIT_FAILED = 1
 TEST_EXIT_SKIPPED = 77
 
-TMPDIR_PREFIX = "bitgreen_func_test_"
+TMPDIR_PREFIX = "bitcorn_func_test_"
 
 
 class SkipTest(Exception):
@@ -74,9 +74,9 @@ class BitCornTestMetaClass(type):
 
 
 class BitCornTestFramework(metaclass=BitCornTestMetaClass):
-    """Base class for a bitgreen test script.
+    """Base class for a bitcorn test script.
 
-    Individual bitgreen test scripts should subclass this class and override the set_test_params() and run_test() methods.
+    Individual bitcorn test scripts should subclass this class and override the set_test_params() and run_test() methods.
 
     Individual tests can also override the following methods to customize the test setup:
 
@@ -106,9 +106,9 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
 
         parser = argparse.ArgumentParser(usage="%(prog)s [options]")
         parser.add_argument("--nocleanup", dest="nocleanup", default=False, action="store_true",
-                            help="Leave bitgreends and test.* datadir on exit or error")
+                            help="Leave bitcornds and test.* datadir on exit or error")
         parser.add_argument("--noshutdown", dest="noshutdown", default=False, action="store_true",
-                            help="Don't stop bitgreends after the test execution")
+                            help="Don't stop bitcornds after the test execution")
         parser.add_argument("--cachedir", dest="cachedir", default=os.path.abspath(os.path.dirname(os.path.realpath(__file__)) + "/../../cache"),
                             help="Directory for caching pregenerated datadirs (default: %(default)s)")
         parser.add_argument("--tmpdir", dest="tmpdir", help="Root directory for datadirs")
@@ -126,7 +126,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
         parser.add_argument("--pdbonfailure", dest="pdbonfailure", default=False, action="store_true",
                             help="Attach a python debugger if test fails")
         parser.add_argument("--usecli", dest="usecli", default=False, action="store_true",
-                            help="use bitgreen-cli instead of RPC for all commands")
+                            help="use bitcorn-cli instead of RPC for all commands")
         parser.add_argument("--perf", dest="perf", default=False, action="store_true",
                             help="profile running nodes with perf for the duration of the test")
         parser.add_argument("--randomseed", type=int,
@@ -143,8 +143,8 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
         self.config = config
-        self.options.bitgreend = os.getenv("BITCORND", default=config["environment"]["BUILDDIR"] + '/src/bitgreend' + config["environment"]["EXEEXT"])
-        self.options.bitgreencli = os.getenv("BITCORNCLI", default=config["environment"]["BUILDDIR"] + '/src/bitgreen-cli' + config["environment"]["EXEEXT"])
+        self.options.bitcornd = os.getenv("BITCORND", default=config["environment"]["BUILDDIR"] + '/src/bitcornd' + config["environment"]["EXEEXT"])
+        self.options.bitcorncli = os.getenv("BITCORNCLI", default=config["environment"]["BUILDDIR"] + '/src/bitcorn-cli' + config["environment"]["EXEEXT"])
 
         os.environ['PATH'] = os.pathsep.join([
             os.path.join(config['environment']['BUILDDIR'], 'src'),
@@ -219,7 +219,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
         else:
             for node in self.nodes:
                 node.cleanup_on_exit = False
-            self.log.info("Note: bitgreends were not stopped and may still be running")
+            self.log.info("Note: bitcornds were not stopped and may still be running")
 
         should_clean_up = (
             not self.options.nocleanup and
@@ -334,7 +334,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
         if extra_args is None:
             extra_args = [[]] * num_nodes
         if binary is None:
-            binary = [self.options.bitgreend] * num_nodes
+            binary = [self.options.bitcornd] * num_nodes
         assert_equal(len(extra_confs), num_nodes)
         assert_equal(len(extra_args), num_nodes)
         assert_equal(len(binary), num_nodes)
@@ -344,8 +344,8 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
                 get_datadir_path(self.options.tmpdir, i),
                 rpchost=rpchost,
                 timewait=self.rpc_timeout,
-                bitgreend=binary[i],
-                bitgreen_cli=self.options.bitgreencli,
+                bitcornd=binary[i],
+                bitcorn_cli=self.options.bitcorncli,
                 coverage_dir=self.options.coveragedir,
                 cwd=self.options.tmpdir,
                 extra_conf=extra_confs[i],
@@ -355,7 +355,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
             ))
 
     def start_node(self, i, *args, **kwargs):
-        """Start a bitgreend"""
+        """Start a bitcornd"""
 
         node = self.nodes[i]
 
@@ -366,7 +366,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
             coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def start_nodes(self, extra_args=None, *args, **kwargs):
-        """Start multiple bitgreends"""
+        """Start multiple bitcornds"""
 
         if extra_args is None:
             extra_args = [None] * self.num_nodes
@@ -386,12 +386,12 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
                 coverage.write_all_rpc_commands(self.options.coveragedir, node.rpc)
 
     def stop_node(self, i, expected_stderr='', wait=0):
-        """Stop a bitgreend test node"""
+        """Stop a bitcornd test node"""
         self.nodes[i].stop_node(expected_stderr, wait=wait)
         self.nodes[i].wait_until_stopped()
 
     def stop_nodes(self, wait=0):
-        """Stop multiple bitgreend test nodes"""
+        """Stop multiple bitcornd test nodes"""
         for node in self.nodes:
             # Issue RPC to stop nodes
             node.stop_node(wait=wait)
@@ -448,7 +448,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
         # User can provide log level as a number or string (eg DEBUG). loglevel was caught as a string, so try to convert it to an int
         ll = int(self.options.loglevel) if self.options.loglevel.isdigit() else self.options.loglevel.upper()
         ch.setLevel(ll)
-        # Format logs the same as bitgreend's debug.log with microprecision (so log files can be concatenated and sorted)
+        # Format logs the same as bitcornd's debug.log with microprecision (so log files can be concatenated and sorted)
         formatter = logging.Formatter(fmt='%(asctime)s.%(msecs)03d000Z %(name)s (%(levelname)s): %(message)s', datefmt='%Y-%m-%dT%H:%M:%S')
         formatter.converter = time.gmtime
         fh.setFormatter(formatter)
@@ -486,8 +486,8 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
                     extra_args=['-disablewallet'],
                     rpchost=None,
                     timewait=self.rpc_timeout,
-                    bitgreend=self.options.bitgreend,
-                    bitgreen_cli=self.options.bitgreencli,
+                    bitcornd=self.options.bitcornd,
+                    bitcorn_cli=self.options.bitcorncli,
                     coverage_dir=None,
                     cwd=self.options.tmpdir,
                 ))
@@ -526,7 +526,7 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
             self.log.debug("Copy cache directory {} to node {}".format(cache_node_dir, i))
             to_dir = get_datadir_path(self.options.tmpdir, i)
             shutil.copytree(cache_node_dir, to_dir)
-            initialize_datadir(self.options.tmpdir, i)  # Overwrite port/rpcport in bitgreen.conf
+            initialize_datadir(self.options.tmpdir, i)  # Overwrite port/rpcport in bitcorn.conf
 
     def _initialize_chain_clean(self):
         """Initialize empty blockchain for use by the test.
@@ -543,10 +543,10 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
         except ImportError:
             raise SkipTest("python3-zmq module not available.")
 
-    def skip_if_no_bitgreend_zmq(self):
-        """Skip the running test if bitgreend has not been compiled with zmq support."""
+    def skip_if_no_bitcornd_zmq(self):
+        """Skip the running test if bitcornd has not been compiled with zmq support."""
         if not self.is_zmq_compiled():
-            raise SkipTest("bitgreend has not been built with zmq enabled.")
+            raise SkipTest("bitcornd has not been built with zmq enabled.")
 
     def skip_if_no_wallet(self):
         """Skip the running test if wallet has not been compiled."""
@@ -554,12 +554,12 @@ class BitCornTestFramework(metaclass=BitCornTestMetaClass):
             raise SkipTest("wallet has not been compiled.")
 
     def skip_if_no_cli(self):
-        """Skip the running test if bitgreen-cli has not been compiled."""
+        """Skip the running test if bitcorn-cli has not been compiled."""
         if not self.is_cli_compiled():
-            raise SkipTest("bitgreen-cli has not been compiled.")
+            raise SkipTest("bitcorn-cli has not been compiled.")
 
     def is_cli_compiled(self):
-        """Checks whether bitgreen-cli was compiled."""
+        """Checks whether bitcorn-cli was compiled."""
         return self.config["components"].getboolean("ENABLE_CLI")
 
     def is_wallet_compiled(self):

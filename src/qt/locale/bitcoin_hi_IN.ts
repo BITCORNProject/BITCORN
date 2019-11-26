@@ -577,7 +577,7 @@
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Verifying blocks...</source>
         <translation>ब्लॉक्स जाँचे जा रहा है...</translation>

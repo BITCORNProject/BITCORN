@@ -7,7 +7,7 @@
 #define BITCORN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #ifdef WIN32

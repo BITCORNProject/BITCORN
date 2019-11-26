@@ -16,7 +16,7 @@
 #include <validation.h>
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <QAction>
@@ -57,7 +57,7 @@ void AppTests::appTests()
         // and fails to handle returned nulls
         // (https://bugreports.qt.io/browse/QTBUG-49686).
         QWARN("Skipping AppTests on mac build with 'minimal' platform set due to Qt bugs. To run AppTests, invoke "
-              "with 'test_bitgreen-qt -platform cocoa' on mac, or else use a linux or windows build.");
+              "with 'test_bitcorn-qt -platform cocoa' on mac, or else use a linux or windows build.");
         return;
     }
 #endif

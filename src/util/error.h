@@ -10,7 +10,7 @@
  * string functions. Types and functions defined here should not require any
  * outside dependencies.
  *
- * Error types defined here can be used in different parts of the bitgreen
+ * Error types defined here can be used in different parts of the bitcorn
  * codebase, to avoid the need to write boilerplate code catching and
  * translating errors passed across wallet/node/rpc/gui code boundaries.
  */

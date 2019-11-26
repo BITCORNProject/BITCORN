@@ -1,16 +1,16 @@
-# bash programmable completion for bitgreen-tx(1)
+# bash programmable completion for bitcorn-tx(1)
 # Copyright (c) 2016 The Bitcoin Core developers
 # Copyright (c) 2019 The BitCorn Core developers
 # Distributed under the MIT software license, see the accompanying
 # file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-_bitgreen_tx() {
+_bitcorn_tx() {
     local cur prev words=() cword
-    local bitgreen_tx
+    local bitcorn_tx
 
-    # save and use original argument to invoke bitgreen-tx for -help
+    # save and use original argument to invoke bitcorn-tx for -help
     # it might not be in $PATH
-    bitgreen_tx="$1"
+    bitcorn_tx="$1"
 
     COMPREPLY=()
     _get_comp_words_by_ref -n =: cur prev words cword
@@ -28,15 +28,15 @@ _bitgreen_tx() {
 
     if [[ "$cword" == 1 || ( "$prev" != "-create" && "$prev" == -* ) ]]; then
         # only options (or an uncompletable hex-string) allowed
-        # parse bitgreen-tx -help for options
+        # parse bitcorn-tx -help for options
         local helpopts
-        helpopts=$($bitgreen_tx -help | sed -e '/^  -/ p' -e d )
+        helpopts=$($bitcorn_tx -help | sed -e '/^  -/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpopts" -- "$cur" ) )
     else
         # only commands are allowed
         # parse -help for commands
         local helpcmds
-        helpcmds=$($bitgreen_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
+        helpcmds=$($bitcorn_tx -help | sed -e '1,/Commands:/d' -e 's/=.*/=/' -e '/^  [a-z]/ p' -e d )
         COMPREPLY=( $( compgen -W "$helpcmds" -- "$cur" ) )
     fi
 
@@ -47,7 +47,7 @@ _bitgreen_tx() {
 
     return 0
 } &&
-complete -F _bitgreen_tx bitgreen-tx
+complete -F _bitcorn_tx bitcorn-tx
 
 # Local variables:
 # mode: shell-script

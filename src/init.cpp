@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <init.h>
@@ -120,7 +120,7 @@ static const char* FEE_ESTIMATES_FILENAME="fee_estimates.dat";
 /**
  * The PID file facilities.
  */
-static const char* BITCORN_PID_FILENAME = "bitgreend.pid";
+static const char* BITCORN_PID_FILENAME = "bitcornd.pid";
 
 static fs::path GetPidFile()
 {
@@ -596,7 +596,7 @@ void SetupServerArgs()
 
     gArgs.AddArg("-staking", "Enable staking while working with wallet, default is 1", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-litemode", strprintf("Disable all BitCorn specific functionality (Masternodes, Governance) (default: %u)", false), false, OptionsCategory::OPTIONS);
-    gArgs.AddArg("-sporkaddr=<bitgreenaddress>", "Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.", false, OptionsCategory::OPTIONS);
+    gArgs.AddArg("-sporkaddr=<bitcornaddress>", "Override spork address. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-minsporkkeys=<n>", "Overrides minimum spork signers to change spork value. Only useful for regtest and devnet. Using this on mainnet or testnet will ban you.", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-sporkkey", "Private key to send spork messages", false, OptionsCategory::OPTIONS);
 
@@ -613,7 +613,7 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/bitgreen/bitgreen>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/bitcorn/bitcorn>";
     const std::string URL_WEBSITE = "<https://bitg.org>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i").translated, 2018, COPYRIGHT_YEAR) + " ") + "\n" +
@@ -1335,9 +1335,9 @@ bool AppInitMain(InitInterfaces& interfaces)
     // Warn about relative -datadir path.
     if (gArgs.IsArgSet("-datadir") && !fs::path(gArgs.GetArg("-datadir", "")).is_absolute()) {
         LogPrintf("Warning: relative datadir option '%s' specified, which will be interpreted relative to the " /* Continued */
-                  "current working directory '%s'. This is fragile, because if bitgreen is started in the future "
+                  "current working directory '%s'. This is fragile, because if bitcorn is started in the future "
                   "from a different location, it will be unable to locate the current data files. There could "
-                  "also be data loss if bitgreen is started while in a temporary directory.\n",
+                  "also be data loss if bitcorn is started while in a temporary directory.\n",
             gArgs.GetArg("-datadir", ""), fs::current_path().string());
     }
 

@@ -6,7 +6,7 @@
 #define BITCORN_CRYPTO_COMMON_H
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <stdint.h>

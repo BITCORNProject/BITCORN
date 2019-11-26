@@ -454,7 +454,7 @@
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Error initializing block database</source>
         <translation>Ошибка инициализации БД блоков</translation>

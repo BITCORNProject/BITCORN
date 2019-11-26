@@ -295,7 +295,7 @@ void BitcoinGUI::createActions()
     receiveIcon.addPixmap(receiveIconActive,QIcon::Active,QIcon::Off);
 
     receiveCoinsAction = new QAction(receiveIcon, tr("&Receive"), this);
-    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and bitgreen: URIs)"));
+    receiveCoinsAction->setStatusTip(tr("Request payments (generates QR codes and bitcorn: URIs)"));
     receiveCoinsAction->setToolTip(receiveCoinsAction->statusTip());
     receiveCoinsAction->setCheckable(true);
     receiveCoinsAction->setShortcut(QKeySequence(Qt::ALT + Qt::Key_3));
@@ -360,7 +360,7 @@ void BitcoinGUI::createActions()
     quitAction->setStatusTip(tr("Quit application"));
     quitAction->setShortcut(QKeySequence(Qt::CTRL + Qt::Key_Q));
     quitAction->setMenuRole(QAction::QuitRole);
-    aboutAction = new QAction(platformStyle->TextColorIcon(":/icons/bitgreen"), tr("&About %1").arg(PACKAGE_NAME), this);
+    aboutAction = new QAction(platformStyle->TextColorIcon(":/icons/bitcorn"), tr("&About %1").arg(PACKAGE_NAME), this);
     aboutAction->setStatusTip(tr("Show information about %1").arg(PACKAGE_NAME));
     aboutAction->setMenuRole(QAction::AboutRole);
     aboutAction->setEnabled(false);
@@ -371,7 +371,7 @@ void BitcoinGUI::createActions()
     optionsAction->setStatusTip(tr("Modify configuration options for %1").arg(PACKAGE_NAME));
     optionsAction->setMenuRole(QAction::PreferencesRole);
     optionsAction->setEnabled(false);
-    toggleHideAction = new QAction(platformStyle->TextColorIcon(":/icons/bitgreen"), tr("&Show / Hide"), this);
+    toggleHideAction = new QAction(platformStyle->TextColorIcon(":/icons/bitcorn"), tr("&Show / Hide"), this);
     toggleHideAction->setStatusTip(tr("Show or hide the main Window"));
 
     encryptWalletAction = new QAction(platformStyle->TextColorIcon(":/icons/lock_closed"), tr("&Encrypt Wallet..."), this);
@@ -401,7 +401,7 @@ void BitcoinGUI::createActions()
     usedReceivingAddressesAction->setStatusTip(tr("Show the list of used receiving addresses and labels"));
 
     openAction = new QAction(platformStyle->TextColorIcon(":/icons/open"), tr("Open &URI..."), this);
-    openAction->setStatusTip(tr("Open a bitgreen: URI or payment request"));
+    openAction->setStatusTip(tr("Open a bitcorn: URI or payment request"));
 
     m_open_wallet_action = new QAction(tr("Open Wallet"), this);
     m_open_wallet_action->setEnabled(false);

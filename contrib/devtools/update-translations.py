@@ -124,9 +124,9 @@ def escape_cdata(text):
     text = text.replace('"', '&quot;')
     return text
 
-def contains_bitgreen_addr(text, errors):
+def contains_bitcorn_addr(text, errors):
     if text is not None and ADDRESS_REGEXP.search(text) is not None:
-        errors.append('Translation "%s" contains a bitgreen address. This will be removed.' % (text))
+        errors.append('Translation "%s" contains a bitcorn address. This will be removed.' % (text))
         return True
     return False
 
@@ -168,7 +168,7 @@ def postprocess_translations(reduce_diff_hacks=False):
                     if translation is None:
                         continue
                     errors = []
-                    valid = check_format_specifiers(source, translation, errors, numerus) and not contains_bitgreen_addr(translation, errors)
+                    valid = check_format_specifiers(source, translation, errors, numerus) and not contains_bitcorn_addr(translation, errors)
 
                     for error in errors:
                         print('%s: %s' % (filename, error))

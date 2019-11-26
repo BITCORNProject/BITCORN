@@ -3,7 +3,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <qt/askpassphrasedialog.h>
@@ -125,7 +125,7 @@ void AskPassphraseDialog::accept()
                                          "<qt>" +
                                          tr("Your wallet is now encrypted. "
                                          "Remember that encrypting your wallet cannot fully protect "
-                                         "your bitgreens from being stolen by malware infecting your computer.") +
+                                         "your bitcorns from being stolen by malware infecting your computer.") +
                                          "<br><br><b>" +
                                          tr("IMPORTANT: Any previous backups you have made of your wallet file "
                                          "should be replaced with the newly generated, encrypted wallet file. "

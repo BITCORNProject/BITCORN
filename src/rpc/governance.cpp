@@ -1095,10 +1095,10 @@ UniValue getsuperblockbudget(const JSONRPCRequest& request)
 static const CRPCCommand commands[] =
 { //  category              name                      actor (function)         argNames
   //  --------------------- ------------------------  -----------------------  ----------
-    { "bitgreen",           "getgovernanceinfo",      &getgovernanceinfo,      {} },
-    { "bitgreen",           "getsuperblockbudget",    &getsuperblockbudget,    {"index"} },
-    { "bitgreen",           "gobject",                &gobject,                {} },
-    { "bitgreen",           "voteraw",                &voteraw,                {} },
+    { "bitcorn",           "getgovernanceinfo",      &getgovernanceinfo,      {} },
+    { "bitcorn",           "getsuperblockbudget",    &getsuperblockbudget,    {"index"} },
+    { "bitcorn",           "gobject",                &gobject,                {} },
+    { "bitcorn",           "voteraw",                &voteraw,                {} },
 
 };
 

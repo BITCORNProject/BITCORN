@@ -310,7 +310,7 @@
     <name>WalletView</name>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Information</source>
         <translation>Информация</translation>

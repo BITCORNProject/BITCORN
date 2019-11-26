@@ -4,7 +4,7 @@
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
 #if defined(HAVE_CONFIG_H)
-#include <config/bitgreen-config.h>
+#include <config/bitcorn-config.h>
 #endif
 
 #include <chainparams.h>
@@ -37,7 +37,7 @@ const std::function<std::string(const char*)> G_TRANSLATION_FUN = nullptr;
  *
  * The software is a community-driven open source project, released under the MIT license.
  *
- * See https://github.com/bitgreen/bitgreen and https://bitg.org/ for further information about the project.
+ * See https://github.com/bitcorn/bitcorn and https://bitg.org/ for further information about the project.
  *
  * \section Navigation
  * Use the buttons <code>Namespaces</code>, <code>Classes</code> or <code>Files</code> at the top of the page to start navigating the code.
@@ -68,7 +68,7 @@ static bool AppInit(int argc, char* argv[])
     //
     // Parameters
     //
-    // If Qt is used, parameters/bitgreen.conf are parsed in qt/bitgreen.cpp's main()
+    // If Qt is used, parameters/bitcorn.conf are parsed in qt/bitcorn.cpp's main()
     SetupServerArgs();
     std::string error;
     if (!gArgs.ParseParameters(argc, argv, error)) {
@@ -85,7 +85,7 @@ static bool AppInit(int argc, char* argv[])
         }
         else
         {
-            strUsage += "\nUsage:  bitgreend [options]                     Start " PACKAGE_NAME " Daemon\n";
+            strUsage += "\nUsage:  bitcornd [options]                     Start " PACKAGE_NAME " Daemon\n";
             strUsage += "\n" + gArgs.GetHelpMessage();
         }
 
@@ -112,11 +112,11 @@ static bool AppInit(int argc, char* argv[])
         // Error out when loose non-argument tokens are encountered on command line
         for (int i = 1; i < argc; i++) {
             if (!IsSwitchChar(argv[i][0])) {
-                return InitError(strprintf("Command line contains unexpected token '%s', see bitgreend -h for a list of options.\n", argv[i]));
+                return InitError(strprintf("Command line contains unexpected token '%s', see bitcornd -h for a list of options.\n", argv[i]));
             }
         }
 
-        // -server defaults to true for bitgreend but not for the GUI so do this here
+        // -server defaults to true for bitcornd but not for the GUI so do this here
         gArgs.SoftSetBoolArg("-server", true);
         // Set this early so that parameter interactions go to console
         InitLogging();
@@ -189,7 +189,7 @@ int main(int argc, char* argv[])
 #endif
     SetupEnvironment();
 
-    // Connect bitgreend signal handlers
+    // Connect bitcornd signal handlers
     noui_connect();
 
     return (AppInit(argc, argv) ? EXIT_SUCCESS : EXIT_FAILURE);

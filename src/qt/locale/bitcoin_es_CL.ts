@@ -188,8 +188,8 @@
         <translation>Billetera codificada</translation>
     </message>
     <message>
-        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitgreens from being stolen by malware infecting your computer.</source>
-        <translation>%1 se cerrará para finalizar el proceso de encriptación. Recuerda que encriptar tu billetera no protege completamente a tus bitgreens de ser robados por virus y malwares en tu computadora.</translation>
+        <source>%1 will close now to finish the encryption process. Remember that encrypting your wallet cannot fully protect your bitcorns from being stolen by malware infecting your computer.</source>
+        <translation>%1 se cerrará para finalizar el proceso de encriptación. Recuerda que encriptar tu billetera no protege completamente a tus bitcorns de ser robados por virus y malwares en tu computadora.</translation>
     </message>
     <message>
         <source>IMPORTANT: Any previous backups you have made of your wallet file should be replaced with the newly generated, encrypted wallet file. For security reasons, previous backups of the unencrypted wallet file will become useless as soon as you start using the new, encrypted wallet.</source>
@@ -347,7 +347,7 @@
     </message>
     <message>
         <source>Send coins to a BitCorn address</source>
-        <translation>Enviar monedas a una dirección bitgreen</translation>
+        <translation>Enviar monedas a una dirección bitcorn</translation>
     </message>
     <message>
         <source>Backup wallet to another location</source>
@@ -422,8 +422,8 @@
         <translation>Barra de pestañas</translation>
     </message>
     <message>
-        <source>Request payments (generates QR codes and bitgreen: URIs)</source>
-        <translation>Pide pagos (genera codigos QR and bitgreen: URls)</translation>
+        <source>Request payments (generates QR codes and bitcorn: URIs)</source>
+        <translation>Pide pagos (genera codigos QR and bitcorn: URls)</translation>
     </message>
     <message>
         <source>Show the list of used sending addresses and labels</source>
@@ -434,8 +434,8 @@
         <translation>Mostrar la lista de direcciones de recepción y etiquetas</translation>
     </message>
     <message>
-        <source>Open a bitgreen: URI or payment request</source>
-        <translation>Abrir un identificador URI bitgreen o una petición de pago</translation>
+        <source>Open a bitcorn: URI or payment request</source>
+        <translation>Abrir un identificador URI bitcorn o una petición de pago</translation>
     </message>
     <message>
         <source>&amp;Command-line options</source>
@@ -875,12 +875,12 @@
         <translation>Formulario</translation>
     </message>
     <message>
-        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitgreen network, as detailed below.</source>
-        <translation>Las transacciones recientes aún no pueden ser visibles, y por lo tanto el saldo de su monedero podría ser incorrecto. Esta información será correcta cuando su monedero haya terminado de sincronizarse con la red de bitgreen, como se detalla abajo.</translation>
+        <source>Recent transactions may not yet be visible, and therefore your wallet's balance might be incorrect. This information will be correct once your wallet has finished synchronizing with the bitcorn network, as detailed below.</source>
+        <translation>Las transacciones recientes aún no pueden ser visibles, y por lo tanto el saldo de su monedero podría ser incorrecto. Esta información será correcta cuando su monedero haya terminado de sincronizarse con la red de bitcorn, como se detalla abajo.</translation>
     </message>
     <message>
-        <source>Attempting to spend bitgreens that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
-        <translation>La red no aceptará el intentar gastar bitgreens que están afectados por transacciones aún no mostradas.</translation>
+        <source>Attempting to spend bitcorns that are affected by not-yet-displayed transactions will not be accepted by the network.</source>
+        <translation>La red no aceptará el intentar gastar bitcorns que están afectados por transacciones aún no mostradas.</translation>
     </message>
     <message>
         <source>Number of blocks left</source>
@@ -2824,7 +2824,7 @@
     </message>
     </context>
 <context>
-    <name>bitgreen-core</name>
+    <name>bitcorn-core</name>
     <message>
         <source>Distributed under the MIT software license, see the accompanying file %s or %s</source>
         <translation>Distribuido bajo la licencia de software MIT, vea el archivo adjunto %s o %s</translation>
@@ -2851,7 +2851,7 @@
     </message>
     <message>
         <source>BitCorn Core</source>
-        <translation>bitgreen core</translation>
+        <translation>bitcorn core</translation>
     </message>
     <message>
         <source>The %s developers</source>

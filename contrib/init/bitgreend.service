@@ -1,47 +1,47 @@
 # It is not recommended to modify this file in-place, because it will
 # be overwritten during package upgrades. If you want to add further
 # options or overwrite existing ones then use
-# $ systemctl edit bitgreend.service
+# $ systemctl edit bitcornd.service
 # See "man systemd.service" for details.
 
 # Note that almost all daemon options could be specified in
-# /etc/bitgreen/bitgreen.conf, except for those explicitly specified as arguments
+# /etc/bitcorn/bitcorn.conf, except for those explicitly specified as arguments
 # in ExecStart=
 
 [Unit]
-Description=bitgreen daemon
+Description=bitcorn daemon
 After=network.target
 
 [Service]
-ExecStart=/usr/bin/bitgreend -daemon \
-                            -pid=/run/bitgreend/bitgreend.pid \
-                            -conf=/etc/bitgreen/bitgreen.conf \
-                            -datadir=/var/lib/bitgreend
+ExecStart=/usr/bin/bitcornd -daemon \
+                            -pid=/run/bitcornd/bitcornd.pid \
+                            -conf=/etc/bitcorn/bitcorn.conf \
+                            -datadir=/var/lib/bitcornd
 
 # Process management
 ####################
 
 Type=forking
-PIDFile=/run/bitgreend/bitgreend.pid
+PIDFile=/run/bitcornd/bitcornd.pid
 Restart=on-failure
 
 # Directory creation and permissions
 ####################################
 
-# Run as bitgreen:bitgreen
-User=bitgreen
-Group=bitgreen
+# Run as bitcorn:bitcorn
+User=bitcorn
+Group=bitcorn
 
-# /run/bitgreend
-RuntimeDirectory=bitgreend
+# /run/bitcornd
+RuntimeDirectory=bitcornd
 RuntimeDirectoryMode=0710
 
-# /etc/bitgreen
-ConfigurationDirectory=bitgreen
+# /etc/bitcorn
+ConfigurationDirectory=bitcorn
 ConfigurationDirectoryMode=0710
 
-# /var/lib/bitgreend
-StateDirectory=bitgreend
+# /var/lib/bitcornd
+StateDirectory=bitcornd
 StateDirectoryMode=0710
 
 # Hardening measures

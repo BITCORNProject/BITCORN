@@ -11,7 +11,7 @@
   </array>
 
   <key>CFBundleIconFile</key>
-  <string>bitgreen.icns</string>
+  <string>bitcorn.icns</string>
 
   <key>CFBundlePackageType</key>
   <string>APPL</string>
@@ -49,7 +49,7 @@
       <string>org.bitg.BitCornPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
-        <string>bitgreen</string>
+        <string>bitcorn</string>
       </array>
     </dict>
   </array>
@@ -68,10 +68,10 @@
       <key>UTTypeTagSpecification</key>
       <dict>
         <key>public.mime-type</key>
-        <string>application/x-bitgreen-payment-request</string>
+        <string>application/x-bitcorn-payment-request</string>
         <key>public.filename-extension</key>
         <array>
-          <string>bitgreenpaymentrequest</string>
+          <string>bitcornpaymentrequest</string>
         </array>
       </dict>
     </dict>
