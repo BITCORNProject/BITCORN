@@ -1749,7 +1749,7 @@ static int64_t nTimeConnect = 0;
 static int64_t nTimeIndex = 0;
 static int64_t nTimeCallbacks = 0;
 static int64_t nTimeTotal = 0;
-static int64_t nTimeBitgreenSpecific = 0;
+static int64_t nTimeBitcornSpecific = 0;
 static int64_t nBlocksTotal = 0;
 
 
@@ -2195,8 +2195,8 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nTime4_3 = GetTimeMicros(); nTimeVerify += nTime4_3 - nTime4_2;
     LogPrint(BCLog::BENCHMARK, "      - ProcessSpecialTxsInBlock: %.2fms [%.2fs]\n", MILLI * (nTime4_3 - nTime4_2), nTimeVerify * MICRO);
 
-    int64_t nTime4_4 = GetTimeMicros(); nTimeBitgreenSpecific += nTime4_4 - nTime4_1;
-    LogPrint(BCLog::BENCHMARK, "    - Bitgreen specific: %.2fms [%.2fs]\n", MILLI * (nTime4_4 - nTime4_3), nTimeBitgreenSpecific * MICRO);
+    int64_t nTime4_4 = GetTimeMicros(); nTimeBitcornSpecific += nTime4_4 - nTime4_1;
+    LogPrint(BCLog::BENCHMARK, "    - Bitcorn specific: %.2fms [%.2fs]\n", MILLI * (nTime4_4 - nTime4_3), nTimeBitcornSpecific * MICRO);
 
     // END BITCORN
 
