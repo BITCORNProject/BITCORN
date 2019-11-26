@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef  BITGREEN_MASTERNODES_MASTERNODE_UTILS_H
-#define  BITGREEN_MASTERNODES_MASTERNODE_UTILS_H
+#ifndef  BITCORN_MASTERNODES_MASTERNODE_UTILS_H
+#define  BITCORN_MASTERNODES_MASTERNODE_UTILS_H
 
 #include <special/deterministicmns.h>
 
@@ -26,4 +26,4 @@ public:
     static void DoMaintenance(CConnman &connman);
 };
 
-#endif // BITGREEN_MASTERNODES_MASTERNODE_UTILS_H
+#endif // BITCORN_MASTERNODES_MASTERNODE_UTILS_H

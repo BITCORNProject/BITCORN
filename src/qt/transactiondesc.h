@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_TRANSACTIONDESC_H
-#define BITGREEN_QT_TRANSACTIONDESC_H
+#ifndef BITCORN_QT_TRANSACTIONDESC_H
+#define BITCORN_QT_TRANSACTIONDESC_H
 
 #include <QObject>
 #include <QString>
@@ -32,4 +32,4 @@ private:
     static QString FormatTxStatus(const interfaces::WalletTx& wtx, const interfaces::WalletTxStatus& status, bool inMempool, int numBlocks);
 };
 
-#endif // BITGREEN_QT_TRANSACTIONDESC_H
+#endif // BITCORN_QT_TRANSACTIONDESC_H

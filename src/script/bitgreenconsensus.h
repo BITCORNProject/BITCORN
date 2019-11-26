@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SCRIPT_BITGREENCONSENSUS_H
-#define BITGREEN_SCRIPT_BITGREENCONSENSUS_H
+#ifndef BITCORN_SCRIPT_BITCORNCONSENSUS_H
+#define BITCORN_SCRIPT_BITCORNCONSENSUS_H
 
 #include <stdint.h>
 
@@ -21,7 +21,7 @@
   #elif defined(HAVE_FUNC_ATTRIBUTE_VISIBILITY)
     #define EXPORT_SYMBOL __attribute__ ((visibility ("default")))
   #endif
-#elif defined(MSC_VER) && !defined(STATIC_LIBBITGREENCONSENSUS)
+#elif defined(MSC_VER) && !defined(STATIC_LIBBITCORNCONSENSUS)
   #define EXPORT_SYMBOL __declspec(dllimport)
 #endif
 
@@ -33,7 +33,7 @@
 extern "C" {
 #endif
 
-#define BITGREENCONSENSUS_API_VER 1
+#define BITCORNCONSENSUS_API_VER 1
 
 typedef enum bitgreenconsensus_error_t
 {
@@ -80,4 +80,4 @@ EXPORT_SYMBOL unsigned int bitgreenconsensus_version();
 
 #undef EXPORT_SYMBOL
 
-#endif // BITGREEN_SCRIPT_BITGREENCONSENSUS_H
+#endif // BITCORN_SCRIPT_BITCORNCONSENSUS_H

@@ -29,9 +29,9 @@ fi
 
 AC_CANONICAL_HOST
 
-AH_TOP([#ifndef BITGREEN_CONFIG_H])
-AH_TOP([#define BITGREEN_CONFIG_H])
-AH_BOTTOM([#endif //BITGREEN_CONFIG_H])
+AH_TOP([#ifndef BITCORN_CONFIG_H])
+AH_TOP([#define BITCORN_CONFIG_H])
+AH_BOTTOM([#endif //BITCORN_CONFIG_H])
 
 dnl faketime breaks configure and is only needed for make. Disable it here.
 unset FAKETIME

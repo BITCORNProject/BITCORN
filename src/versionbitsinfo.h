@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_VERSIONBITSINFO_H
-#define BITGREEN_VERSIONBITSINFO_H
+#ifndef BITCORN_VERSIONBITSINFO_H
+#define BITCORN_VERSIONBITSINFO_H
 
 struct VBDeploymentInfo {
     /** Deployment name */
@@ -14,4 +14,4 @@ struct VBDeploymentInfo {
 
 extern const struct VBDeploymentInfo VersionBitsDeploymentInfo[];
 
-#endif // BITGREEN_VERSIONBITSINFO_H
+#endif // BITCORN_VERSIONBITSINFO_H

@@ -1,6 +1,6 @@
 // Automatically generated file. Do not modify.
-#ifndef BITGREEN_UNIVALUE_UNIVALUE_ESCAPES_H
-#define BITGREEN_UNIVALUE_UNIVALUE_ESCAPES_H
+#ifndef BITCORN_UNIVALUE_UNIVALUE_ESCAPES_H
+#define BITCORN_UNIVALUE_UNIVALUE_ESCAPES_H
 static const char *escapes[256] = {
 	"\\u0000",
 	"\\u0001",
@@ -259,4 +259,4 @@ static const char *escapes[256] = {
 	NULL,
 	NULL,
 };
-#endif // BITGREEN_UNIVALUE_UNIVALUE_ESCAPES_H
+#endif // BITCORN_UNIVALUE_UNIVALUE_ESCAPES_H

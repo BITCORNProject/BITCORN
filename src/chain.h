@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_CHAIN_H
-#define BITGREEN_CHAIN_H
+#ifndef BITCORN_CHAIN_H
+#define BITCORN_CHAIN_H
 
 #include <arith_uint256.h>
 #include <consensus/params.h>
@@ -574,4 +574,4 @@ public:
     CBlockIndex* FindEarliestAtLeast(int64_t nTime, int height) const;
 };
 
-#endif // BITGREEN_CHAIN_H
+#endif // BITCORN_CHAIN_H

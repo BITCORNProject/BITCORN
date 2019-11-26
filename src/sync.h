@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SYNC_H
-#define BITGREEN_SYNC_H
+#ifndef BITCORN_SYNC_H
+#define BITCORN_SYNC_H
 
 #include <threadsafety.h>
 
@@ -318,4 +318,4 @@ struct SCOPED_LOCKABLE LockAssertion
     ~LockAssertion() UNLOCK_FUNCTION() {}
 };
 
-#endif // BITGREEN_SYNC_H
+#endif // BITCORN_SYNC_H

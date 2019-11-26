@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INDIRECTMAP_H
-#define BITGREEN_INDIRECTMAP_H
+#ifndef BITCORN_INDIRECTMAP_H
+#define BITCORN_INDIRECTMAP_H
 
 template <class T>
 struct DereferencingComparator { bool operator()(const T a, const T b) const { return *a < *b; } };
@@ -53,4 +53,4 @@ public:
     const_iterator cend() const     { return m.cend(); }
 };
 
-#endif // BITGREEN_INDIRECTMAP_H
+#endif // BITCORN_INDIRECTMAP_H

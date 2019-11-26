@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_WALLET_WALLETTOOL_H
-#define BITGREEN_WALLET_WALLETTOOL_H
+#ifndef BITCORN_WALLET_WALLETTOOL_H
+#define BITCORN_WALLET_WALLETTOOL_H
 
 #include <wallet/ismine.h>
 #include <wallet/wallet.h>
@@ -17,4 +17,4 @@ bool ExecuteWalletToolFunc(const std::string& command, const std::string& file);
 
 } // namespace WalletTool
 
-#endif // BITGREEN_WALLET_WALLETTOOL_H
+#endif // BITCORN_WALLET_WALLETTOOL_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_POLICY_FEERATE_H
-#define BITGREEN_POLICY_FEERATE_H
+#ifndef BITCORN_POLICY_FEERATE_H
+#define BITCORN_POLICY_FEERATE_H
 
 #include <amount.h>
 #include <serialize.h>
@@ -56,4 +56,4 @@ public:
     }
 };
 
-#endif //  BITGREEN_POLICY_FEERATE_H
+#endif //  BITCORN_POLICY_FEERATE_H

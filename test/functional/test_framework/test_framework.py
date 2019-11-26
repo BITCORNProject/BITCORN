@@ -143,8 +143,8 @@ class BitGreenTestFramework(metaclass=BitGreenTestMetaClass):
         config = configparser.ConfigParser()
         config.read_file(open(self.options.configfile))
         self.config = config
-        self.options.bitgreend = os.getenv("BITGREEND", default=config["environment"]["BUILDDIR"] + '/src/bitgreend' + config["environment"]["EXEEXT"])
-        self.options.bitgreencli = os.getenv("BITGREENCLI", default=config["environment"]["BUILDDIR"] + '/src/bitgreen-cli' + config["environment"]["EXEEXT"])
+        self.options.bitgreend = os.getenv("BITCORND", default=config["environment"]["BUILDDIR"] + '/src/bitgreend' + config["environment"]["EXEEXT"])
+        self.options.bitgreencli = os.getenv("BITCORNCLI", default=config["environment"]["BUILDDIR"] + '/src/bitgreen-cli' + config["environment"]["EXEEXT"])
 
         os.environ['PATH'] = os.pathsep.join([
             os.path.join(config['environment']['BUILDDIR'], 'src'),

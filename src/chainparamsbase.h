@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_CHAINPARAMSBASE_H
-#define BITGREEN_CHAINPARAMSBASE_H
+#ifndef BITCORN_CHAINPARAMSBASE_H
+#define BITCORN_CHAINPARAMSBASE_H
 
 #include <memory>
 #include <string>
@@ -52,4 +52,4 @@ const CBaseChainParams& BaseParams();
 /** Sets the params returned by Params() to those for the given network. */
 void SelectBaseParams(const std::string& chain);
 
-#endif // BITGREEN_CHAINPARAMSBASE_H
+#endif // BITCORN_CHAINPARAMSBASE_H

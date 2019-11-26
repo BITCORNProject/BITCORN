@@ -9,8 +9,8 @@
 //
 // For more information, see BIP 173.
 
-#ifndef BITGREEN_BECH32_H
-#define BITGREEN_BECH32_H
+#ifndef BITCORN_BECH32_H
+#define BITCORN_BECH32_H
 
 #include <stdint.h>
 #include <string>
@@ -27,4 +27,4 @@ std::pair<std::string, std::vector<uint8_t>> Decode(const std::string& str);
 
 } // namespace bech32
 
-#endif // BITGREEN_BECH32_H
+#endif // BITCORN_BECH32_H

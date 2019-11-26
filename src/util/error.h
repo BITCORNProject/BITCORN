@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_UTIL_ERROR_H
-#define BITGREEN_UTIL_ERROR_H
+#ifndef BITCORN_UTIL_ERROR_H
+#define BITCORN_UTIL_ERROR_H
 
 /**
  * util/error.h is a common place for definitions of simple error types and
@@ -36,4 +36,4 @@ std::string AmountHighWarn(const std::string& optname);
 
 std::string AmountErrMsg(const char* const optname, const std::string& strValue);
 
-#endif // BITGREEN_UTIL_ERROR_H
+#endif // BITCORN_UTIL_ERROR_H

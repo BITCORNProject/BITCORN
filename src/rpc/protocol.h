@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_RPC_PROTOCOL_H
-#define BITGREEN_RPC_PROTOCOL_H
+#ifndef BITCORN_RPC_PROTOCOL_H
+#define BITCORN_RPC_PROTOCOL_H
 
 //! HTTP status codes
 enum HTTPStatusCode
@@ -83,4 +83,4 @@ enum RPCErrorCode
     RPC_FORBIDDEN_BY_SAFE_MODE      = -2,  //!< Server is in safe mode, and command is not allowed in safe mode
 };
 
-#endif // BITGREEN_RPC_PROTOCOL_H
+#endif // BITCORN_RPC_PROTOCOL_H

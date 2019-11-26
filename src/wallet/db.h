@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_WALLET_DB_H
-#define BITGREEN_WALLET_DB_H
+#ifndef BITCORN_WALLET_DB_H
+#define BITCORN_WALLET_DB_H
 
 #include <clientversion.h>
 #include <fs.h>
@@ -402,4 +402,4 @@ public:
     bool static Rewrite(BerkeleyDatabase& database, const char* pszSkip = nullptr);
 };
 
-#endif // BITGREEN_WALLET_DB_H
+#endif // BITCORN_WALLET_DB_H

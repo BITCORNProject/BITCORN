@@ -7,8 +7,8 @@
 #error This header can only be compiled as C++.
 #endif
 
-#ifndef BITGREEN_PROTOCOL_H
-#define BITGREEN_PROTOCOL_H
+#ifndef BITCORN_PROTOCOL_H
+#define BITCORN_PROTOCOL_H
 
 #include <netaddress.h>
 #include <serialize.h>
@@ -443,4 +443,4 @@ public:
     uint256 hash;
 };
 
-#endif // BITGREEN_PROTOCOL_H
+#endif // BITCORN_PROTOCOL_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_LLMQ_QUORUMS_UTILS_H
-#define BITGREEN_LLMQ_QUORUMS_UTILS_H
+#ifndef BITCORN_LLMQ_QUORUMS_UTILS_H
+#define BITCORN_LLMQ_QUORUMS_UTILS_H
 
 #include <consensus/params.h>
 #include <net.h>
@@ -70,4 +70,4 @@ public:
 
 }
 
-#endif//BITGREEN_LLMQ_QUORUMS_UTILS_H
+#endif//BITCORN_LLMQ_QUORUMS_UTILS_H

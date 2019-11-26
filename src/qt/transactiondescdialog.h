@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_TRANSACTIONDESCDIALOG_H
-#define BITGREEN_QT_TRANSACTIONDESCDIALOG_H
+#ifndef BITCORN_QT_TRANSACTIONDESCDIALOG_H
+#define BITCORN_QT_TRANSACTIONDESCDIALOG_H
 
 #include <QDialog>
 
@@ -29,4 +29,4 @@ private:
     Ui::TransactionDescDialog *ui;
 };
 
-#endif // BITGREEN_QT_TRANSACTIONDESCDIALOG_H
+#endif // BITCORN_QT_TRANSACTIONDESCDIALOG_H

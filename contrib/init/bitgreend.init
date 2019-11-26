@@ -19,14 +19,14 @@ fi
 RETVAL=0
 
 prog=bitgreend
-# you can override the lockfile via BITGREEND_LOCKFILE in /etc/sysconfig/bitgreend
-lockfile=${BITGREEND_LOCKFILE-/var/lock/subsys/bitgreend}
+# you can override the lockfile via BITCORND_LOCKFILE in /etc/sysconfig/bitgreend
+lockfile=${BITCORND_LOCKFILE-/var/lock/subsys/bitgreend}
 
-# bitgreend defaults to /usr/bin/bitgreend, override with BITGREEND_BIN
-bitgreend=${BITGREEND_BIN-/usr/bin/bitgreend}
+# bitgreend defaults to /usr/bin/bitgreend, override with BITCORND_BIN
+bitgreend=${BITCORND_BIN-/usr/bin/bitgreend}
 
-# bitgreend opts default to -disablewallet, override with BITGREEND_OPTS
-bitgreend_opts=${BITGREEND_OPTS--disablewallet}
+# bitgreend opts default to -disablewallet, override with BITCORND_OPTS
+bitgreend_opts=${BITCORND_OPTS--disablewallet}
 
 start() {
     echo -n $"Starting $prog: "

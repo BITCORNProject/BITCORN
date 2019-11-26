@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INIT_H
-#define BITGREEN_INIT_H
+#ifndef BITCORN_INIT_H
+#define BITCORN_INIT_H
 
 #include <memory>
 #include <string>
@@ -73,4 +73,4 @@ void SetupServerArgs();
 /** Returns licensing information (for -version) */
 std::string LicenseInfo();
 
-#endif // BITGREEN_INIT_H
+#endif // BITCORN_INIT_H

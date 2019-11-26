@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_RPC_SERVER_H
-#define BITGREEN_RPC_SERVER_H
+#ifndef BITCORN_RPC_SERVER_H
+#define BITCORN_RPC_SERVER_H
 
 #include <amount.h>
 #include <rpc/request.h>
@@ -169,4 +169,4 @@ std::string JSONRPCExecBatch(const JSONRPCRequest& jreq, const UniValue& vReq);
 // Retrieves any serialization flags requested in command line argument
 int RPCSerializationFlags();
 
-#endif // BITGREEN_RPC_SERVER_H
+#endif // BITCORN_RPC_SERVER_H

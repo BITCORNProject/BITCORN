@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_MNAUTH_H
-#define BITGREEN_MNAUTH_H
+#ifndef BITCORN_MNAUTH_H
+#define BITCORN_MNAUTH_H
 
 #include <uint256.h>
 #include <serialize.h>
@@ -56,4 +56,4 @@ public:
 };
 
 
-#endif // BITGREEN_MNAUTH_H
+#endif // BITCORN_MNAUTH_H

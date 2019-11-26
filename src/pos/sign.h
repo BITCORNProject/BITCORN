@@ -2,8 +2,8 @@
 // Copyright (c) 2019 The BitGreen Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITGREEN_POS_SIGN_H
-#define BITGREEN_POS_SIGN_H
+#ifndef BITCORN_POS_SIGN_H
+#define BITCORN_POS_SIGN_H
 
 #include <memory>
 
@@ -22,4 +22,4 @@ public:
     bool CheckBlockSignature();
 };
 
-#endif // BITGREEN_POS_SIGN_H
+#endif // BITCORN_POS_SIGN_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_TRANSACTIONRECORD_H
-#define BITGREEN_QT_TRANSACTIONRECORD_H
+#ifndef BITCORN_QT_TRANSACTIONRECORD_H
+#define BITCORN_QT_TRANSACTIONRECORD_H
 
 #include <amount.h>
 #include <uint256.h>
@@ -155,4 +155,4 @@ public:
     bool statusUpdateNeeded(int numBlocks, int numISLocks, int chainLockHeight) const;
 };
 
-#endif // BITGREEN_QT_TRANSACTIONRECORD_H
+#endif // BITCORN_QT_TRANSACTIONRECORD_H

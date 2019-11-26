@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_COINS_H
-#define BITGREEN_COINS_H
+#ifndef BITCORN_COINS_H
+#define BITCORN_COINS_H
 
 #include <primitives/transaction.h>
 #include <compressor.h>
@@ -357,4 +357,4 @@ private:
 
 };
 
-#endif // BITGREEN_COINS_H
+#endif // BITCORN_COINS_H

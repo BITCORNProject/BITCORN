@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_BITCOINUNITS_H
-#define BITGREEN_QT_BITCOINUNITS_H
+#ifndef BITCORN_QT_BITCOINUNITS_H
+#define BITCORN_QT_BITCOINUNITS_H
 
 #include <amount.h>
 
@@ -127,4 +127,4 @@ private:
 };
 typedef BitcoinUnits::Unit BitGreenUnit;
 
-#endif // BITGREEN_QT_BITCOINUNITS_H
+#endif // BITCORN_QT_BITCOINUNITS_H

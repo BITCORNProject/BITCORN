@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INDEX_BLOCKFILTERINDEX_H
-#define BITGREEN_INDEX_BLOCKFILTERINDEX_H
+#ifndef BITCORN_INDEX_BLOCKFILTERINDEX_H
+#define BITCORN_INDEX_BLOCKFILTERINDEX_H
 
 #include <blockfilter.h>
 #include <chain.h>
@@ -91,4 +91,4 @@ bool DestroyBlockFilterIndex(BlockFilterType filter_type);
 /** Destroy all open block filter indexes. */
 void DestroyAllBlockFilterIndexes();
 
-#endif // BITGREEN_INDEX_BLOCKFILTERINDEX_H
+#endif // BITCORN_INDEX_BLOCKFILTERINDEX_H

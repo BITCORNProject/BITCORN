@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_NETADDRESS_H
-#define BITGREEN_NETADDRESS_H
+#ifndef BITCORN_NETADDRESS_H
+#define BITCORN_NETADDRESS_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -170,4 +170,4 @@ class CService : public CNetAddr
         }
 };
 
-#endif // BITGREEN_NETADDRESS_H
+#endif // BITCORN_NETADDRESS_H

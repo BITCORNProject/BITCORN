@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_RPC_UTIL_H
-#define BITGREEN_RPC_UTIL_H
+#ifndef BITCORN_RPC_UTIL_H
+#define BITCORN_RPC_UTIL_H
 
 #include <node/transaction.h>
 #include <outputtype.h>
@@ -262,4 +262,4 @@ private:
     const RPCExamples m_examples;
 };
 
-#endif // BITGREEN_RPC_UTIL_H
+#endif // BITCORN_RPC_UTIL_H

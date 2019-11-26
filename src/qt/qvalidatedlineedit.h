@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_QVALIDATEDLINEEDIT_H
-#define BITGREEN_QT_QVALIDATEDLINEEDIT_H
+#ifndef BITCORN_QT_QVALIDATEDLINEEDIT_H
+#define BITCORN_QT_QVALIDATEDLINEEDIT_H
 
 #include <QLineEdit>
 
@@ -40,4 +40,4 @@ private Q_SLOTS:
     void checkValidity();
 };
 
-#endif // BITGREEN_QT_QVALIDATEDLINEEDIT_H
+#endif // BITCORN_QT_QVALIDATEDLINEEDIT_H

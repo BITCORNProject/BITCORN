@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_UINT256_H
-#define BITGREEN_UINT256_H
+#ifndef BITCORN_UINT256_H
+#define BITCORN_UINT256_H
 
 #include <assert.h>
 #include <cstring>
@@ -168,4 +168,4 @@ namespace std {
     };
 }
 
-#endif // BITGREEN_UINT256_H
+#endif // BITCORN_UINT256_H

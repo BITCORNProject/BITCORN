@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_NODE_PSBT_H
-#define BITGREEN_NODE_PSBT_H
+#ifndef BITCORN_NODE_PSBT_H
+#define BITCORN_NODE_PSBT_H
 
 #include <psbt.h>
 
@@ -40,4 +40,4 @@ struct PSBTAnalysis {
  */
 PSBTAnalysis AnalyzePSBT(PartiallySignedTransaction psbtx);
 
-#endif // BITGREEN_NODE_PSBT_H
+#endif // BITCORN_NODE_PSBT_H

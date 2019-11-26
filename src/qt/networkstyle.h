@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_NETWORKSTYLE_H
-#define BITGREEN_QT_NETWORKSTYLE_H
+#ifndef BITCORN_QT_NETWORKSTYLE_H
+#define BITCORN_QT_NETWORKSTYLE_H
 
 #include <QIcon>
 #include <QPixmap>
@@ -30,4 +30,4 @@ private:
     QString titleAddText;
 };
 
-#endif // BITGREEN_QT_NETWORKSTYLE_H
+#endif // BITCORN_QT_NETWORKSTYLE_H

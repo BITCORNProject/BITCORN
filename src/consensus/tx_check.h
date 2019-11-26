@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_CONSENSUS_TX_CHECK_H
-#define BITGREEN_CONSENSUS_TX_CHECK_H
+#ifndef BITCORN_CONSENSUS_TX_CHECK_H
+#define BITCORN_CONSENSUS_TX_CHECK_H
 
 /**
  * Context-independent transaction checking code that can be called outside the
@@ -17,4 +17,4 @@ class CValidationState;
 
 bool CheckTransaction(const CTransaction& tx, CValidationState& state, bool fCheckDuplicateInputs=true);
 
-#endif // BITGREEN_CONSENSUS_TX_CHECK_H
+#endif // BITCORN_CONSENSUS_TX_CHECK_H

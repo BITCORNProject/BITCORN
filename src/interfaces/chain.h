@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INTERFACES_CHAIN_H
-#define BITGREEN_INTERFACES_CHAIN_H
+#ifndef BITCORN_INTERFACES_CHAIN_H
+#define BITCORN_INTERFACES_CHAIN_H
 
 #include <optional.h>               // For Optional and nullopt
 #include <primitives/transaction.h> // For CTransactionRef
@@ -310,4 +310,4 @@ std::unique_ptr<ChainClient> MakeWalletClient(Chain& chain, std::vector<std::str
 
 } // namespace interfaces
 
-#endif // BITGREEN_INTERFACES_CHAIN_H
+#endif // BITCORN_INTERFACES_CHAIN_H

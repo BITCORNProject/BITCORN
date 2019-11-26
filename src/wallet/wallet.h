@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_WALLET_WALLET_H
-#define BITGREEN_WALLET_WALLET_H
+#ifndef BITCORN_WALLET_WALLET_H
+#define BITCORN_WALLET_WALLET_H
 
 #include <amount.h>
 #include <index/txindex.h>
@@ -1493,4 +1493,4 @@ public:
 // be IsAllFromMe).
 int64_t CalculateMaximumSignedTxSize(const CTransaction &tx, const CWallet *wallet, bool use_max_sig = false) EXCLUSIVE_LOCKS_REQUIRED(wallet->cs_wallet);
 int64_t CalculateMaximumSignedTxSize(const CTransaction &tx, const CWallet *wallet, const std::vector<CTxOut>& txouts, bool use_max_sig = false);
-#endif // BITGREEN_WALLET_WALLET_H
+#endif // BITCORN_WALLET_WALLET_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_TRANSACTIONTABLEMODEL_H
-#define BITGREEN_QT_TRANSACTIONTABLEMODEL_H
+#ifndef BITCORN_QT_TRANSACTIONTABLEMODEL_H
+#define BITCORN_QT_TRANSACTIONTABLEMODEL_H
 
 #include <qt/bitcoinunits.h>
 
@@ -132,4 +132,4 @@ public Q_SLOTS:
     friend class TransactionTablePriv;
 };
 
-#endif // BITGREEN_QT_TRANSACTIONTABLEMODEL_H
+#endif // BITCORN_QT_TRANSACTIONTABLEMODEL_H

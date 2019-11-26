@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SCRIPT_KEYORIGIN_H
-#define BITGREEN_SCRIPT_KEYORIGIN_H
+#ifndef BITCORN_SCRIPT_KEYORIGIN_H
+#define BITCORN_SCRIPT_KEYORIGIN_H
 
 #include <serialize.h>
 #include <streams.h>
@@ -34,4 +34,4 @@ struct KeyOriginInfo
     }
 };
 
-#endif // BITGREEN_SCRIPT_KEYORIGIN_H
+#endif // BITCORN_SCRIPT_KEYORIGIN_H

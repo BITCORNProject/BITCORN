@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SPECIAL_TRANSACTION
-#define BITGREEN_SPECIAL_TRANSACTION
+#ifndef BITCORN_SPECIAL_TRANSACTION
+#define BITCORN_SPECIAL_TRANSACTION
 
 #include <primitives/transaction.h>
 #include <streams.h>
@@ -50,4 +50,4 @@ void SetTxPayload(CMutableTransaction& tx, const T& payload)
 
 uint256 CalcTxInputsHash(const CTransaction& tx);
 
-#endif // BITGREEN_SPECIAL_TRANSACTION
+#endif // BITCORN_SPECIAL_TRANSACTION

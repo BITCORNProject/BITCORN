@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_PAYMENTSERVER_H
-#define BITGREEN_QT_PAYMENTSERVER_H
+#ifndef BITCORN_QT_PAYMENTSERVER_H
+#define BITCORN_QT_PAYMENTSERVER_H
 
 // This class handles payment requests from clicking on
 // bitgreen: URIs
@@ -157,4 +157,4 @@ private:
 #endif
 };
 
-#endif // BITGREEN_QT_PAYMENTSERVER_H
+#endif // BITCORN_QT_PAYMENTSERVER_H

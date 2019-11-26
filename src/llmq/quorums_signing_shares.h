@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_LLMQ_QUORUMS_SIGNING_SHARES_H
-#define BITGREEN_LLMQ_QUORUMS_SIGNING_SHARES_H
+#ifndef BITCORN_LLMQ_QUORUMS_SIGNING_SHARES_H
+#define BITCORN_LLMQ_QUORUMS_SIGNING_SHARES_H
 
 #include <bls/bls.h>
 #include <chainparams.h>
@@ -427,4 +427,4 @@ extern CSigSharesManager* quorumSigSharesManager;
 
 }
 
-#endif //BITGREEN_LLMQ_QUORUMS_SIGNING_SHARES_H
+#endif //BITCORN_LLMQ_QUORUMS_SIGNING_SHARES_H

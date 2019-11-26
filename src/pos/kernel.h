@@ -2,8 +2,8 @@
 // Copyright (c) 2017-2019 The BitGreen Core developers
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
-#ifndef BITGREEN_POS_POS_H
-#define BITGREEN_POS_POS_H
+#ifndef BITCORN_POS_POS_H
+#define BITCORN_POS_POS_H
 
 #include <uint256.h>
 #include <primitives/transaction.h> // CTransaction(Ref)
@@ -38,4 +38,4 @@ bool CheckStakeModifierCheckpoints(int nHeight, unsigned int nStakeModifierCheck
 // Entropy bit for stake modifier if chosen by modifier
 unsigned int GetStakeEntropyBit(const CBlock& block);
 
-#endif // BITGREEN_POS_POS_H
+#endif // BITCORN_POS_POS_H

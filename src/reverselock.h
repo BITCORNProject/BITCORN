@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_REVERSELOCK_H
-#define BITGREEN_REVERSELOCK_H
+#ifndef BITCORN_REVERSELOCK_H
+#define BITCORN_REVERSELOCK_H
 
 /**
  * An RAII-style reverse lock. Unlocks on construction and locks on destruction.
@@ -31,4 +31,4 @@ private:
     Lock templock;
 };
 
-#endif // BITGREEN_REVERSELOCK_H
+#endif // BITCORN_REVERSELOCK_H

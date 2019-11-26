@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_MERKLEBLOCK_H
-#define BITGREEN_MERKLEBLOCK_H
+#ifndef BITCORN_MERKLEBLOCK_H
+#define BITCORN_MERKLEBLOCK_H
 
 #include <serialize.h>
 #include <uint256.h>
@@ -170,4 +170,4 @@ private:
     CMerkleBlock(const CBlock& block, CBloomFilter* filter, const std::set<uint256>* txids);
 };
 
-#endif // BITGREEN_MERKLEBLOCK_H
+#endif // BITCORN_MERKLEBLOCK_H

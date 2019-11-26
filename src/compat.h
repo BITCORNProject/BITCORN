@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_COMPAT_H
-#define BITGREEN_COMPAT_H
+#ifndef BITCORN_COMPAT_H
+#define BITCORN_COMPAT_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -103,4 +103,4 @@ bool static inline IsSelectableSocket(const SOCKET& s) {
 #endif
 }
 
-#endif // BITGREEN_COMPAT_H
+#endif // BITCORN_COMPAT_H

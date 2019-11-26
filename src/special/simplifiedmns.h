@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SPECIAL_SIMPLIFIEDMNS_H
-#define BITGREEN_SPECIAL_SIMPLIFIEDMNS_H
+#ifndef BITCORN_SPECIAL_SIMPLIFIEDMNS_H
+#define BITCORN_SPECIAL_SIMPLIFIEDMNS_H
 
 #include <bls/bls.h>
 #include <merkleblock.h>
@@ -143,4 +143,4 @@ public:
 
 bool BuildSimplifiedMNListDiff(const uint256& baseBlockHash, const uint256& blockHash, CSimplifiedMNListDiff& mnListDiffRet, std::string& errorRet);
 
-#endif //BITGREEN_SPECIAL_SIMPLIFIEDMNS_H
+#endif //BITCORN_SPECIAL_SIMPLIFIEDMNS_H

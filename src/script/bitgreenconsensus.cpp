@@ -125,5 +125,5 @@ int bitgreenconsensus_verify_script(const unsigned char *scriptPubKey, unsigned 
 unsigned int bitgreenconsensus_version()
 {
     // Just use the API version for now
-    return BITGREENCONSENSUS_API_VER;
+    return BITCORNCONSENSUS_API_VER;
 }

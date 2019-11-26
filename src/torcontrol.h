@@ -5,8 +5,8 @@
 /**
  * Functionality for communicating with Tor.
  */
-#ifndef BITGREEN_TORCONTROL_H
-#define BITGREEN_TORCONTROL_H
+#ifndef BITCORN_TORCONTROL_H
+#define BITCORN_TORCONTROL_H
 
 #include <scheduler.h>
 
@@ -17,4 +17,4 @@ void StartTorControl();
 void InterruptTorControl();
 void StopTorControl();
 
-#endif /* BITGREEN_TORCONTROL_H */
+#endif /* BITCORN_TORCONTROL_H */

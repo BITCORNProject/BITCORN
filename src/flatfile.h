@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_FLATFILE_H
-#define BITGREEN_FLATFILE_H
+#ifndef BITCORN_FLATFILE_H
+#define BITCORN_FLATFILE_H
 
 #include <string>
 
@@ -93,4 +93,4 @@ public:
     bool Flush(const FlatFilePos& pos, bool finalize = false);
 };
 
-#endif // BITGREEN_FLATFILE_H
+#endif // BITCORN_FLATFILE_H

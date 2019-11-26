@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_RPCCONSOLE_H
-#define BITGREEN_QT_RPCCONSOLE_H
+#ifndef BITCORN_QT_RPCCONSOLE_H
+#define BITCORN_QT_RPCCONSOLE_H
 
 #include <qt/guiutil.h>
 #include <qt/peertablemodel.h>
@@ -172,4 +172,4 @@ private:
     void updateNetworkState();
 };
 
-#endif // BITGREEN_QT_RPCCONSOLE_H
+#endif // BITCORN_QT_RPCCONSOLE_H

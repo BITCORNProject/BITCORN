@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_ADDRDB_H
-#define BITGREEN_ADDRDB_H
+#ifndef BITCORN_ADDRDB_H
+#define BITCORN_ADDRDB_H
 
 #include <fs.h>
 #include <serialize.h>
@@ -104,4 +104,4 @@ public:
     bool Read(banmap_t& banSet);
 };
 
-#endif // BITGREEN_ADDRDB_H
+#endif // BITCORN_ADDRDB_H

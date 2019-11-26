@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_BITCOINAMOUNTFIELD_H
-#define BITGREEN_QT_BITCOINAMOUNTFIELD_H
+#ifndef BITCORN_QT_BITCOINAMOUNTFIELD_H
+#define BITCORN_QT_BITCOINAMOUNTFIELD_H
 
 #include <amount.h>
 
@@ -81,4 +81,4 @@ private Q_SLOTS:
 
 };
 
-#endif // BITGREEN_QT_BITCOINAMOUNTFIELD_H
+#endif // BITCORN_QT_BITCOINAMOUNTFIELD_H

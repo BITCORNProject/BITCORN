@@ -47,8 +47,8 @@
 #include <QTextDocument>
 #include <QUrlQuery>
 
-const int BITGREEN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
-const QString BITGREEN_IPC_PREFIX("bitgreen:");
+const int BITCORN_IPC_CONNECT_TIMEOUT = 1000; // milliseconds
+const QString BITCORN_IPC_PREFIX("bitgreen:");
 #ifdef ENABLE_BIP70
 // BIP70 payment protocol messages
 const char* BIP70_MESSAGE_PAYMENTACK = "PaymentACK";
@@ -105,7 +105,7 @@ void PaymentServer::ipcParseCommandLine(interfaces::Node& node, int argc, char* 
         // network as that would require fetching and parsing the payment request.
         // That means clicking such an URI which contains a testnet payment request
         // will start a mainnet instance and throw a "wrong network" error.
-        if (arg.startsWith(BITGREEN_IPC_PREFIX, Qt::CaseInsensitive)) // bitgreen: URI
+        if (arg.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitgreen: URI
         {
             savedPaymentRequests.append(arg);
 
@@ -165,7 +165,7 @@ bool PaymentServer::ipcSendCommandLine()
     {
         QLocalSocket* socket = new QLocalSocket();
         socket->connectToServer(ipcServerName(), QIODevice::WriteOnly);
-        if (!socket->waitForConnected(BITGREEN_IPC_CONNECT_TIMEOUT))
+        if (!socket->waitForConnected(BITCORN_IPC_CONNECT_TIMEOUT))
         {
             delete socket;
             socket = nullptr;
@@ -180,7 +180,7 @@ bool PaymentServer::ipcSendCommandLine()
 
         socket->write(block);
         socket->flush();
-        socket->waitForBytesWritten(BITGREEN_IPC_CONNECT_TIMEOUT);
+        socket->waitForBytesWritten(BITCORN_IPC_CONNECT_TIMEOUT);
         socket->disconnectFromServer();
 
         delete socket;
@@ -289,7 +289,7 @@ void PaymentServer::handleURIOrFile(const QString& s)
         Q_EMIT message(tr("URI handling"), tr("'bitgreen://' is not a valid URI. Use 'bitgreen:' instead."),
             CClientUIInterface::MSG_ERROR);
     }
-    else if (s.startsWith(BITGREEN_IPC_PREFIX, Qt::CaseInsensitive)) // bitgreen: URI
+    else if (s.startsWith(BITCORN_IPC_PREFIX, Qt::CaseInsensitive)) // bitgreen: URI
     {
         QUrlQuery uri((QUrl(s)));
 #ifdef ENABLE_BIP70

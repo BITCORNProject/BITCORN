@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_VALIDATION_H
-#define BITGREEN_VALIDATION_H
+#ifndef BITCORN_VALIDATION_H
+#define BITCORN_VALIDATION_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -722,4 +722,4 @@ inline bool IsBlockPruned(const CBlockIndex* pblockindex)
  */
 bool GetBlockHash(uint256& hashRet, int nBlockHeight = -1);
 
-#endif // BITGREEN_VALIDATION_H
+#endif // BITCORN_VALIDATION_H

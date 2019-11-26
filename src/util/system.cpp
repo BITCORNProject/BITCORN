@@ -69,7 +69,7 @@
 // Application startup time (used for uptime calculation)
 const int64_t nStartupTime = GetTime();
 
-const char * const BITGREEN_CONF_FILENAME = "bitgreen.conf";
+const char * const BITCORN_CONF_FILENAME = "bitgreen.conf";
 
 ArgsManager gArgs;
 
@@ -873,7 +873,7 @@ bool ArgsManager::ReadConfigFiles(std::string& error, bool ignore_invalid_keys)
         m_config_sections.clear();
     }
 
-    const std::string confPath = GetArg("-conf", BITGREEN_CONF_FILENAME);
+    const std::string confPath = GetArg("-conf", BITCORN_CONF_FILENAME);
     fsbridge::ifstream stream(GetConfigFile(confPath));
 
     // ok to not have a config file

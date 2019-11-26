@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_THREADINTERRUPT_H
-#define BITGREEN_THREADINTERRUPT_H
+#ifndef BITCORN_THREADINTERRUPT_H
+#define BITCORN_THREADINTERRUPT_H
 
 #include <sync.h>
 
@@ -34,4 +34,4 @@ private:
     std::atomic<bool> flag;
 };
 
-#endif //BITGREEN_THREADINTERRUPT_H
+#endif //BITCORN_THREADINTERRUPT_H

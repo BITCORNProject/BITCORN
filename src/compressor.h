@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_COMPRESSOR_H
-#define BITGREEN_COMPRESSOR_H
+#ifndef BITCORN_COMPRESSOR_H
+#define BITCORN_COMPRESSOR_H
 
 #include <primitives/transaction.h>
 #include <script/script.h>
@@ -108,4 +108,4 @@ public:
     }
 };
 
-#endif // BITGREEN_COMPRESSOR_H
+#endif // BITCORN_COMPRESSOR_H

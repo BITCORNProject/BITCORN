@@ -5,8 +5,8 @@
 
 // Compile-time verification of assumptions we make.
 
-#ifndef BITGREEN_COMPAT_ASSUMPTIONS_H
-#define BITGREEN_COMPAT_ASSUMPTIONS_H
+#ifndef BITCORN_COMPAT_ASSUMPTIONS_H
+#define BITCORN_COMPAT_ASSUMPTIONS_H
 
 #include <limits>
 
@@ -62,4 +62,4 @@ static_assert(sizeof(size_t) == sizeof(void*), "Sizes of size_t and void* assume
 // * We are NOT assuming a specific value for std::locale("").name().
 // * We are NOT assuming a specific value for std::numeric_limits<char>::is_signed.
 
-#endif // BITGREEN_COMPAT_ASSUMPTIONS_H
+#endif // BITCORN_COMPAT_ASSUMPTIONS_H

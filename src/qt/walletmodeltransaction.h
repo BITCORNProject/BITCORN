@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_WALLETMODELTRANSACTION_H
-#define BITGREEN_QT_WALLETMODELTRANSACTION_H
+#ifndef BITCORN_QT_WALLETMODELTRANSACTION_H
+#define BITCORN_QT_WALLETMODELTRANSACTION_H
 
 #include <qt/walletmodel.h>
 
@@ -42,4 +42,4 @@ private:
     CAmount fee;
 };
 
-#endif // BITGREEN_QT_WALLETMODELTRANSACTION_H
+#endif // BITCORN_QT_WALLETMODELTRANSACTION_H

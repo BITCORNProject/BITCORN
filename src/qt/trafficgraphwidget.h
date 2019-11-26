@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_TRAFFICGRAPHWIDGET_H
-#define BITGREEN_QT_TRAFFICGRAPHWIDGET_H
+#ifndef BITCORN_QT_TRAFFICGRAPHWIDGET_H
+#define BITCORN_QT_TRAFFICGRAPHWIDGET_H
 
 #include <QWidget>
 #include <QQueue>
@@ -45,4 +45,4 @@ private:
     ClientModel *clientModel;
 };
 
-#endif // BITGREEN_QT_TRAFFICGRAPHWIDGET_H
+#endif // BITCORN_QT_TRAFFICGRAPHWIDGET_H

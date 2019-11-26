@@ -3,8 +3,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_LLMQ_QUORUMS_DEBUG_H
-#define BITGREEN_LLMQ_QUORUMS_DEBUG_H
+#ifndef BITCORN_LLMQ_QUORUMS_DEBUG_H
+#define BITCORN_LLMQ_QUORUMS_DEBUG_H
 
 #include <consensus/params.h>
 #include <sync.h>
@@ -110,4 +110,4 @@ extern CDKGDebugManager* quorumDKGDebugManager;
 
 }
 
-#endif //BITGREEN_LLMQ_QUORUMS_DEBUG_H
+#endif //BITCORN_LLMQ_QUORUMS_DEBUG_H

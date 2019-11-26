@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
-#define BITGREEN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
+#ifndef BITCORN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
+#define BITCORN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
 
 #include <support/allocators/pooled_secure.h>
 #include <util/memory.h>
@@ -83,4 +83,4 @@ private:
     std::vector<std::unique_ptr<internal_pool>> pools;
 };
 
-#endif // BITGREEN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H
+#endif // BITCORN_SUPPORT_ALLOCATORS_MT_POOLED_SECURE_H

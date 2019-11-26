@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_COINCONTROLDIALOG_H
-#define BITGREEN_QT_COINCONTROLDIALOG_H
+#ifndef BITCORN_QT_COINCONTROLDIALOG_H
+#define BITCORN_QT_COINCONTROLDIALOG_H
 
 #include <amount.h>
 
@@ -115,4 +115,4 @@ private Q_SLOTS:
     void updateLabelLocked();
 };
 
-#endif // BITGREEN_QT_COINCONTROLDIALOG_H
+#endif // BITCORN_QT_COINCONTROLDIALOG_H

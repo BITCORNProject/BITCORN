@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SPECIAL_UTIL
-#define BITGREEN_SPECIAL_UTIL
+#ifndef BITCORN_SPECIAL_UTIL
+#define BITCORN_SPECIAL_UTIL
 
 #include <primitives/transaction.h>
 #include <coins.h>
@@ -13,4 +13,4 @@ bool GetUTXOCoin(const COutPoint& outpoint, Coin& coin);
 int GetUTXOHeight(const COutPoint& outpoint);
 int GetUTXOConfirmations(const COutPoint& outpoint);
 
-#endif // BITGREEN_SPECIAL_UTIL
+#endif // BITCORN_SPECIAL_UTIL

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_GUIUTIL_H
-#define BITGREEN_QT_GUIUTIL_H
+#ifndef BITCORN_QT_GUIUTIL_H
+#define BITCORN_QT_GUIUTIL_H
 
 #include <amount.h>
 #include <fs.h>
@@ -263,4 +263,4 @@ namespace GUIUtil
     void PolishProgressDialog(QProgressDialog* dialog);
 } // namespace GUIUtil
 
-#endif // BITGREEN_QT_GUIUTIL_H
+#endif // BITCORN_QT_GUIUTIL_H

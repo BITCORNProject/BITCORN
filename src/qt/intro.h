@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_INTRO_H
-#define BITGREEN_QT_INTRO_H
+#ifndef BITCORN_QT_INTRO_H
+#define BITCORN_QT_INTRO_H
 
 #include <QDialog>
 #include <QMutex>
@@ -76,4 +76,4 @@ private:
     friend class FreespaceChecker;
 };
 
-#endif // BITGREEN_QT_INTRO_H
+#endif // BITCORN_QT_INTRO_H

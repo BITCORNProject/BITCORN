@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_RECENTREQUESTSTABLEMODEL_H
-#define BITGREEN_QT_RECENTREQUESTSTABLEMODEL_H
+#ifndef BITCORN_QT_RECENTREQUESTSTABLEMODEL_H
+#define BITCORN_QT_RECENTREQUESTSTABLEMODEL_H
 
 #include <qt/walletmodel.h>
 
@@ -102,4 +102,4 @@ private:
     QString getAmountTitle();
 };
 
-#endif // BITGREEN_QT_RECENTREQUESTSTABLEMODEL_H
+#endif // BITCORN_QT_RECENTREQUESTSTABLEMODEL_H

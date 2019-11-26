@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_VALIDATIONINTERFACE_H
-#define BITGREEN_VALIDATIONINTERFACE_H
+#ifndef BITCORN_VALIDATIONINTERFACE_H
+#define BITCORN_VALIDATIONINTERFACE_H
 
 #include <primitives/transaction.h> // CTransaction(Ref)
 #include <sync.h>
@@ -226,4 +226,4 @@ public:
 
 CMainSignals& GetMainSignals();
 
-#endif // BITGREEN_VALIDATIONINTERFACE_H
+#endif // BITCORN_VALIDATIONINTERFACE_H

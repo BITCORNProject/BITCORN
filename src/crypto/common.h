@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_CRYPTO_COMMON_H
-#define BITGREEN_CRYPTO_COMMON_H
+#ifndef BITCORN_CRYPTO_COMMON_H
+#define BITCORN_CRYPTO_COMMON_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -100,4 +100,4 @@ uint64_t static inline CountBits(uint64_t x)
     return ret;
 }
 
-#endif // BITGREEN_CRYPTO_COMMON_H
+#endif // BITCORN_CRYPTO_COMMON_H

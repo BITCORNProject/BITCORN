@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_NETMESSAGEMAKER_H
-#define BITGREEN_NETMESSAGEMAKER_H
+#ifndef BITCORN_NETMESSAGEMAKER_H
+#define BITCORN_NETMESSAGEMAKER_H
 
 #include <net.h>
 #include <serialize.h>
@@ -33,4 +33,4 @@ private:
     const int nVersion;
 };
 
-#endif // BITGREEN_NETMESSAGEMAKER_H
+#endif // BITCORN_NETMESSAGEMAKER_H

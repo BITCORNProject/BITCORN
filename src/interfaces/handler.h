@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INTERFACES_HANDLER_H
-#define BITGREEN_INTERFACES_HANDLER_H
+#ifndef BITCORN_INTERFACES_HANDLER_H
+#define BITCORN_INTERFACES_HANDLER_H
 
 #include <memory>
 
@@ -32,4 +32,4 @@ std::unique_ptr<Handler> MakeHandler(boost::signals2::connection connection);
 
 } // namespace interfaces
 
-#endif // BITGREEN_INTERFACES_HANDLER_H
+#endif // BITCORN_INTERFACES_HANDLER_H

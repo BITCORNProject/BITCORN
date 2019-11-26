@@ -2,8 +2,8 @@
 // Distributed under the MIT/X11 software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_BLS_BATCHVERIFIER_H
-#define BITGREEN_BLS_BATCHVERIFIER_H
+#ifndef BITCORN_BLS_BATCHVERIFIER_H
+#define BITCORN_BLS_BATCHVERIFIER_H
 
 #include <bls/bls.h>
 
@@ -232,4 +232,4 @@ private:
     }
 };
 
-#endif //BITGREEN_BLS_BATCHVERIFIER_H
+#endif //BITCORN_BLS_BATCHVERIFIER_H

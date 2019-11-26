@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INTERFACES_NODE_H
-#define BITGREEN_INTERFACES_NODE_H
+#ifndef BITCORN_INTERFACES_NODE_H
+#define BITCORN_INTERFACES_NODE_H
 
 #include <addrdb.h>     // For banmap_t
 #include <amount.h>     // For CAmount
@@ -259,4 +259,4 @@ std::unique_ptr<Node> MakeNode();
 
 } // namespace interfaces
 
-#endif // BITGREEN_INTERFACES_NODE_H
+#endif // BITCORN_INTERFACES_NODE_H

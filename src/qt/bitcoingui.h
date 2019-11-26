@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_BITCOINGUI_H
-#define BITGREEN_QT_BITCOINGUI_H
+#ifndef BITCORN_QT_BITCOINGUI_H
+#define BITCORN_QT_BITCOINGUI_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -347,4 +347,4 @@ private Q_SLOTS:
     void onMenuSelection(QAction* action);
 };
 
-#endif // BITGREEN_QT_BITCOINGUI_H
+#endif // BITCORN_QT_BITCOINGUI_H

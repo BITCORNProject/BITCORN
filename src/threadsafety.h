@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_THREADSAFETY_H
-#define BITGREEN_THREADSAFETY_H
+#ifndef BITCORN_THREADSAFETY_H
+#define BITCORN_THREADSAFETY_H
 
 #ifdef __clang__
 // TL;DR Add GUARDED_BY(mutex) to member variables. The others are
@@ -54,4 +54,4 @@
 #define ASSERT_EXCLUSIVE_LOCK(...)
 #endif // __GNUC__
 
-#endif // BITGREEN_THREADSAFETY_H
+#endif // BITCORN_THREADSAFETY_H

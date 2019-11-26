@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_CLIENTVERSION_H
-#define BITGREEN_CLIENTVERSION_H
+#ifndef BITCORN_CLIENTVERSION_H
+#define BITCORN_CLIENTVERSION_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -50,4 +50,4 @@ std::string FormatSubVersion(const std::string& name, int nClientVersion, const 
 
 #endif // WINDRES_PREPROC
 
-#endif // BITGREEN_CLIENTVERSION_H
+#endif // BITCORN_CLIENTVERSION_H

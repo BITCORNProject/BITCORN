@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_TIMEDATA_H
-#define BITGREEN_TIMEDATA_H
+#ifndef BITCORN_TIMEDATA_H
+#define BITCORN_TIMEDATA_H
 
 #include <algorithm>
 #include <assert.h>
@@ -75,4 +75,4 @@ int64_t GetTimeOffset();
 int64_t GetAdjustedTime();
 void AddTimeData(const CNetAddr& ip, int64_t nTime);
 
-#endif // BITGREEN_TIMEDATA_H
+#endif // BITCORN_TIMEDATA_H

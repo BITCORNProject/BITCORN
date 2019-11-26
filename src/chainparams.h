@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_CHAINPARAMS_H
-#define BITGREEN_CHAINPARAMS_H
+#ifndef BITCORN_CHAINPARAMS_H
+#define BITCORN_CHAINPARAMS_H
 
 #include <chainparamsbase.h>
 #include <consensus/params.h>
@@ -139,4 +139,4 @@ const CChainParams &Params();
  */
 void SelectParams(const std::string& chain);
 
-#endif // BITGREEN_CHAINPARAMS_H
+#endif // BITCORN_CHAINPARAMS_H

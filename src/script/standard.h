@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SCRIPT_STANDARD_H
-#define BITGREEN_SCRIPT_STANDARD_H
+#ifndef BITCORN_SCRIPT_STANDARD_H
+#define BITCORN_SCRIPT_STANDARD_H
 
 #include <script/interpreter.h>
 #include <uint256.h>
@@ -200,4 +200,4 @@ CScript GetScriptForMultisig(int nRequired, const std::vector<CPubKey>& keys);
  */
 CScript GetScriptForWitness(const CScript& redeemscript);
 
-#endif // BITGREEN_SCRIPT_STANDARD_H
+#endif // BITCORN_SCRIPT_STANDARD_H

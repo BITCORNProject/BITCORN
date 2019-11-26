@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_NOUI_H
-#define BITGREEN_NOUI_H
+#ifndef BITCORN_NOUI_H
+#define BITCORN_NOUI_H
 
 #include <string>
 
@@ -17,4 +17,4 @@ void noui_InitMessage(const std::string& message);
 /** Connect all bitgreend signal handlers */
 void noui_connect();
 
-#endif // BITGREEN_NOUI_H
+#endif // BITCORN_NOUI_H

@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SPECIAL_SPECIALDB_H
-#define BITGREEN_SPECIAL_SPECIALDB_H
+#ifndef BITCORN_SPECIAL_SPECIALDB_H
+#define BITCORN_SPECIAL_SPECIALDB_H
 
 #include <dbwrapper.h>
 #include <sync.h>
@@ -85,4 +85,4 @@ public:
 
 extern std::unique_ptr<CSpecialDB> pspecialdb;
 
-#endif //BITGREEN_SPECIAL_SPECIALDB_H
+#endif //BITCORN_SPECIAL_SPECIALDB_H

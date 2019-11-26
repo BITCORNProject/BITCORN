@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_INDEX_TXINDEX_H
-#define BITGREEN_INDEX_TXINDEX_H
+#ifndef BITCORN_INDEX_TXINDEX_H
+#define BITCORN_INDEX_TXINDEX_H
 
 #include <chain.h>
 #include <index/base.h>
@@ -51,4 +51,4 @@ public:
 /// The global transaction index, used in GetTransaction. May be null.
 extern std::unique_ptr<TxIndex> g_txindex;
 
-#endif // BITGREEN_INDEX_TXINDEX_H
+#endif // BITCORN_INDEX_TXINDEX_H

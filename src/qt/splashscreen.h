@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_SPLASHSCREEN_H
-#define BITGREEN_QT_SPLASHSCREEN_H
+#ifndef BITCORN_QT_SPLASHSCREEN_H
+#define BITCORN_QT_SPLASHSCREEN_H
 
 #include <QWidget>
 
@@ -66,4 +66,4 @@ private:
     std::list<std::unique_ptr<interfaces::Handler>> m_connected_wallet_handlers;
 };
 
-#endif // BITGREEN_QT_SPLASHSCREEN_H
+#endif // BITCORN_QT_SPLASHSCREEN_H

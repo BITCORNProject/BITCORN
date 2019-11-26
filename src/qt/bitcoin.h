@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_BITCOIN_H
-#define BITGREEN_QT_BITCOIN_H
+#ifndef BITCORN_QT_BITCOIN_H
+#define BITCORN_QT_BITCOIN_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -120,4 +120,4 @@ private:
 
 int GuiMain(int argc, char* argv[]);
 
-#endif // BITGREEN_QT_BITCOIN_H
+#endif // BITCORN_QT_BITCOIN_H

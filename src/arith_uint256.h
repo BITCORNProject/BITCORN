@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_ARITH_UINT256_H
-#define BITGREEN_ARITH_UINT256_H
+#ifndef BITCORN_ARITH_UINT256_H
+#define BITCORN_ARITH_UINT256_H
 
 #include <assert.h>
 #include <cstring>
@@ -286,4 +286,4 @@ public:
 uint256 ArithToUint256(const arith_uint256 &);
 arith_uint256 UintToArith256(const uint256 &);
 
-#endif // BITGREEN_ARITH_UINT256_H
+#endif // BITCORN_ARITH_UINT256_H

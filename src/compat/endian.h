@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_COMPAT_ENDIAN_H
-#define BITGREEN_COMPAT_ENDIAN_H
+#ifndef BITCORN_COMPAT_ENDIAN_H
+#define BITCORN_COMPAT_ENDIAN_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -238,4 +238,4 @@ inline uint64_t le64toh(uint64_t little_endian_64bits)
 
 #endif // WORDS_BIGENDIAN
 
-#endif // BITGREEN_COMPAT_ENDIAN_H
+#endif // BITCORN_COMPAT_ENDIAN_H

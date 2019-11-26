@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_RPC_BLOCKCHAIN_H
-#define BITGREEN_RPC_BLOCKCHAIN_H
+#ifndef BITCORN_RPC_BLOCKCHAIN_H
+#define BITCORN_RPC_BLOCKCHAIN_H
 
 #include <amount.h>
 #include <sync.h>

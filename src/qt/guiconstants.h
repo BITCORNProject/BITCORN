@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_GUICONSTANTS_H
-#define BITGREEN_QT_GUICONSTANTS_H
+#ifndef BITCORN_QT_GUICONSTANTS_H
+#define BITCORN_QT_GUICONSTANTS_H
 
 /* Milliseconds between model updates */
 static const int MODEL_UPDATE_DELAY = 250;
@@ -52,4 +52,4 @@ static constexpr uint64_t GB_BYTES{1000000000};
 /* Staking label update frequency (in seconds) */
 static const int STAKING_LABEL_REFRESH = 10;
 
-#endif // BITGREEN_QT_GUICONSTANTS_H
+#endif // BITCORN_QT_GUICONSTANTS_H

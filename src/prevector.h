@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_PREVECTOR_H
-#define BITGREEN_PREVECTOR_H
+#ifndef BITCORN_PREVECTOR_H
+#define BITCORN_PREVECTOR_H
 
 #include <assert.h>
 #include <stdlib.h>
@@ -525,4 +525,4 @@ public:
 };
 #pragma pack(pop)
 
-#endif // BITGREEN_PREVECTOR_H
+#endif // BITCORN_PREVECTOR_H

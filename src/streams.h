@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_STREAMS_H
-#define BITGREEN_STREAMS_H
+#ifndef BITCORN_STREAMS_H
+#define BITCORN_STREAMS_H
 
 #include <support/allocators/zeroafterfree.h>
 #include <serialize.h>
@@ -854,4 +854,4 @@ public:
     }
 };
 
-#endif // BITGREEN_STREAMS_H
+#endif // BITCORN_STREAMS_H

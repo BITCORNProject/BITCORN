@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SCRIPT_SIGCACHE_H
-#define BITGREEN_SCRIPT_SIGCACHE_H
+#ifndef BITCORN_SCRIPT_SIGCACHE_H
+#define BITCORN_SCRIPT_SIGCACHE_H
 
 #include <script/interpreter.h>
 
@@ -53,4 +53,4 @@ public:
 
 void InitSignatureCache();
 
-#endif // BITGREEN_SCRIPT_SIGCACHE_H
+#endif // BITCORN_SCRIPT_SIGCACHE_H

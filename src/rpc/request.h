@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_RPC_REQUEST_H
-#define BITGREEN_RPC_REQUEST_H
+#ifndef BITCORN_RPC_REQUEST_H
+#define BITCORN_RPC_REQUEST_H
 
 #include <string>
 
@@ -39,4 +39,4 @@ public:
     void parse(const UniValue& valRequest);
 };
 
-#endif // BITGREEN_RPC_REQUEST_H
+#endif // BITCORN_RPC_REQUEST_H

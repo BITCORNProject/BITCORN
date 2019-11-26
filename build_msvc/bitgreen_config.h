@@ -1,5 +1,5 @@
-#ifndef BITGREEN_BITGREEN_CONFIG_H
-#define BITGREEN_BITGREEN_CONFIG_H
+#ifndef BITCORN_BITCORN_CONFIG_H
+#define BITCORN_BITCORN_CONFIG_H
 
 /* Define if building universal (internal helper macro) */
 /* #undef AC_APPLE_UNIVERSAL_BUILD */
@@ -431,4 +431,4 @@
 
 #endif // !WINAPI_FAMILY || WINAPI_FAMILY_DESKTOP_APP
 
-#endif //BITGREEN_BITGREEN_CONFIG_H
+#endif //BITCORN_BITCORN_CONFIG_H

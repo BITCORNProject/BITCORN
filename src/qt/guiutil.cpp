@@ -390,7 +390,7 @@ void openDebugLogfile()
 
 bool openBitGreenConf()
 {
-    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITGREEN_CONF_FILENAME));
+    fs::path pathConfig = GetConfigFile(gArgs.GetArg("-conf", BITCORN_CONF_FILENAME));
 
     /* Create the file */
     fsbridge::ofstream configFile(pathConfig, std::ios_base::app);

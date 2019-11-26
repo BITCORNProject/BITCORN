@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_WALLETINITINTERFACE_H
-#define BITGREEN_WALLETINITINTERFACE_H
+#ifndef BITCORN_WALLETINITINTERFACE_H
+#define BITCORN_WALLETINITINTERFACE_H
 
 #include <string>
 
@@ -27,4 +27,4 @@ public:
 
 extern const WalletInitInterface& g_wallet_init_interface;
 
-#endif // BITGREEN_WALLETINITINTERFACE_H
+#endif // BITCORN_WALLETINITINTERFACE_H

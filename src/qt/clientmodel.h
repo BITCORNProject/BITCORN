@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_QT_CLIENTMODEL_H
-#define BITGREEN_QT_CLIENTMODEL_H
+#ifndef BITCORN_QT_CLIENTMODEL_H
+#define BITCORN_QT_CLIENTMODEL_H
 
 #include <special/deterministicmns.h>
 #include <sync.h>
@@ -136,4 +136,4 @@ public Q_SLOTS:
     void updateBanlist();
 };
 
-#endif // BITGREEN_QT_CLIENTMODEL_H
+#endif // BITCORN_QT_CLIENTMODEL_H

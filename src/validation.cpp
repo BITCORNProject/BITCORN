@@ -2156,7 +2156,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
         LogPrintf("%s: spork is off, skipping transaction locking checks\n", __func__);
     }
 
-    // BITGREEN: Check Proof-of-Stake, masternode payments and superblocks
+    // BITCORN: Check Proof-of-Stake, masternode payments and superblocks
 
     // proof-of-stake: keep track of money supply and mint amount.
     CAmount nMoneySupplyPrev = pindex->pprev ? pindex->pprev->nMoneySupply : 0;
@@ -2198,7 +2198,7 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     int64_t nTime4_4 = GetTimeMicros(); nTimeBitgreenSpecific += nTime4_4 - nTime4_1;
     LogPrint(BCLog::BENCHMARK, "    - Bitgreen specific: %.2fms [%.2fs]\n", MILLI * (nTime4_4 - nTime4_3), nTimeBitgreenSpecific * MICRO);
 
-    // END BITGREEN
+    // END BITCORN
 
     //IMPORTANT NOTE: Nothing before this point should actually store to disk (or even memory)
     if (fJustCheck)

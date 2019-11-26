@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_POW_H
-#define BITGREEN_POW_H
+#ifndef BITCORN_POW_H
+#define BITCORN_POW_H
 
 #include <consensus/params.h>
 
@@ -22,4 +22,4 @@ unsigned int CalculateNextWorkRequired(const CBlockIndex* pindexLast, int64_t nF
 /** Check whether a block hash satisfies the proof-of-work requirement specified by nBits */
 bool CheckProofOfWork(uint256 hash, unsigned int nBits, const Consensus::Params&);
 
-#endif // BITGREEN_POW_H
+#endif // BITCORN_POW_H

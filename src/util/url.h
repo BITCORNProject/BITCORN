@@ -2,11 +2,11 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_UTIL_URL_H
-#define BITGREEN_UTIL_URL_H
+#ifndef BITCORN_UTIL_URL_H
+#define BITCORN_UTIL_URL_H
 
 #include <string>
 
 std::string urlDecode(const std::string &urlEncoded);
 
-#endif // BITGREEN_UTIL_URL_H
+#endif // BITCORN_UTIL_URL_H

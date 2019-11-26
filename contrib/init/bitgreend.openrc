@@ -3,40 +3,40 @@
 # backward compatibility for existing gentoo layout
 #
 if [ -d "/var/lib/bitgreen/.bitgreen" ]; then
-	BITGREEND_DEFAULT_DATADIR="/var/lib/bitgreen/.bitgreen"
+	BITCORND_DEFAULT_DATADIR="/var/lib/bitgreen/.bitgreen"
 else
-	BITGREEND_DEFAULT_DATADIR="/var/lib/bitgreend"
+	BITCORND_DEFAULT_DATADIR="/var/lib/bitgreend"
 fi
 
-BITGREEND_CONFIGFILE=${BITGREEND_CONFIGFILE:-/etc/bitgreen/bitgreen.conf}
-BITGREEND_PIDDIR=${BITGREEND_PIDDIR:-/var/run/bitgreend}
-BITGREEND_PIDFILE=${BITGREEND_PIDFILE:-${BITGREEND_PIDDIR}/bitgreend.pid}
-BITGREEND_DATADIR=${BITGREEND_DATADIR:-${BITGREEND_DEFAULT_DATADIR}}
-BITGREEND_USER=${BITGREEND_USER:-${BITGREEN_USER:-bitgreen}}
-BITGREEND_GROUP=${BITGREEND_GROUP:-bitgreen}
-BITGREEND_BIN=${BITGREEND_BIN:-/usr/bin/bitgreend}
-BITGREEND_NICE=${BITGREEND_NICE:-${NICELEVEL:-0}}
-BITGREEND_OPTS="${BITGREEND_OPTS:-${BITGREEN_OPTS}}"
+BITCORND_CONFIGFILE=${BITCORND_CONFIGFILE:-/etc/bitgreen/bitgreen.conf}
+BITCORND_PIDDIR=${BITCORND_PIDDIR:-/var/run/bitgreend}
+BITCORND_PIDFILE=${BITCORND_PIDFILE:-${BITCORND_PIDDIR}/bitgreend.pid}
+BITCORND_DATADIR=${BITCORND_DATADIR:-${BITCORND_DEFAULT_DATADIR}}
+BITCORND_USER=${BITCORND_USER:-${BITCORN_USER:-bitgreen}}
+BITCORND_GROUP=${BITCORND_GROUP:-bitgreen}
+BITCORND_BIN=${BITCORND_BIN:-/usr/bin/bitgreend}
+BITCORND_NICE=${BITCORND_NICE:-${NICELEVEL:-0}}
+BITCORND_OPTS="${BITCORND_OPTS:-${BITCORN_OPTS}}"
 
 name="BitGreen Core Daemon"
 description="BitGreen cryptocurrency P2P network daemon"
 
 command="/usr/bin/bitgreend"
-command_args="-pid=\"${BITGREEND_PIDFILE}\" \
-		-conf=\"${BITGREEND_CONFIGFILE}\" \
-		-datadir=\"${BITGREEND_DATADIR}\" \
+command_args="-pid=\"${BITCORND_PIDFILE}\" \
+		-conf=\"${BITCORND_CONFIGFILE}\" \
+		-datadir=\"${BITCORND_DATADIR}\" \
 		-daemon \
-		${BITGREEND_OPTS}"
+		${BITCORND_OPTS}"
 
-required_files="${BITGREEND_CONFIGFILE}"
-start_stop_daemon_args="-u ${BITGREEND_USER} \
-			-N ${BITGREEND_NICE} -w 2000"
-pidfile="${BITGREEND_PIDFILE}"
+required_files="${BITCORND_CONFIGFILE}"
+start_stop_daemon_args="-u ${BITCORND_USER} \
+			-N ${BITCORND_NICE} -w 2000"
+pidfile="${BITCORND_PIDFILE}"
 
 # The retry schedule to use when stopping the daemon. Could be either
 # a timeout in seconds or multiple signal/timeout pairs (like
 # "SIGKILL/180 SIGTERM/300")
-retry="${BITGREEND_SIGTERM_TIMEOUT}"
+retry="${BITCORND_SIGTERM_TIMEOUT}"
 
 depend() {
 	need localmount net
@@ -50,29 +50,29 @@ start_pre() {
 	checkpath \
 	-d \
 	--mode 0750 \
-	--owner "${BITGREEND_USER}:${BITGREEND_GROUP}" \
-	"${BITGREEND_DATADIR}"
+	--owner "${BITCORND_USER}:${BITCORND_GROUP}" \
+	"${BITCORND_DATADIR}"
 
 	checkpath \
 	-d \
 	--mode 0755 \
-	--owner "${BITGREEND_USER}:${BITGREEND_GROUP}" \
-	"${BITGREEND_PIDDIR}"
+	--owner "${BITCORND_USER}:${BITCORND_GROUP}" \
+	"${BITCORND_PIDDIR}"
 
 	checkpath -f \
-	-o ${BITGREEND_USER}:${BITGREEND_GROUP} \
+	-o ${BITCORND_USER}:${BITCORND_GROUP} \
 	-m 0660 \
-	${BITGREEND_CONFIGFILE}
+	${BITCORND_CONFIGFILE}
 
 	checkconfig || return 1
 }
 
 checkconfig()
 {
-	if ! grep -qs '^rpcpassword=' "${BITGREEND_CONFIGFILE}" ; then
+	if ! grep -qs '^rpcpassword=' "${BITCORND_CONFIGFILE}" ; then
 		eerror ""
 		eerror "ERROR: You must set a secure rpcpassword to run bitgreend."
-		eerror "The setting must appear in ${BITGREEND_CONFIGFILE}"
+		eerror "The setting must appear in ${BITCORND_CONFIGFILE}"
 		eerror ""
 		eerror "This password is security critical to securing wallets "
 		eerror "and must not be the same as the rpcuser setting."

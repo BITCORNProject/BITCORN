@@ -6,8 +6,8 @@
 /**
  * Money parsing/formatting utilities.
  */
-#ifndef BITGREEN_UTIL_MONEYSTR_H
-#define BITGREEN_UTIL_MONEYSTR_H
+#ifndef BITCORN_UTIL_MONEYSTR_H
+#define BITCORN_UTIL_MONEYSTR_H
 
 #include <amount.h>
 #include <attributes.h>
@@ -22,4 +22,4 @@ std::string FormatMoney(const CAmount& n);
 NODISCARD bool ParseMoney(const std::string& str, CAmount& nRet);
 NODISCARD bool ParseMoney(const char* pszIn, CAmount& nRet);
 
-#endif // BITGREEN_UTIL_MONEYSTR_H
+#endif // BITCORN_UTIL_MONEYSTR_H

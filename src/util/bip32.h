@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_UTIL_BIP32_H
-#define BITGREEN_UTIL_BIP32_H
+#ifndef BITCORN_UTIL_BIP32_H
+#define BITCORN_UTIL_BIP32_H
 
 #include <attributes.h>
 #include <string>
@@ -16,4 +16,4 @@ NODISCARD bool ParseHDKeypath(const std::string& keypath_str, std::vector<uint32
 std::string WriteHDKeypath(const std::vector<uint32_t>& keypath);
 std::string FormatHDKeypath(const std::vector<uint32_t>& path);
 
-#endif // BITGREEN_UTIL_BIP32_H
+#endif // BITCORN_UTIL_BIP32_H

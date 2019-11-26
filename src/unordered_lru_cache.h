@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_UNORDERED_LRU_CACHE_H
-#define BITGREEN_UNORDERED_LRU_CACHE_H
+#ifndef BITCORN_UNORDERED_LRU_CACHE_H
+#define BITCORN_UNORDERED_LRU_CACHE_H
 
 #include <unordered_map>
 
@@ -108,4 +108,4 @@ private:
     }
 };
 
-#endif // BITGREEN_UNORDERED_LRU_CACHE_H
+#endif // BITCORN_UNORDERED_LRU_CACHE_H

@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_ZMQ_ZMQCONFIG_H
-#define BITGREEN_ZMQ_ZMQCONFIG_H
+#ifndef BITCORN_ZMQ_ZMQCONFIG_H
+#define BITCORN_ZMQ_ZMQCONFIG_H
 
 #if defined(HAVE_CONFIG_H)
 #include <config/bitgreen-config.h>
@@ -21,4 +21,4 @@
 
 void zmqError(const char *str);
 
-#endif // BITGREEN_ZMQ_ZMQCONFIG_H
+#endif // BITCORN_ZMQ_ZMQCONFIG_H

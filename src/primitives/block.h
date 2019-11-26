@@ -3,8 +3,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_PRIMITIVES_BLOCK_H
-#define BITGREEN_PRIMITIVES_BLOCK_H
+#ifndef BITCORN_PRIMITIVES_BLOCK_H
+#define BITCORN_PRIMITIVES_BLOCK_H
 
 #include <primitives/transaction.h>
 #include <serialize.h>
@@ -174,4 +174,4 @@ struct CBlockLocator
     }
 };
 
-#endif // BITGREEN_PRIMITIVES_BLOCK_H
+#endif // BITCORN_PRIMITIVES_BLOCK_H

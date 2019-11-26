@@ -2,8 +2,8 @@
 // Distributed under the MIT software license, see the accompanying
 // file COPYING or http://www.opensource.org/licenses/mit-license.php.
 
-#ifndef BITGREEN_SUPPORT_LOCKEDPOOL_H
-#define BITGREEN_SUPPORT_LOCKEDPOOL_H
+#ifndef BITCORN_SUPPORT_LOCKEDPOOL_H
+#define BITCORN_SUPPORT_LOCKEDPOOL_H
 
 #include <stdint.h>
 #include <list>
@@ -237,4 +237,4 @@ private:
     static std::once_flag init_flag;
 };
 
-#endif // BITGREEN_SUPPORT_LOCKEDPOOL_H
+#endif // BITCORN_SUPPORT_LOCKEDPOOL_H
