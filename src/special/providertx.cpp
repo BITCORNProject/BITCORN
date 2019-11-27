@@ -127,7 +127,7 @@ bool CheckProRegTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CValid
 
     if (!ptx.collateralOutpoint.hash.IsNull()) {
         Coin coin;
-        if (!GetUTXOCoin(ptx.collateralOutpoint, coin) || coin.out.nValue != 2500 * COIN)
+        if (!GetUTXOCoin(ptx.collateralOutpoint, coin) || coin.out.nValue != 10000000 * COIN)
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-protx-collateral");
         if (!ExtractDestination(coin.out.scriptPubKey, collateralTxDest))
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-protx-collateral-dest");
@@ -148,7 +148,7 @@ bool CheckProRegTx(const CTransaction& tx, const CBlockIndex* pindexPrev, CValid
         if (ptx.collateralOutpoint.n >= tx.vout.size())
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID,
                                  "bad-protx-collateral-index");
-        if (tx.vout[ptx.collateralOutpoint.n].nValue != 2500 * COIN)
+        if (tx.vout[ptx.collateralOutpoint.n].nValue != 10000000 * COIN)
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID, "bad-protx-collateral");
         if (!ExtractDestination(tx.vout[ptx.collateralOutpoint.n].scriptPubKey, collateralTxDest))
             return state.Invalid(ValidationInvalidReason::CONSENSUS, false, REJECT_INVALID,

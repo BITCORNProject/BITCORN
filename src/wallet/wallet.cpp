@@ -2589,7 +2589,7 @@ void CWallet::AvailableCoins(interfaces::Chain::Lock& locked_chain, std::vector<
 
         for (unsigned int i = 0; i < wtx.tx->vout.size(); i++) {
             // Check masternode collateral
-            if (nCoinType == ONLY_COLLATERALS && wtx.tx->vout[i].nValue != 2500 * COIN)
+            if (nCoinType == ONLY_COLLATERALS && wtx.tx->vout[i].nValue != 10000000 * COIN)
                 continue;
 
             if (wtx.tx->vout[i].nValue < nMinimumAmount || wtx.tx->vout[i].nValue > nMaximumAmount)

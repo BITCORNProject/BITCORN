@@ -437,7 +437,7 @@ UniValue protx_register(const JSONRPCRequest& request)
 
     size_t paramIdx = 1;
 
-    CAmount collateralAmount = 2500 * COIN;
+    CAmount collateralAmount = 10000000 * COIN;
 
     CMutableTransaction tx;
     tx.nVersion = 2;
