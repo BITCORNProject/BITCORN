@@ -199,10 +199,10 @@ public:
          * The characters are rarely used upper ASCII, not valid as UTF-8, and produce
          * a large 32-bit integer with any alignment.
          */
-        pchMessageStart[0] = 0xe4;
-        pchMessageStart[1] = 0xa4;
-        pchMessageStart[2] = 0x06;
-        pchMessageStart[3] = 0x1f;
+        pchMessageStart[0] = 0x23;
+        pchMessageStart[1] = 0x06;
+        pchMessageStart[2] = 0x18;
+        pchMessageStart[3] = 0x3f;
         nDefaultPort = 9333;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 1;
@@ -325,9 +325,9 @@ public:
         consensus.nInstantSendConfirmationsRequired = 2;
         consensus.nInstantSendKeepLock = 6;
 
-        pchMessageStart[0] = 0xa3;
-        pchMessageStart[1] = 0x6b;
-        pchMessageStart[2] = 0xb0;
+        pchMessageStart[0] = 0x43;
+        pchMessageStart[1] = 0x76;
+        pchMessageStart[2] = 0x65;
         pchMessageStart[3] = 0x4b;
         nDefaultPort = 19333;
         nPruneAfterHeight = 1000;
