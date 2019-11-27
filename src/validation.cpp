@@ -1067,32 +1067,29 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
         return 50 * COIN;
 
     /*
-    1 - old chain supply: 9,851,721
-    <= 7500 - zero rewards
-    <= 175000 - 10 CORN
-    > 175000 - halving every 525,600 blocks (~2 years)
+     1-7500 - zero rewards
+     7500+ - 10000 CORN
     */
 
-    // Supply on old chain
+    // Supply on old chain TODO: update total coins upon snapshot
     if (nHeight == 1)
-        return 9851721 * COIN;
+        return 15199291760 * COIN;
 
     if (nHeight <= 7500)
         return 0 * COIN;
 
-    CAmount nSubsidy = 10 * COIN;
-    if (nHeight >= 175000) nSubsidy = 5 * COIN;
+    CAmount nSubsidy = 10000 * COIN;
 
-    int halvings = (nHeight - 175000) / consensusParams.nSubsidyHalvingInterval;
+    int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
+
     // Force block reward to zero when right shift is undefined.
     if (halvings >= 64)
         return 0;
 
-    // Subsidy is cut in half every 525,600 blocks which will occur approximately every 2 years.
     nSubsidy >>= halvings;
 
-    // Hard fork to reduce the block reward by 10 extra percent (allowing budget/superblocks)
-    CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/10 : 0;
+    // Hard fork to reduce the block reward by 5 extra percent (allowing budget/superblocks)
+    CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/5 : 0;
 
     return fSuperblockPartOnly ? nSuperblockPart : nSubsidy - nSuperblockPart;
 }
@@ -1103,7 +1100,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     if (nHeight < Params().GetConsensus().nLastPoWBlock || blockValue == 0)
         return 0;
 
-    CAmount ret = blockValue * 0.85; // 85% of block reward
+    CAmount ret = blockValue * 0.40; // 40% of block reward
     return ret;
 }
 
