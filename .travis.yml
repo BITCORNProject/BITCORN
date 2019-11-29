@@ -135,7 +135,7 @@ jobs:
         PACKAGES="python3-zmq"
         DEP_OPTS="NO_WALLET=1"
         GOAL="install"
-        BITCORN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports"
+        BITCORN_CONFIG="--enable-glibc-back-compat --enable-reduce-exports --disable-wallet"
 
     - stage: test
       name: 'macOS 10.10  [GOAL: deploy] [no functional tests]'
