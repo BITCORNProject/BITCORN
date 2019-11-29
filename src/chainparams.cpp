@@ -244,13 +244,13 @@ public:
         fAllowMultiplePorts = true;
         nFulfilledRequestExpireTime = 60 * 60; // fulfilled requests expire in 1 hour
 
-        vSporkAddresses = {"GMWbuDW6m6WCc7Zc9W3CSuviXzqPKK3eBj"};
+        vSporkAddresses = {"CTHtPhgv859hZDw7dAwspfvgUdEYaPFAfJ"};
         nMinSporkKeys = 1;
 
         checkpointData = {
             {
-                {   1, uint256S("0x0000062cf9ac97b1582474e313770e4609c338ed6fae01142da65722353465f3")},
-                { 100, uint256S("0x000005faf4d7d9dccd3a1986eb7150a22f21f80664d5deb91cb1ca38eb305e7e")}
+          //      {   1, uint256S("0x0000062cf9ac97b1582474e313770e4609c338ed6fae01142da65722353465f3")},
+          //      { 100, uint256S("0x000005faf4d7d9dccd3a1986eb7150a22f21f80664d5deb91cb1ca38eb305e7e")}
             }};
 
         chainTxData = ChainTxData{
