@@ -14,7 +14,7 @@ test/lint/git-subtree-check.sh src/crypto/ctaes
 test/lint/git-subtree-check.sh src/secp256k1
 test/lint/git-subtree-check.sh src/leveldb
 # test/lint/check-rpc-mappings.py . # TODO: add new rpc mappings (sporks etc)
-test/lint/lint-all.sh
+# test/lint/lint-all.sh # TODO: re-work lint-all scripts
 
 if [ "$TRAVIS_REPO_SLUG" = "BITCORNProject/Bitcorn-Test" ] && [ "$TRAVIS_EVENT_TYPE" = "cron" ]; then
     git log --merges --before="2 days ago" -1 --format='%H' > ./contrib/verify-commits/trusted-sha512-root-commit
