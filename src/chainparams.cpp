@@ -271,18 +271,18 @@ public:
     CTestNetParams()
     {
         strNetworkID = "test";
-        consensus.nSubsidyHalvingInterval = 210000;
+        consensus.nSubsidyHalvingInterval = 9000000;
         consensus.BIP16Exception = uint256();
-        consensus.BIP34Height = 200;
+        consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256();
-        consensus.BIP65Height = 200;
-        consensus.BIP66Height = 200;
+        consensus.BIP65Height = 1;
+        consensus.BIP66Height = 1;
         consensus.powLimit = uint256S("00000ffff0000000000000000000000000000000000000000000000000000000");
         consensus.nPowTargetTimespan = 14 * 24 * 60 * 60; // two weeks
-        consensus.nPowTargetSpacing = 1 * 60;
+        consensus.nPowTargetSpacing = 1 * 30;
         consensus.fPowAllowMinDifficultyBlocks = true;
         consensus.fPowNoRetargeting = false;
-        consensus.nPosTargetSpacing = 2 * 60; // PoS: 2 minutes
+        consensus.nPosTargetSpacing = 1 * 30; // PoS: 30 seconds for testnet
         consensus.nPosTargetTimespan = 60 * 40;
         consensus.nStakeMinAge = 60 * 10; // 10 minutes
         consensus.nStakeMaxAge = 60 * 60; // 1 hour
@@ -293,13 +293,13 @@ public:
         consensus.nMasternodeMinimumConfirmations = 1;
 
         // Governance
-        consensus.nSuperblockCycle = 24; // Superblocks can be issued hourly on testnet
+        consensus.nSuperblockCycle = 200; // Superblocks can be issued every 200 blocks on testnet
         consensus.nGovernanceMinQuorum = 1;
         consensus.nGovernanceFilterElements = 500;
         consensus.nBudgetPaymentsStartBlock = 200;
         consensus.nBudgetPaymentsCycleBlocks = 50;
         consensus.nBudgetPaymentsWindowBlocks = 10;
-        consensus.nSuperblockStartBlock = 300; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
+        consensus.nSuperblockStartBlock = 400; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
