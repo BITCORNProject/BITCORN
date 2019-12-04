@@ -365,10 +365,10 @@ public:
         fRequireStandard = false;
         m_is_test_chain = true;
         fMiningRequiresPeers = true;
-        fAllowMultiplePorts = false;
+        fAllowMultiplePorts = true;
         nFulfilledRequestExpireTime = 5 * 60; // fulfilled requests expire in 5 minutes
 
-        vSporkAddresses = {"GMWbuDW6m6WCc7Zc9W3CSuviXzqPKK3eBj"};
+        vSporkAddresses = {"y5tJaa34iRns4Sj2MiQ2MTd6uSNykCkndx"};
         nMinSporkKeys = 1;
 
         checkpointData = {
@@ -376,9 +376,9 @@ public:
 
         chainTxData = ChainTxData{
             // Data from rpc: getchaintxstats <nblocks> <hash>
-            /* nTime    */ 0,
-            /* nTxCount */ 0,
-            /* dTxRate  */ 0};
+            /* nTime    */ 1574436943,
+            /* nTxCount */ 10,
+            /* dTxRate  */ 0.009};
     }
 };
 
