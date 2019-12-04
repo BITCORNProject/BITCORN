@@ -141,7 +141,7 @@ public:
     CMainParams()
     {
         strNetworkID = "main";
-        consensus.nSubsidyHalvingInterval = 525600;
+        consensus.nSubsidyHalvingInterval = 9000000;
         consensus.BIP16Exception = uint256();
         consensus.BIP34Height = 1;
         consensus.BIP34Hash = uint256();

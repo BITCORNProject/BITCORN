@@ -1074,8 +1074,14 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     // Supply on old chain TODO: update total coins upon snapshot
     if (nHeight == 1)
         return 15199291760 * COIN;
-
-    if (nHeight <= 7500)
+    // Empty blocks during transition period
+    if (nHeight > 1 && nHeight <= 7500)
+        return 0 * COIN;
+    // Begin 10k subsidy
+    if (nHeight > 7500 && nHeight <= 8480070) // TODO: Recalculate reward after snapshot
+        return 10000 * COIN;
+    // End subsidy at 10b max
+    if (nHeight > 8480070) // TODO: Recalculate reward after snapshot
         return 0 * COIN;
 
     CAmount nSubsidy = 10000 * COIN;
