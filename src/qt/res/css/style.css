@@ -1,19 +1,13 @@
 /*
-* Copyright (c) 2018-2019 The BitCorn Core developers
+* Copyright (c) 2018-2019 The BitGreen Core developers
 *
 * Global Qt Stylesheet
 *
 * Based on the Dash-Qt stylesheet.
 *
-* Color Codes:
-* - dark-green:             #0f7f12
-*
-* - light-green1:           #43B043
-* - light-green2:           #219C21
-*
-* - medium-green1:          #219C21
-* - medium-green1:          #006200
-* - medium-green2:          #004000
+* - light-yellow1:           #fce94f
+* - light-yellow2:           #fdc403
+* - medium-yellow2:          #e9a825
 *
 * - background:             #f8f6f6
 * - input fields:           #e7e7e7
@@ -21,7 +15,8 @@
 */
 
 WalletFrame {
-    border-image: url(':/images/walletFrame') no-repeat fixed;
+/*    border-image: url(':/images/walletFrame') no-repeat fixed; */
+    background-color: #ffffff;
     border-top: 0px solid #000;
     margin: 0;
     padding: 0;
@@ -63,14 +58,14 @@ QMenu::item:selected {
 }
 
 QToolBar {
-    background-color: #0f7f12;
+    background-color: #fdc403;
     border: 0px solid #000;
     padding: 0;
     margin: 0;
 }
 
 QToolBar>QToolButton {
-    background-color: #0f7f12;
+    background-color: #fdc403;
     border: 0px solid #333;
     min-height: 2.5em;
     padding: 0em 1em;
@@ -113,7 +108,7 @@ QLabel {
 .QValidatedLineEdit,
 .QLineEdit {
     /* Text Entry Fields */
-    border: 1px solid #43B043;
+    border: 1px solid #fce94f;
     font-size: 11px;
     min-height: 25px;
     outline: 0;
@@ -135,11 +130,11 @@ QLabel {
 
 QPushButton {
     /* Global Button Style */
-    background-color: #006200;
+    background-color: #e9a825;
     border: 0;
 	border-width: 1px;
 	border-style: outset;
-	border-color: #0f7f12;
+	border-color: #fdc403;
 	border-radius: 2px;
     color: #ffffff;
     font-size: 12px;
@@ -151,7 +146,7 @@ QPushButton {
 }
 
 QPushButton:hover {
-    background-color: #219C21
+    background-color: #fdc403
 }
 
 QPushButton:focus {
@@ -160,12 +155,12 @@ QPushButton:focus {
 }
 
 QPushButton:pressed {
-    border: 1px solid #004000;
+    border: 1px solid #e9a825;
 }
 
 QComboBox {
     /* Dropdown Menus */
-    border: 1px solid #004000;
+    border: 1px solid #e9a825;
     padding: 3px 5px 3px 5px;
     background: #fcfcfc;
     min-height: 25px;
@@ -177,7 +172,7 @@ QComboBox:checked {
 }
 
 QComboBox:editable {
-    background: #0f7f12;
+    background: #fdc403;
     color: #616161;
     border: 0px solid transparent;
 }
@@ -219,7 +214,7 @@ QComboBox::indicator {
 }
 
 QAbstractSpinBox {
-    border: 1px solid #43B043;
+    border: 1px solid #fce94f;
     padding: 3px 5px 3px 5px;
     background: #fcfcfc;
     min-height: 25px;
@@ -232,8 +227,8 @@ QAbstractSpinBox::up-button {
     width: 21px;
     background: #fcfcfc;
     border-left: 0px;
-    border-right: 1px solid #43B043;
-    border-top: 1px solid #43B043;
+    border-right: 1px solid #fce94f;
+    border-top: 1px solid #fce94f;
     border-bottom: 0px;
     padding-right: 1px;
     padding-left: 5px;
@@ -251,8 +246,8 @@ QAbstractSpinBox::down-button {
     background: #fcfcfc;
     border-top: 0px;
     border-left: 0px;
-    border-right: 1px solid #43B043;
-    border-bottom: 1px solid #43B043;
+    border-right: 1px solid #fce94f;
+    border-bottom: 1px solid #fce94f;
     padding-right: 1px;
     padding-left: 5px;
     padding-bottom: 2px;
@@ -282,7 +277,7 @@ QHeaderView {
 QHeaderView::section {
     /* Table Header Sections */
     qproperty-alignment: center;
-    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #4c97bf, stop: 1 #219C21);
+    background-color: qlineargradient(x1: 0, y1: 0, x2: 0, y2: 0.25, stop: 0 #4c97bf, stop: 1 #fdc403);
     color: #fff;
     min-height: 25px;
     font-weight: bold;
@@ -321,7 +316,7 @@ QHeaderView::section:last {
 
 QTableView::item {
     /* Table Item */
-    background-color: #fcfcfc;
+    background-color: #ffffff;
     font-size: 12px;
 }
 
@@ -551,7 +546,7 @@ QDialog#SignVerifyMessageDialog QPushButton#addressBookButton_SM {
 
 QDialog#SignVerifyMessageDialog QPlainTextEdit {
     /* Message Signing Text */
-    border: 1px solid #43B043;
+    border: 1px solid #fce94f;
     background-color: #fff;
 }
 
@@ -793,7 +788,7 @@ QDialog#RPCConsole QWidget#tab_info QLabel#label_10 {
 
 QDialog#RPCConsole QWidget#tab_peers QLabel#peerHeading {
     /* Peers Info Header */
-    color: #0f7f12;
+    color: #fdc403;
 }
 
 QDialog#RPCConsole QPushButton#openDebugLogfileButton {
@@ -883,7 +878,7 @@ QWidget .QFrame#frame>.QLabel {
 QWidget .QFrame#frame .QLabel#label_5 {
     /* Wallet Label */
     min-width: 160px;
-    color: #0f7f12;
+    color: #fdc403;
     font-weight: bold;
     font-size: 15px;
     min-height: 24px;
@@ -912,7 +907,7 @@ QWidget .QFrame#frame .QLabel#labelBalanceText {
     /* Available Balance Label */
     qproperty-alignment: 'AlignVCenter | AlignRight';
     min-width: 160px;
-    background-color: #219C21;
+    background-color: #fdc403;
     color: #ffffff;
     margin-right: 5px;
     padding-right: 5px;
@@ -926,7 +921,7 @@ QWidget .QFrame#frame .QLabel#labelBalance {
     qproperty-alignment: 'AlignVCenter | AlignLeft';
     font-size: 12px;
     font-weight: bold;
-    color: #219C21;
+    color: #fdc403;
     margin-left: 0px;
 }
 
@@ -942,7 +937,7 @@ QWidget .QFrame#frame .QLabel#labelPendingText {
     qproperty-alignment: 'AlignVCenter | AlignRight';
     min-width: 160px;
     font-size: 12px;
-    background-color: #F8F6F6;
+    background-color: #FFFFFF;
     margin-right: 5px;
     padding-right: 5px;
 }
@@ -966,7 +961,7 @@ QWidget .QFrame#frame .QLabel#labelImmatureText {
     qproperty-alignment: 'AlignVCenter | AlignRight';
     min-width: 160px;
     font-size: 12px;
-    background-color: #F8F6F6;
+    background-color: #FFFFFF;
     margin-right: 5px;
     padding-right: 5px;
 }
@@ -990,7 +985,7 @@ QWidget .QFrame#frame .QLabel#labelTotalText {
     qproperty-alignment: 'AlignVCenter | AlignRight';
     min-width: 160px;
     font-size: 12px;
-    background-color: #F8F6F6;
+    background-color: #FFFFFF;
     margin-right: 5px;
     padding-right: 5px;
 }
@@ -1026,7 +1021,7 @@ QWidget .QFrame#frame_2 {
 QWidget .QFrame#frame_2 .QLabel#label_4 {
     /* Recent Transactions Label */
     min-width: 180px;
-    color: #0f7f12;
+    color: #fdc403;
     padding-right: 5px;
     font-weight: bold;
     font-size: 15px;
@@ -1101,7 +1096,7 @@ QDialog#SendCoinsDialog .QFrame#frameCoinControl .QPushButton#pushButtonCoinCont
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl .QLabel#labelCoinControlFeatures {
     /* Coin Control Header */
-    color: #0f7f12;
+    color: #fdc403;
     font-weight: bold;
     font-size: 14px;
 }
@@ -1228,7 +1223,7 @@ QDialog#SendCoinsDialog QLabel#labelBalance {
 
 QStackedWidget#SendCoinsEntry .QFrame#SendCoins>.QLabel {
     /* Send Coin Entry Labels */
-    background-color: #219C21;
+    background-color: #fdc403;
     min-width: 102px;
     font-weight: bold;
     font-size: 11px;
@@ -1248,7 +1243,7 @@ QStackedWidget#SendCoinsEntry .QValidatedLineEdit#payTo {
 
 QStackedWidget#SendCoinsEntry .QToolButton {
     /* General Settings for Pay To Icons */
-    background-color: #0f7f12;
+    background-color: #fdc403;
     padding-left: 5px;
     padding-right: 5px;
     border: 0;
@@ -1432,7 +1427,7 @@ QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::indicator {
 
 QWidget#ReceiveCoinsDialog .QFrame#frame2 .QLabel#label_2 {
     /* Label Label */
-    background-color: #219C21;
+    background-color: #fdc403;
     min-width: 102px;
     color: #ffffff;
     font-weight: bold;
@@ -1452,7 +1447,7 @@ QWidget#ReceiveCoinsDialog .QFrame#frame2 .QLabel#label {
 
 QWidget#ReceiveCoinsDialog .QFrame#frame2 .QLabel#label_3 {
     /* Message Label */
-    background-color: #219C21;
+    background-color: #fdc403;
     min-width: 102px;
     color: #ffffff;
     font-weight: bold;
@@ -1516,7 +1511,7 @@ QWidget#ReceiveCoinsDialog .QFrame#frame QPushButton#removeRequestButton:pressed
 
 QWidget#ReceiveCoinsDialog .QFrame#frame .QLabel#label_6 {
     /* Requested Payments History Label */
-    color: #0f7f12;
+    color: #fdc403;
     font-weight: bold;
     font-size: 14px;
 }
