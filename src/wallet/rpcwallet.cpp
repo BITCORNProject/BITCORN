@@ -1941,6 +1941,13 @@ static UniValue walletpassphrase(const JSONRPCRequest& request)
     // Alternately, find a way to make request.params[0] mlock()'d to begin with.
     strWalletPass = request.params[0].get_str().c_str();
 
+    bool stakingOnly = false;
+    if (request.params.size() == 3)
+        stakingOnly = request.params[2].get_bool();
+
+    if (!pwallet->IsLocked() && pwallet->fWalletUnlockStakingOnly && stakingOnly)
+        throw JSONRPCError(RPC_WALLET_ALREADY_UNLOCKED, "Error: Wallet is already unlocked.");
+
     // Get the timeout
     int64_t nSleepTime = request.params[1].get_int64();
     // Timeout cannot be negative, otherwise it will relock immediately
