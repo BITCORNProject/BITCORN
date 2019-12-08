@@ -1096,7 +1096,7 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
     nSubsidy >>= halvings;
 
     // Hard fork to reduce the block reward by 5 extra percent (allowing budget/superblocks)
-    CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/5 : 0;
+    CAmount nSuperblockPart = (nHeight >= consensusParams.nBudgetPaymentsStartBlock) ? nSubsidy/20 : 0;
 
     return fSuperblockPartOnly ? nSuperblockPart : nSubsidy - nSuperblockPart;
 }
@@ -1107,7 +1107,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     if (nHeight < Params().GetConsensus().nLastPoWBlock || blockValue == 0)
         return 0;
 
-    CAmount ret = blockValue * 0.40; // 40% of block reward
+    CAmount ret = blockValue * 0.4; // 40% of block reward
     return ret;
 }
 
