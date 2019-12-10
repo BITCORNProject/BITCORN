@@ -3171,6 +3171,9 @@ CBlockIndex* BlockManager::AddToBlockIndex(const CBlockHeader& block, bool fProo
         pindexNew->nStatus |= nStatus;
     }
 
+    if (!block.nNonce)
+        pindexNew->SetProofOfStake();
+
     setDirtyBlockIndex.insert(pindexNew);
 
     // track prevBlockHash -> pindex (multimap)
