@@ -1,10 +1,10 @@
 package=chia_bls
-$(package)_version=v20181101
+$(package)_version=v20181103
 # It's actually from https://github.com/Chia-Network/bls-signatures, but we have so many patches atm that it's forked
-$(package)_download_path=https://github.com/codablock/bls-signatures/archive
+$(package)_download_path=https://github.com/proteanx/bls-signatures/archive
 $(package)_file_name=$($(package)_version).tar.gz
-$(package)_sha256_hash=b3ec74a77a7b6795f84b05e051a0824ef8d9e05b04b2993f01040f35689aa87c
-# $(package)_dependencies=gmp
+$(package)_sha256_hash=93d751a61b7dbee9bf24a591e41c104286bd4dc60fff6279af7a3003b845de51
+$(package)_dependencies=gmp
 #$(package)_patches=...TODO (when we switch back to https://github.com/Chia-Network/bls-signatures)
 
 #define $(package)_preprocess_cmds
