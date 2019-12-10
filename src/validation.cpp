@@ -1073,11 +1073,11 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
         nCornSubsidy = 15199291760;
     } 
     // Empty blocks during transition period
-    if (nHeight > 1 && nHeight <= 350) {
+    if (nHeight > 1 && nHeight <= 200) {
         nCornSubsidy = 0;
     }
     // Begin 10k subsidy & end height // TODO: Recalculate reward end after snapshot
-    if (nHeight > 350 && nHeight <= 8480070) {
+    if (nHeight > 200 && nHeight <= 8480070) {
         nCornSubsidy = 10000;
     }
     // End subsidy at 10b max

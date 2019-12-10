@@ -287,7 +287,7 @@ public:
         consensus.nStakeMinAge = 60 * 10; // 10 minutes
         consensus.nStakeMaxAge = 60 * 60; // 1 hour
         consensus.nModifierInterval = 60; // Modifier interval: time to elapse before new modifier is computed (1 minute)
-        consensus.nLastPoWBlock = 200;
+        consensus.nLastPoWBlock = 250;
         consensus.nRuleChangeActivationThreshold = 1512; // 75% for testchains
         consensus.nMinerConfirmationWindow = 2016;       // nPowTargetTimespan / nPowTargetSpacing
         consensus.nMasternodeMinimumConfirmations = 1;
@@ -296,10 +296,10 @@ public:
         consensus.nSuperblockCycle = 200; // Superblocks can be issued every 200 blocks on testnet
         consensus.nGovernanceMinQuorum = 1;
         consensus.nGovernanceFilterElements = 500;
-        consensus.nBudgetPaymentsStartBlock = 200;
+        consensus.nBudgetPaymentsStartBlock = 400;
         consensus.nBudgetPaymentsCycleBlocks = 50;
         consensus.nBudgetPaymentsWindowBlocks = 10;
-        consensus.nSuperblockStartBlock = 400; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
+        consensus.nSuperblockStartBlock = 600; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
