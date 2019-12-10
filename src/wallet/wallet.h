@@ -1433,7 +1433,7 @@ public:
     /** proof-of-stake */
     bool fWalletUnlockStakingOnly = false;
     int nStakeSetUpdateTime = 300; // 5 minutes
-    uint64_t nStakeSplitThreshold = 2000;
+    uint64_t nStakeSplitThreshold = 250000;
     using StakeCoinsSet = std::set<std::pair<const CWalletTx*, unsigned int>>;
     bool MintableCoins();
     bool SelectStakeCoins(StakeCoinsSet& setCoins, CAmount nTargetAmount) const;
