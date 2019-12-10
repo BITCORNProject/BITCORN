@@ -1064,27 +1064,28 @@ bool ReadRawBlockFromDisk(std::vector<uint8_t>& block, const CBlockIndex* pindex
 CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, bool fSuperblockPartOnly)
 {
     if (Params().NetworkIDString() == "regtest")
-        return 50 * COIN;
+        return 10000 * COIN;
 
-    /*
-     1-7500 - zero rewards
-     7500+ - 10000 CORN
-    */
+    CAmount nCornSubsidy;
 
     // Supply on old chain TODO: update total coins upon snapshot
-    if (nHeight == 1)
-        return 15199291760 * COIN;
+    if (nHeight == 1) {
+        nCornSubsidy = 15199291760;
+    } 
     // Empty blocks during transition period
-    if (nHeight > 1 && nHeight <= 7500)
-        return 0 * COIN;
-    // Begin 10k subsidy
-    if (nHeight > 7500 && nHeight <= 8480070) // TODO: Recalculate reward after snapshot
-        return 10000 * COIN;
+    if (nHeight > 1 && nHeight <= 350) {
+        nCornSubsidy = 0;
+    }
+    // Begin 10k subsidy & end height // TODO: Recalculate reward end after snapshot
+    if (nHeight > 350 && nHeight <= 8480070) {
+        nCornSubsidy = 10000;
+    }
     // End subsidy at 10b max
-    if (nHeight > 8480070) // TODO: Recalculate reward after snapshot
-        return 0 * COIN;
+    if (nHeight > 8480070) {
+        nCornSubsidy = 0;
+    }
 
-    CAmount nSubsidy = 10000 * COIN;
+    CAmount nSubsidy = nCornSubsidy * COIN;
 
     int halvings = nHeight / consensusParams.nSubsidyHalvingInterval;
 
