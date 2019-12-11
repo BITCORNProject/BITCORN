@@ -1107,7 +1107,7 @@ CAmount GetMasternodePayment(int nHeight, CAmount blockValue)
     if (nHeight < Params().GetConsensus().nLastPoWBlock || blockValue == 0)
         return 0;
 
-    CAmount ret = blockValue * 0.4; // 40% of block reward
+    CAmount ret = blockValue * 0.421; // 39.995% of block reward
     return ret;
 }
 
