@@ -75,17 +75,17 @@ QToolBar>QToolButton {
 
 QToolBar>QToolButton:hover {
     background-color: #1b2032;
-    color: #333;
+    color: #fdc403;
 }
 
 QToolBar>QToolButton:checked {
     background-color: #1b2032;
-    color: #333;
+    color: #fdc403;
     font-weight: bold;
 }
 
 QMessageBox {
-    background-color: #F8F6F6;
+    background-color: #1b2032;
 }
 
 
@@ -162,7 +162,7 @@ QComboBox {
     /* Dropdown Menus */
     border: 1px solid #e9a825;
     padding: 3px 5px 3px 5px;
-    background: #fcfcfc;
+    background: #1b2032;
     min-height: 25px;
     color: #818181;
 }
@@ -173,7 +173,7 @@ QComboBox:checked {
 
 QComboBox:editable {
     background: #fdc403;
-    color: #616161;
+    color: #ffffff;
     border: 0px solid transparent;
 }
 
@@ -317,6 +317,7 @@ QHeaderView::section:last {
 QTableView::item {
     /* Table Item */
     background-color: #1b2032;
+    color: #fff;
     font-size: 12px;
 }
 
@@ -465,12 +466,12 @@ QDialog .QTabWidget QTabBar::tab:last {
 QDialog .QTabWidget QTabBar::tab:selected,
 QDialog .QTabWidget QTabBar::tab:hover {
     background-color: #1b2032;
-    color: #333;
+    color: #fff;
 }
 
 QDialog .QTabWidget .QWidget {
     background-color: #1b2032;
-    color: #333;
+    color: #fff;
 }
 
 QDialog .QTabWidget .QWidget QAbstractSpinBox {
@@ -504,7 +505,7 @@ QDialog QWidget {
 /* Dialog: Open URI */
 
 QDialog#OpenURIDialog {
-    background-color: #F8F6F6;
+    background-color: #1b2032;
 }
 
 QDialog#OpenURIDialog QLabel#label {
@@ -708,7 +709,7 @@ QWidget#AddressBookPage QHeaderView::section {
 /* Encrypt Wallet and Change Passphrase Dialog */
 
 QDialog#AskPassphraseDialog {
-    background-color: #F8F6F6;
+    background-color: #1b2032;
 }
 
 QDialog#AskPassphraseDialog QLabel#passLabel1,
@@ -717,6 +718,7 @@ QDialog#AskPassphraseDialog QLabel#passLabel3 {
     qproperty-alignment: 'AlignVCenter | AlignRight';
     min-width: 170px;
     min-height: 33px;
+    background-color: #1b2032;
     /* base width of 25px for QLineEdit, plus padding and border */
 }
 
@@ -1080,11 +1082,13 @@ QWidget#bgWidget .QPushButton#closeButton {}
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl {
     /* Coin Control Section */
+    background-color: #1b2032;
 }
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl>.QLabel {
     /* Default Font Color and  Size */
     font-weight: normal;
+    background-color: #1b2032;
 }
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl .QPushButton#pushButtonCoinControl {
@@ -1103,6 +1107,7 @@ QDialog#SendCoinsDialog .QFrame#frameCoinControl .QLabel#labelCoinControlFeature
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl .QWidget#widgetCoinControl {
     /* Coin Control Inputs */
+    background-color: #1b2032;
 }
 
 QDialog#SendCoinsDialog .QFrame#frameCoinControl .QWidget#widgetCoinControl>.QLabel {
@@ -1261,7 +1266,7 @@ QStackedWidget#SendCoinsEntry .QToolButton#addressBookButton {
 
 QDialog#CoinControlDialog {
     /* Coin Control Dialog Window */
-    background-color: #F8F6F6;
+    background-color: #1b2032;
 }
 
 QDialog#CoinControlDialog .QLabel#labelCoinControlQuantityText {
@@ -1364,13 +1369,13 @@ QDialog#CoinControlDialog .QDialogButtonBox#buttonBox QPushButton {
 
 QDialog#CoinControlDialog .QFrame#frame .QRadioButton#radioTreeMode {
     /* Coin Control Tree Mode Selector */
-    color: #818181;
+    color: #fce94f;
     background-color: transparent;
 }
 
 QDialog#CoinControlDialog .QFrame#frame .QRadioButton#radioListMode {
     /* Coin Control List Mode Selector */
-    color: #818181;
+    color: #fce94f;
     background-color: transparent;
 }
 
@@ -1383,7 +1388,8 @@ QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget {
     /* Coin Control Widget Container */
     outline: 0;
     background-color: #1b2032;
-    border: 0px solid #818181;
+    color: #fff;
+    border: 0px solid #fce94f;
 }
 
 QDialog#CoinControlDialog .CoinControlTreeWidget#treeWidget::item {}
