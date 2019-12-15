@@ -14,7 +14,7 @@
 - (NSString *)__bundleIdentifier
 {
     if (self == [NSBundle mainBundle]) {
-        return @"org.bitg.BitCorn-Qt";
+        return @"com.bitcornproject.BitCorn-Qt";
     } else {
         return [self __bundleIdentifier];
     }

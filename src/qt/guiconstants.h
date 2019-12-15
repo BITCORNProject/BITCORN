@@ -41,7 +41,7 @@ static const int TOOLTIP_WRAP_THRESHOLD = 80;
 #define SPINNER_FRAMES 36
 
 #define QAPP_ORG_NAME "BitCorn"
-#define QAPP_ORG_DOMAIN "bitg.org"
+#define QAPP_ORG_DOMAIN "bitcornproject.com"
 #define QAPP_APP_NAME_DEFAULT "BitCorn-Qt"
 #define QAPP_APP_NAME_TESTNET "BitCorn-Qt-testnet"
 #define QAPP_APP_NAME_REGTEST "BitCorn-Qt-regtest"

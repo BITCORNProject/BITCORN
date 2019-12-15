@@ -613,8 +613,8 @@ void SetupServerArgs()
 
 std::string LicenseInfo()
 {
-    const std::string URL_SOURCE_CODE = "<https://github.com/bitcorn/bitcorn>";
-    const std::string URL_WEBSITE = "<https://bitg.org>";
+    const std::string URL_SOURCE_CODE = "<https://github.com/BITCORNProject/Bitcorn>";
+    const std::string URL_WEBSITE = "<https://bitcornproject.com>";
 
     return CopyrightHolders(strprintf(_("Copyright (C) %i-%i").translated, 2018, COPYRIGHT_YEAR) + " ") + "\n" +
            "\n" +
