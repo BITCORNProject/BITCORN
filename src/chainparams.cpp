@@ -214,11 +214,12 @@ public:
         assert(consensus.hashGenesisBlock == uint256S("0x00000f2ccd79712e561f6f883ed19ffd89c2e8aa28c8cd2c238fc60bee0c62d4"));
         assert(genesis.hashMerkleRoot == uint256S("0x2de60c1f5a93e37e028aef8e3cb2afd4dfbfac707624a3c2644b5b5c7d9c1404"));
 
-        // Note that of those which support the service bits prefix, most only support a subset of
-        // possible options.
-        // This is fine at runtime as we'll fall back to using them as a oneshot if they don't support the
-        // service bits we want, but we should get them updated to support all service bits wanted by any
-        // release ASAP to avoid it where possible.
+	// Mainnet Seeds
+        vSeeds.emplace_back("seed1.bitcornproject.com");
+        vSeeds.emplace_back("seed2.bitcornproject.com");
+        vSeeds.emplace_back("seed3.bitcornproject.com");
+        vSeeds.emplace_back("seed4.bitcornproject.com");
+        vSeeds.emplace_back("seed5.bitcornproject.com");
 
         base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 28); // C Prefix P2PKH
         base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 60); // R Prefix for P2SH
