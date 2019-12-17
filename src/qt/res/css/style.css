@@ -1006,8 +1006,13 @@ QWidget .QFrame#frame .QLabel#labelWatchTotal {
     margin-left: 16px;
 }
 
+/* MASTERNODE LIST */
 
-
+QWidget#tabDIP3Masternodes {
+    /* tab above mn list */
+    font-size: 12px;
+    background-color: #1b2032;
+}
 
 /* RECENT TRANSACTIONS */
 
@@ -1018,6 +1023,7 @@ QWidget .QFrame#frame_2 {
     margin-left: 0;
     margin-top: 0;
     background-repeat: none;
+    color: #fff;
 }
 
 QWidget .QFrame#frame_2 .QLabel#label_4 {
@@ -1037,6 +1043,7 @@ QWidget .QFrame#frame_2 .QLabel#labelTransactionsStatus {
     margin-left: 16px;
     margin-right: 5px;
     min-height: 16px;
+    color: #fff;
 }
 
 QWidget .QFrame#frame_2 QListView {
@@ -1046,6 +1053,7 @@ QWidget .QFrame#frame_2 QListView {
     max-width: 369px;
     margin-top: 12px;
     margin-left: 0px;
+    color: #fff;
     /* CSS Voodoo - set to -66px to hide default transaction icons */
 }
 
