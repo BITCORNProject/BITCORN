@@ -149,7 +149,7 @@ public:
         consensus.BIP65Height = 1;
         consensus.BIP66Height = 1;
         consensus.powLimit = uint256S("00000fffffffffffffffffffffffffffffffffffffffffffffffffffffffffff"); // ~arith_uint256(0) >> 20;
-        consensus.nPowTargetTimespan = 1 * 24 * 60 * 60;                                                   // 1 day
+        consensus.nPowTargetTimespan = 24 * 60 * 60;   // 1 day
         consensus.nPowTargetSpacing = 1 * 60;
         consensus.fPowAllowMinDifficultyBlocks = false;
         consensus.fPowNoRetargeting = false;
@@ -158,19 +158,19 @@ public:
         consensus.nStakeMinAge = 60 * 60 * 12; // 12 hours
         consensus.nStakeMaxAge = 60 * 60 * 48; // 48 hours
         consensus.nModifierInterval = 60;      // Modifier interval: time to elapse before new modifier is computed (60 seconds)
-        consensus.nLastPoWBlock = 1500;
+        consensus.nLastPoWBlock = 3500;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
         consensus.nMinerConfirmationWindow = 2016;       // nPowTargetTimespan / nPowTargetSpacing
         consensus.nMasternodeMinimumConfirmations = 15;
 
         // Governance
-        consensus.nSuperblockCycle = 20571; // ~(60*24*30)/2.1, actual number of blocks per month is 262800 / 12 = 21900
+        consensus.nSuperblockCycle = 21915; // monthly
         consensus.nGovernanceMinQuorum = 10;
         consensus.nGovernanceFilterElements = 20000;
-        consensus.nBudgetPaymentsStartBlock = 10000;
-        consensus.nBudgetPaymentsCycleBlocks = 20571; // ~(60*24*30)/2.1, actual number of blocks per month is 262800 / 12 = 21900
+        consensus.nBudgetPaymentsStartBlock = 3101;
+        consensus.nBudgetPaymentsCycleBlocks = 21915; // monthly
         consensus.nBudgetPaymentsWindowBlocks = 100;
-        consensus.nSuperblockStartBlock = 12000; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
+        consensus.nSuperblockStartBlock = 17000; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
 
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].bit = 28;
         consensus.vDeployments[Consensus::DEPLOYMENT_TESTDUMMY].nStartTime = 1199145601; // January 1, 2008
@@ -178,8 +178,8 @@ public:
 
         // Deployment of BIP68, BIP112, and BIP113.
         consensus.vDeployments[Consensus::DEPLOYMENT_CSV].bit = 0;
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE; // May 1st, 2016
-        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT;   // May 1st, 2017
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nStartTime = Consensus::BIP9Deployment::ALWAYS_ACTIVE; 
+        consensus.vDeployments[Consensus::DEPLOYMENT_CSV].nTimeout = Consensus::BIP9Deployment::NO_TIMEOUT; 
 
         // Deployment of SegWit (BIP141, BIP143, and BIP147)
         consensus.vDeployments[Consensus::DEPLOYMENT_SEGWIT].bit = 1;
@@ -245,7 +245,7 @@ public:
         fAllowMultiplePorts = true;
         nFulfilledRequestExpireTime = 60 * 60; // fulfilled requests expire in 1 hour
 
-        vSporkAddresses = {"CTHtPhgv859hZDw7dAwspfvgUdEYaPFAfJ"};
+        vSporkAddresses = {"CTGuABhNzjk9vMe3mrHE78bZRkLfAKGDxz"};
         nMinSporkKeys = 1;
 
         checkpointData = {
@@ -468,7 +468,7 @@ public:
         fAllowMultiplePorts = true;
         nFulfilledRequestExpireTime = 5 * 60; // fulfilled requests expire in 5 minutes
 
-        vSporkAddresses = {"GMWbuDW6m6WCc7Zc9W3CSuviXzqPKK3eBj"};
+        vSporkAddresses = {"y5tJaa34iRns4Sj2MiQ2MTd6uSNykCkndx"};
         nMinSporkKeys = 1;
 
         checkpointData = {
@@ -479,9 +479,9 @@ public:
             0,
             0};
 
-        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 98);
-        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 12);
-        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 108);
+        base58Prefixes[PUBKEY_ADDRESS] = std::vector<unsigned char>(1, 139);
+        base58Prefixes[SCRIPT_ADDRESS] = std::vector<unsigned char>(1, 19);
+        base58Prefixes[SECRET_KEY] = std::vector<unsigned char>(1, 239);
         base58Prefixes[EXT_PUBLIC_KEY] = {0x04, 0x35, 0x87, 0xCF};
         base58Prefixes[EXT_SECRET_KEY] = {0x04, 0x35, 0x83, 0x94};
 
