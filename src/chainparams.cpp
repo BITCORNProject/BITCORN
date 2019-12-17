@@ -54,7 +54,7 @@ static CBlock CreateGenesisBlock(const char* pszTimestamp, const CScript& genesi
  */
 static CBlock CreateGenesisBlock(uint32_t nTime, uint32_t nNonce, uint32_t nBits, int32_t nVersion, const CAmount& genesisReward)
 {
-    const char* pszTimestamp = "Even With Energy Surplus, Canada Unable to Meet Electricity Demands of Bitcoin Miners";
+    const char* pszTimestamp = "GRETA THUNBURG NAMED 2019 PERSON OF THE YEAR BY TIME MAGAZINE LOLLLLLLLLLLLLLLL cough LLLL";
     const CScript genesisOutputScript = CScript() << ParseHex("04e5a8143f86ad8ac63791fbbdb8e0b91a8da88c8c693a95f6c2c13c063ea790f7960b8025a9047a7bc671d5cfe707a2dd2e13b86182e1064a0eea7bf863636363") << OP_CHECKSIG;
     return CreateGenesisBlock(pszTimestamp, genesisOutputScript, nTime, nNonce, nBits, nVersion, genesisReward);
 }
@@ -209,10 +209,10 @@ public:
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
-        genesis = CreateGenesisBlock(1574334000, 27296764, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1576608420, 43807151, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x0000025289d6b03cbda4950e825cd865185f34fbb3e098295534b63d78beba15"));
-        assert(genesis.hashMerkleRoot == uint256S("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000f2ccd79712e561f6f883ed19ffd89c2e8aa28c8cd2c238fc60bee0c62d4"));
+        assert(genesis.hashMerkleRoot == uint256S("0x2de60c1f5a93e37e028aef8e3cb2afd4dfbfac707624a3c2644b5b5c7d9c1404"));
 
         // Note that of those which support the service bits prefix, most only support a subset of
         // possible options.
@@ -335,10 +335,10 @@ public:
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
-        genesis = CreateGenesisBlock(1565017975, 21212214, 0x1e0ffff0, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1576555706, 1396691, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000546a6b03a54ae05f94119e37c55202e90a953058c35364d112d41ded06a"));
-        assert(genesis.hashMerkleRoot == uint256S("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000dbf970fcd8795ccf4089428817484db96d164de0fa0aac9a8a6a447dba6"));
+        assert(genesis.hashMerkleRoot == uint256S("0x2de60c1f5a93e37e028aef8e3cb2afd4dfbfac707624a3c2644b5b5c7d9c1404"));
 
         vFixedSeeds.clear();
         vSeeds.clear();
@@ -453,10 +453,10 @@ public:
 
         UpdateVersionBitsParametersFromArgs(args);
 
-        genesis = CreateGenesisBlock(1565017975, 20542302, 0x207fffff, 1, 0 * COIN);
+        genesis = CreateGenesisBlock(1576555803, 1, 0x207fffff, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x100a3271b95d1a817101bcbd7045ad14c9799cb34e1cb6071973c8932ae48b6a"));
-        assert(genesis.hashMerkleRoot == uint256S("0x07cbcacfc822fba6bbeb05312258fa43b96a68fc310af8dfcec604591763f7cf"));
+        assert(consensus.hashGenesisBlock == uint256S("0x5f56c67a2948980270607a05bf9350d68978a088a3649d0c6e2bb1ec62cfee74"));
+        assert(genesis.hashMerkleRoot == uint256S("0x2de60c1f5a93e37e028aef8e3cb2afd4dfbfac707624a3c2644b5b5c7d9c1404"));
 
         vFixedSeeds.clear(); //!< Regtest mode doesn't have any fixed seeds.
         vSeeds.clear();      //!< Regtest mode doesn't have any DNS seeds.
