@@ -1068,20 +1068,20 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
 
     CAmount nCornSubsidy;
 
-    // Supply on old chain TODO: update total coins upon snapshot
+    // Supply on old chain
     if (nHeight == 1) {
-        nCornSubsidy = 15199291760;
+        nCornSubsidy = 15461531755;
     } 
     // Empty blocks during transition period
-    if (nHeight > 1 && nHeight <= 350) {
+    if (nHeight > 1 && nHeight <= 3100) {
         nCornSubsidy = 0;
     }
-    // Begin 10k subsidy & end height // TODO: Recalculate reward end after snapshot
-    if (nHeight > 350 && nHeight <= 8480070) {
+    // Begin 10k subsidy & end height
+    if (nHeight > 3100 && nHeight <= 8457346) {
         nCornSubsidy = 10000;
     }
     // End subsidy at 10b max
-    if (nHeight > 8480070) {
+    if (nHeight > 8457346) {
         nCornSubsidy = 0;
     }
 
