@@ -396,7 +396,7 @@ endif # ENABLE_BIP70
 endif # ENABLE_WALLET
 
 RES_IMAGES = \
-  qt/res/images/about.png \
+  qt/res/images/aboutcorn.png \
   qt/res/images/walletFrame.png \
   qt/res/images/downArrow_small_dark.png \
   qt/res/images/downArrow_small.png \
