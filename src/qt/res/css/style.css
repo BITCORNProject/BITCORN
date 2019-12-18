@@ -538,7 +538,7 @@ QDialog#OpenURIDialog QPushButton#selectFileButton:pressed {
 /* Dialog: Sign / Verify Message */
 
 QDialog#SignVerifyMessageDialog {
-    background-color: #F8F6F6;
+    background-color: #1b2032;
 }
 
 QDialog#SignVerifyMessageDialog QPushButton#addressBookButton_SM {
@@ -552,6 +552,7 @@ QDialog#SignVerifyMessageDialog QPlainTextEdit {
     /* Message Signing Text */
     border: 1px solid #fce94f;
     background-color: #1b2032;
+    color: #fff;
 }
 
 QDialog#SignVerifyMessageDialog QPushButton#pasteButton_SM {
@@ -620,7 +621,7 @@ QDialog#SignVerifyMessageDialog QPushButton#clearButton_VM:pressed {
 /* Dialog: Send and Receive */
 
 QWidget#AddressBookPage {
-    background-color: #F8F6F6;
+    background-color: #1b2032;
 }
 
 QWidget#AddressBookPage QPushButton#newAddress {
