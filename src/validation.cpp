@@ -1073,15 +1073,15 @@ CAmount GetBlockSubsidy(int nHeight, const Consensus::Params& consensusParams, b
         nCornSubsidy = 15461531755;
     } 
     // Empty blocks during transition period
-    if (nHeight > 1 && nHeight <= 3100) {
+    if (nHeight > 1 && nHeight <= 1100) {
         nCornSubsidy = 0;
     }
     // Begin 10k subsidy & end height
-    if (nHeight > 3100 && nHeight <= 8457346) {
+    if (nHeight > 1100 && nHeight <= 8455346) {
         nCornSubsidy = 10000;
     }
     // End subsidy at 10b max
-    if (nHeight > 8457346) {
+    if (nHeight > 8455346) {
         nCornSubsidy = 0;
     }
 

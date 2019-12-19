@@ -158,7 +158,7 @@ public:
         consensus.nStakeMinAge = 60 * 60 * 12; // 12 hours
         consensus.nStakeMaxAge = 60 * 60 * 48; // 48 hours
         consensus.nModifierInterval = 60;      // Modifier interval: time to elapse before new modifier is computed (60 seconds)
-        consensus.nLastPoWBlock = 3500;
+        consensus.nLastPoWBlock = 1500;
         consensus.nRuleChangeActivationThreshold = 1916; // 95% of 2016
         consensus.nMinerConfirmationWindow = 2016;       // nPowTargetTimespan / nPowTargetSpacing
         consensus.nMasternodeMinimumConfirmations = 15;
@@ -167,7 +167,7 @@ public:
         consensus.nSuperblockCycle = 21915; // monthly
         consensus.nGovernanceMinQuorum = 10;
         consensus.nGovernanceFilterElements = 20000;
-        consensus.nBudgetPaymentsStartBlock = 3101;
+        consensus.nBudgetPaymentsStartBlock = 1101;
         consensus.nBudgetPaymentsCycleBlocks = 21915; // monthly
         consensus.nBudgetPaymentsWindowBlocks = 100;
         consensus.nSuperblockStartBlock = 17000; // NOTE: Should satisfy nSuperblockStartBlock > nBudgetPaymentsStartBlock
@@ -203,15 +203,15 @@ public:
         pchMessageStart[0] = 0x23;
         pchMessageStart[1] = 0x06;
         pchMessageStart[2] = 0x18;
-        pchMessageStart[3] = 0x3f;
+        pchMessageStart[3] = 0x20;
         nDefaultPort = 42420;
         nPruneAfterHeight = 100000;
         m_assumed_blockchain_size = 1;
         m_assumed_chain_state_size = 0;
 
-        genesis = CreateGenesisBlock(1576608420, 43807151, 0x1e0ffff0, 1, 50 * COIN);
+        genesis = CreateGenesisBlock(1576772420, 42677711, 0x1e0ffff0, 1, 50 * COIN);
         consensus.hashGenesisBlock = genesis.GetHash();
-        assert(consensus.hashGenesisBlock == uint256S("0x00000f2ccd79712e561f6f883ed19ffd89c2e8aa28c8cd2c238fc60bee0c62d4"));
+        assert(consensus.hashGenesisBlock == uint256S("0x00000bd7ef5b1f38befe78f91614334809bb3919fe1bdcf019f0eb8a3f477560"));
         assert(genesis.hashMerkleRoot == uint256S("0x2de60c1f5a93e37e028aef8e3cb2afd4dfbfac707624a3c2644b5b5c7d9c1404"));
 
 	// Mainnet Seeds
@@ -251,8 +251,8 @@ public:
 
         checkpointData = {
             {
-                {   1, uint256S("0x000009a5e35155890a8b79c0fd957de309b56cb219a4d517765c82bb0d7214d2")},
-                {  28, uint256S("0x00000aaff93c587d962ad3c638aa477bf6e71d65c26ec9e5138dc7830a27354b")}
+         //       {   1, uint256S("0x000009a5e35155890a8b79c0fd957de309b56cb219a4d517765c82bb0d7214d2")},
+         //       {  28, uint256S("0x00000aaff93c587d962ad3c638aa477bf6e71d65c26ec9e5138dc7830a27354b")}
             }};
 
         chainTxData = ChainTxData{
