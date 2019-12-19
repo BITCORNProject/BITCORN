@@ -251,8 +251,8 @@ public:
 
         checkpointData = {
             {
-         //       {   1, uint256S("0x000009a5e35155890a8b79c0fd957de309b56cb219a4d517765c82bb0d7214d2")},
-         //       {  28, uint256S("0x00000aaff93c587d962ad3c638aa477bf6e71d65c26ec9e5138dc7830a27354b")}
+                {   1, uint256S("0x00000b5a11041ff0258b5e2e0b8d9b1e9158b54dfa9e8752afc80985ca5df831")},
+                {  69, uint256S("0x000005db56cc4d9beb04ed6bcb0bcf7704616ccb7a0e2eb637d6f0b919155312")}
             }};
 
         chainTxData = ChainTxData{
