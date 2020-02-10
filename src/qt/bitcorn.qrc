@@ -65,7 +65,6 @@
         <file alias="masternodes_active">res/icons/masternodes_active.png</file>
     </qresource>
     <qresource prefix="/images">
-        <file alias="walletFrame">res/images/walletFrame.png</file>
         <file alias="downArrow_small">res/images/downArrow_small_dark.png</file>
         <file alias="downArrow_small_white">res/images/downArrow_small.png</file>
         <file alias="upArrow_small">res/images/upArrow_small_dark.png</file>
