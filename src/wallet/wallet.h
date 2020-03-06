@@ -1431,7 +1431,6 @@ public:
     bool GetKeyOrigin(const CKeyID& keyid, KeyOriginInfo& info) const override;
 
     /** proof-of-stake */
-    bool fWalletUnlockStakingOnly = false;
     int nStakeSetUpdateTime = 300; // 5 minutes
     uint64_t nStakeSplitThreshold = 2500000;
     using StakeCoinsSet = std::set<std::pair<const CWalletTx*, unsigned int>>;
