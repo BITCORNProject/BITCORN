@@ -1771,11 +1771,12 @@ void maintainStakeSeen()
         vecStakeSeen.erase(vecStakeSeen.begin(), vecStakeSeen.begin() + 128);
 }
 
-bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool fJustCheck)
+bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool &fSpamNode, bool fJustCheck)
 {
     uint256 hashProofOfStake = uint256();
+
     // verify hash target and signature of coinstake tx
-    if (block.IsProofOfStake() && !CheckProofOfStake(block, pindex->pprev, hashProofOfStake)) {
+    if (block.IsProofOfStake() && !CheckProofOfStake(block, pindex->pprev, hashProofOfStake, fSpamNode)) {
         LogPrintf("%s: check proof-of-stake failed for block %s\n", __func__, block.GetHash().ToString());
         return false; // do not error here as we expect this during initial block download
     }
@@ -1856,7 +1857,9 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     assert(*pindex->phashBlock == block.GetHash());
     int64_t nTimeStart = GetTimeMicros();
 
-    if (pindex->nStakeModifier == 0 && pindex->nStakeModifierChecksum == 0 && !PoSContextualBlockChecks(block, state, pindex, fJustCheck))
+    bool *fSpamNode;
+
+    if (pindex->nStakeModifier == 0 && pindex->nStakeModifierChecksum == 0 && !PoSContextualBlockChecks(block, state, pindex, *fSpamNode, fJustCheck))
         return error("%s: failed proof-of-stake checks: %s", __func__, FormatStateMessage(state));
 
     // Check it again in case a previous version let a bad block in
@@ -3800,10 +3803,11 @@ static FlatFilePos SaveBlockToDisk(const CBlock& block, int nHeight, const CChai
 }
 
 /** Store block on disk. If dbp is non-nullptr, the file is known to already reside on disk */
-bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CValidationState& state, const CChainParams& chainparams, CBlockIndex** ppindex, bool fRequested, const FlatFilePos* dbp, bool* fNewBlock, bool fCheckPoS)
+bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CValidationState& state, const CChainParams& chainparams, CBlockIndex** ppindex, bool fRequested, const FlatFilePos* dbp, bool* fNewBlock, bool* fSpamNode, bool fCheckPoS)
 {
     const CBlock& block = *pblock;
 
+    if (fSpamNode) *fSpamNode = false;
     if (fNewBlock) *fNewBlock = false;
     AssertLockHeld(cs_main);
 
@@ -3812,11 +3816,6 @@ bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CVali
 
     if (!m_blockman.AcceptBlockHeader(block, state, chainparams, &pindex, (block.nNonce == 0)))
          return false;
-
-    //! no need, we wont even get here unless checkblock/checkblockheader succeeds
-    // if (fCheckPoS && pindex->pprev && !pindex->pprev->IsValid(BLOCK_VALID_TRANSACTIONS)) {
-    //     return error("%s: this block does not connect to any valid known block", __func__);
-    // }
 
     // Try to process all requested blocks that we don't have, but only
     // process an unrequested block if it's new and has enough work to
@@ -3862,7 +3861,7 @@ bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CVali
 
     uint256 hashProofOfStake = uint256();
     if (!block.nNonce) {
-        bool fValid = CheckProofOfStake(block, pindex->pprev, hashProofOfStake);
+        bool fValid = CheckProofOfStake(block, pindex->pprev, hashProofOfStake, *fSpamNode);
         LogPrintf("hashProof = %s\n", hashProofOfStake.ToString().c_str());
         if (!fValid) {
             LogPrintf("WARNING: %s: check proof-of-stake failed for block %s\n", __func__, block.GetHash().ToString());
@@ -3895,7 +3894,7 @@ bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CVali
     return true;
 }
 
-bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<const CBlock> pblock, bool fForceProcessing, bool *fNewBlock)
+bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<const CBlock> pblock, bool fForceProcessing, bool *fNewBlock, bool *fSpamNode)
 {
     AssertLockNotHeld(cs_main);
 
@@ -3913,7 +3912,7 @@ bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<cons
         bool ret = CheckBlock(*pblock, state, chainparams.GetConsensus());
         if (ret) {
             // Store to disk
-            ret = ::ChainstateActive().AcceptBlock(pblock, state, chainparams, &pindex, fForceProcessing, nullptr, fNewBlock);
+            ret = ::ChainstateActive().AcceptBlock(pblock, state, chainparams, &pindex, fForceProcessing, nullptr, fNewBlock, fSpamNode);
         }
         if (!ret) {
             GetMainSignals().BlockChecked(*pblock, state);
@@ -4824,7 +4823,7 @@ bool LoadExternalBlockFile(const CChainParams& chainparams, FILE* fileIn, FlatFi
                     CBlockIndex* pindex = LookupBlockIndex(hash);
                     if (!pindex || (pindex->nStatus & BLOCK_HAVE_DATA) == 0) {
                       CValidationState state;
-                      if (::ChainstateActive().AcceptBlock(pblock, state, chainparams, nullptr, true, dbp, nullptr, false)) {
+                      if (::ChainstateActive().AcceptBlock(pblock, state, chainparams, nullptr, true, dbp, nullptr, nullptr, false)) {
                           nLoaded++;
                       }
                       if (state.IsError()) {
@@ -4861,7 +4860,7 @@ bool LoadExternalBlockFile(const CChainParams& chainparams, FILE* fileIn, FlatFi
                                     head.ToString());
                             LOCK(cs_main);
                             CValidationState dummy;
-                            if (::ChainstateActive().AcceptBlock(pblockrecursive, dummy, chainparams, nullptr, true, &it->second, nullptr, false))
+                            if (::ChainstateActive().AcceptBlock(pblockrecursive, dummy, chainparams, nullptr, true, &it->second, nullptr, nullptr, false))
                             {
                                 nLoaded++;
                                 queue.push_back(pblockrecursive->GetHash());
