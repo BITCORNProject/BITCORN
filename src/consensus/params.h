@@ -174,6 +174,7 @@ struct Params {
     int nStakeEnforcement;
     CAmount StakeEnforcement() const { return nStakeEnforcement; }
     CAmount MinStakeAmount() const { return nMinStakeAmount; }
+    int MinStakeHistory() const { return nMinStakeHistory; }
 
     std::map<LLMQType, LLMQParams> llmqs;
     LLMQType llmqChainLocks;
