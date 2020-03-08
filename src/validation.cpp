@@ -1857,9 +1857,8 @@ bool CChainState::ConnectBlock(const CBlock& block, CValidationState& state, CBl
     assert(*pindex->phashBlock == block.GetHash());
     int64_t nTimeStart = GetTimeMicros();
 
-    bool *fSpamNode;
-
-    if (pindex->nStakeModifier == 0 && pindex->nStakeModifierChecksum == 0 && !PoSContextualBlockChecks(block, state, pindex, *fSpamNode, fJustCheck))
+    bool fSpamNode = false;
+    if (pindex->nStakeModifier == 0 && pindex->nStakeModifierChecksum == 0 && !PoSContextualBlockChecks(block, state, pindex, fSpamNode, fJustCheck))
         return error("%s: failed proof-of-stake checks: %s", __func__, FormatStateMessage(state));
 
     // Check it again in case a previous version let a bad block in

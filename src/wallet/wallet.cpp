@@ -5238,17 +5238,18 @@ bool CWallet::CreateCoinStake(unsigned int nBits,
         nTxNewTime = GetAdjustedTime();
         unsigned int nTryTime = 0;
         bool fKernelFound = false;
+        bool fSpamNode = false;
 
         for (unsigned int n = 0; n < std::min(nSearchInterval, (int64_t)nMaxStakeSearchInterval) && !fKernelFound; n++)
         {
             // Search backward in time from the given txNew timestamp
             // Search nSearchInterval seconds back up to nMaxStakeSearchInterval
             uint256 hashProofOfStake = uint256();
-            bool *fSpamNode;
+
             COutPoint prevoutStake = COutPoint(pcoin.first->GetHash(), pcoin.second);
             nTryTime = nTxNewTime + 45 - n; // TODO: change 45 to nHashDrift
 
-            if (CheckStakeKernelHash(nBits, ChainActive().Tip(), block, pcoin.first->tx, prevoutStake, nTryTime, hashProofOfStake, *fSpamNode))
+            if (CheckStakeKernelHash(nBits, ChainActive().Tip(), block, pcoin.first->tx, prevoutStake, nTryTime, hashProofOfStake, fSpamNode))
             {
                 // Found a kernel
                 LogPrint(BCLog::KERNEL, "%s: kernel found\n", __func__);
