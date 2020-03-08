@@ -38,7 +38,7 @@
   <true/>
 
   <key>CFBundleIdentifier</key>
-  <string>org.bitg.BitCorn-Qt</string>
+  <string>com.bitcornproject.BitCorn-Qt</string>
 
   <key>CFBundleURLTypes</key>
   <array>
@@ -46,7 +46,7 @@
       <key>CFBundleTypeRole</key>
       <string>Editor</string>
       <key>CFBundleURLName</key>
-      <string>org.bitg.BitCornPayment</string>
+      <string>com.bitcornproject.BitCornPayment</string>
       <key>CFBundleURLSchemes</key>
       <array>
         <string>bitcorn</string>
@@ -58,7 +58,7 @@
   <array>
     <dict>
       <key>UTTypeIdentifier</key>
-      <string>org.bitg.paymentrequest</string>
+      <string>com.bitcornproject.paymentrequest</string>
       <key>UTTypeDescription</key>
       <string>BitCorn payment request</string>
       <key>UTTypeConformsTo</key>
@@ -84,7 +84,7 @@
       <string>Editor</string>
       <key>LSItemContentTypes</key>
       <array>
-        <string>org.bitg.paymentrequest</string>
+        <string>com.bitcornproject.paymentrequest</string>
       </array>
       <key>LSHandlerRank</key>
       <string>Owner</string>

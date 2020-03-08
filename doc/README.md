@@ -5,7 +5,7 @@ Setup
 ---------------------
 BitCorn Core is the original BitCorn client and it builds the backbone of the network. It downloads and, by default, stores the entire history of BitCorn transactions.
 
-To download BitCorn Core, visit [bitg.org](https://bitg.org/).
+To download BitCorn Core, visit [bitcornproject.com](https://bitcornproject.com/).
 
 Running
 ---------------------

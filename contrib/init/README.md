@@ -5,7 +5,7 @@ Upstart: bitcornd.conf
 OpenRC:  bitcornd.openrc
          bitcornd.openrcconf
 CentOS:  bitcornd.init
-macOS:   org.bitg.bitcornd.plist
+macOS:   com.bitcornproject.bitcornd.plist
 ```
 have been made available to assist packagers in creating node packages here.
 

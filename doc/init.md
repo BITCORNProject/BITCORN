@@ -129,13 +129,13 @@ setting the BITCORND and FLAGS environment variables in the file
 
 ### macOS
 
-Copy org.bitg.bitcornd.plist into ~/Library/LaunchAgents. Load the launch agent by
-running `launchctl load ~/Library/LaunchAgents/org.bitg.bitcornd.plist`.
+Copy com.bitcornproject.bitcornd.plist into ~/Library/LaunchAgents. Load the launch agent by
+running `launchctl load ~/Library/LaunchAgents/com.bitcornproject.bitcornd.plist`.
 
 This Launch Agent will cause bitcornd to start whenever the user logs in.
 
 NOTE: This approach is intended for those wanting to run bitcornd as the current user.
-You will need to modify org.bitg.bitcornd.plist if you intend to use it as a
+You will need to modify com.bitcornproject.bitcornd.plist if you intend to use it as a
 Launch Daemon with a dedicated bitcorn user.
 
 Auto-respawn
