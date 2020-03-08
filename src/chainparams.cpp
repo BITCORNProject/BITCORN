@@ -165,7 +165,7 @@ public:
 
         // Stake constants
         consensus.nStakeEnforcement = 67500;
-        consensus.nMinStakeAmount = 200 * COIN;
+        consensus.nMinStakeAmount = 500000 * COIN;
         consensus.nMinStakeHistory = 360;
 
         // Governance
