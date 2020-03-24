@@ -453,6 +453,7 @@ class BlockManager {
 public:
     BlockMap m_block_index GUARDED_BY(cs_main);
     PrevBlockMap m_prev_block_index GUARDED_BY(cs_main);
+    std::vector<uint256> m_pos_index GUARDED_BY(cs_main);
 
     /** In order to efficiently track invalidity of headers, we keep the set of
       * blocks which we tried to connect and found to be invalid here (ie which
@@ -500,6 +501,8 @@ public:
     CBlockIndex* AddToBlockIndex(const CBlockHeader& block, bool fProofOfStake, enum BlockStatus nStatus = BLOCK_VALID_TREE) EXCLUSIVE_LOCKS_REQUIRED(cs_main);
     /** Create a new block index entry for a given block hash */
     CBlockIndex* InsertBlockIndex(const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main);
+    /** Create a new PoS hash index entry for a given PoS hash */
+    void InsertPoSIndex(const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main);
 
     /**
      * If a block header hasn't already been seen, call CheckBlockHeader on it, ensure
@@ -643,6 +646,8 @@ private:
 
     //! Mark a block as not having block data
     void EraseBlockData(CBlockIndex* index) EXCLUSIVE_LOCKS_REQUIRED(cs_main);
+
+    bool PoSContextualBlockChecks(const CBlock& block, CValidationState& state, CBlockIndex* pindex, bool &fSpamNode, bool fJustCheck);
 };
 
 /** Mark a block as precious and reorganize.

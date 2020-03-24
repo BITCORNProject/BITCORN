@@ -172,7 +172,7 @@ struct Params {
     CAmount nMinStakeAmount;
     int nMinStakeHistory;
     int nStakeEnforcement;
-    CAmount StakeEnforcement() const { return nStakeEnforcement; }
+    int StakeEnforcement() const { return nStakeEnforcement; }
     CAmount MinStakeAmount() const { return nMinStakeAmount; }
     int MinStakeHistory() const { return nMinStakeHistory; }
 
