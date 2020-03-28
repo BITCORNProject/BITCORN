@@ -439,6 +439,7 @@ void SetupServerArgs()
             "(default: 0 = disable pruning blocks, 1 = allow manual pruning via RPC, >=%u = automatically prune block files to stay under the specified target size in MiB)", MIN_DISK_SPACE_FOR_BLOCK_FILES / 1024 / 1024), false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-reindex", "Rebuild chain state and block index from the blk*.dat files on disk", false, OptionsCategory::OPTIONS);
     gArgs.AddArg("-reindex-chainstate", "Rebuild chain state from the currently indexed blocks. When in pruning mode or if blocks on disk might be corrupted, use full -reindex instead.", false, OptionsCategory::OPTIONS);
+    gArgs.AddArg("-resync", "Delete blockchain folders and resync from scratch", false, OptionsCategory::OPTIONS);
 #ifndef WIN32
     gArgs.AddArg("-sysperms", "Create new files with system default permissions, instead of umask 077 (only effective with disabled wallet functionality)", false, OptionsCategory::OPTIONS);
 #else
@@ -1411,6 +1412,50 @@ bool AppInitMain(InitInterfaces& interfaces)
         uiInterface.InitMessage_connect(SetRPCWarmupStatus);
         if (!AppInitServers())
             return InitError(_("Unable to start HTTP server. See debug log for details.").translated);
+    }
+
+    // ********************************************************* Step 4b: check blockchain resync
+
+    if (gArgs.GetBoolArg("-resync", false)) {
+        uiInterface.InitMessage(_("Preparing for resync...").translated);
+
+        // Delete the local blockchain folders to force a resync from scratch to get a consitent blockchain-state
+        fs::path blocksDir = GetDataDir() / "blocks";
+        fs::path chainstateDir = GetDataDir() / "chainstate";
+        fs::path indexesDir = GetDataDir() / "indexes";
+        fs::path llmqDir = GetDataDir() / "llmq";
+        fs::path specialdbDir = GetDataDir() / "specialdb";
+
+        LogPrintf("resync: deleting blockchain folders:\n");
+
+        try {
+            if (fs::exists(blocksDir)){
+                fs::remove_all(blocksDir);
+                LogPrintf("    %s\n", blocksDir.string());
+            }
+
+            if (fs::exists(chainstateDir)){
+                fs::remove_all(chainstateDir);
+                LogPrintf("    %s\n", chainstateDir.string());
+            }
+
+            if (fs::exists(indexesDir)){
+                fs::remove_all(indexesDir);
+                LogPrintf("    %s\n", indexesDir.string());
+            }
+
+            if (fs::exists(llmqDir)){
+                fs::remove_all(llmqDir);
+                LogPrintf("    %s\n", llmqDir.string());
+            }
+
+            if (fs::exists(specialdbDir)){
+                fs::remove_all(specialdbDir);
+                LogPrintf("    %s\n", specialdbDir.string());
+            }
+        } catch (const fs::filesystem_error& error) {
+            LogPrintf("Failed to delete blockchain folder: %s\n", error.what());
+        }
     }
 
     // ********************************************************* Step 5: verify wallet database integrity
