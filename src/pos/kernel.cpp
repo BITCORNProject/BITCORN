@@ -304,8 +304,7 @@ bool CheckStakeKernelHash(unsigned int nBits, CBlockIndex* pindexPrev, const CBl
         if (!fHardenedChecks) {
             return error("%s: nTime violation", __func__);
         } else {
-            LogPrintf("Timestamp violation (nTimeTx < txPrevTime)\n");
-            return false;
+            return error("%s: timestamp violation (nTimeTx < txPrevTime)", __func__);
         }
     }
 
@@ -315,8 +314,7 @@ bool CheckStakeKernelHash(unsigned int nBits, CBlockIndex* pindexPrev, const CBl
         if (!fHardenedChecks) {
             return error("%s: min age violation", __func__);
         } else {
-            LogPrintf("Minimum age violation (nTimeBlockFrom + params.nStakeMinAge > nTimeTx)\n");
-            return false;
+            return error("%s: min age violation (nTimeBlockFrom + params.nStakeMinAge > nTimeTx)", __func__);
         }
     }
 
@@ -327,7 +325,7 @@ bool CheckStakeKernelHash(unsigned int nBits, CBlockIndex* pindexPrev, const CBl
     //! enforce minimum stake amount
     if (nValueIn < Params().GetConsensus().MinStakeAmount() && fHardenedChecks) {
         fSpamNode = true; //! solely for PoS spam
-        return false;
+        return error("%s: min input violation", __func__);
     }
 
     // v0.3 protocol kernel hash weight starts from 0 at the 30-day min age
@@ -411,12 +409,11 @@ bool CheckProofOfStake(const CBlock &block, CBlockIndex* pindexPrev, uint256& ha
 
     // returning zero from GetLastHeight() indicates error
     if (nBlockFromHeight == 0 && fHardenedChecks)
-        return false;
+        return error("%s: returning zero from GetLastHeight()", __func__);
 
     if (!Params().GetConsensus().HasStakeMinDepth(nPreviousBlockHeight+1, nBlockFromHeight) && fHardenedChecks) {
         fSpamNode = true;
-        LogPrintf("\n%s : min age violation - height=%d - nHeightBlockFrom=%d (depth=%d)\n", __func__, nPreviousBlockHeight, nBlockFromHeight, nPreviousBlockHeight - nBlockFromHeight);
-        return false;
+        return error("%s: min age violation - height=%d - nHeightBlockFrom=%d (depth=%d)", __func__, nPreviousBlockHeight, nBlockFromHeight, nPreviousBlockHeight - nBlockFromHeight);
     }
 
     CBlockHeader header = LookupBlockIndex(hashBlock)->GetBlockHeader();

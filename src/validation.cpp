@@ -1770,15 +1770,13 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
 
     // verify hash target and signature of coinstake tx
     if (block.IsProofOfStake() && !CheckProofOfStake(block, pindex->pprev, hashProofOfStake, fSpamNode)) {
-        LogPrintf("%s: check proof-of-stake failed for block %s\n", __func__, block.GetHash().ToString());
-        return false; // do not error here as we expect this during initial block download
+        return error("%s: check proof-of-stake failed for block %s", __func__, block.GetHash().ToString()); // do not error here as we expect this during initial block download
     }
 
     // make sure we havent seen this stake previously
     if (pindex->nHeight >= Params().GetConsensus().StakeEnforcement() &&
         std::find(m_blockman.m_pos_index.begin(), m_blockman.m_pos_index.end(), hashProofOfStake) != m_blockman.m_pos_index.end()) {
-        LogPrintf(" * already seen this stake (%s), discarding block..\n", hashProofOfStake.ToString());
-        return false;
+        return error(" * already seen this stake (%s), discarding block..", hashProofOfStake.ToString());
     }
 
     // set stake hash as seen
