@@ -67,6 +67,7 @@ const QString ZAPTXES2("-zapwallettxes=2");
 const QString UPGRADEWALLET("-upgradewallet");
 const QString REINDEX("-reindex");
 const QString RESYNC("-resync");
+const QString WALLET("-wallet");
 
 namespace {
 
@@ -1376,9 +1377,19 @@ void RPCConsole::buildParameterlist(QString arg)
     args.removeAll(UPGRADEWALLET);
     args.removeAll(REINDEX);
     args.removeAll(RESYNC);
+    args.removeAll(WALLET);
 
     // Append repair parameter to command line.
     args.append(arg);
+
+    // Append the selected wallet.
+    const int wallet_index = ui->WalletSelector->currentIndex();
+    if (wallet_index > 0) {
+        WalletModel* wallet_model = ui->WalletSelector->itemData(wallet_index).value<WalletModel*>();
+        if (wallet_model && wallet_model->getWalletName().size() > 0) {
+            args.append(WALLET + "=" + wallet_model->getWalletName());
+        }
+    }
 
     // Send command-line arguments to BitcoinGUI::handleRestart()
     Q_EMIT handleRestart(args);
