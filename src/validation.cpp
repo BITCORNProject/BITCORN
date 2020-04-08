@@ -3850,13 +3850,10 @@ bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CVali
     }
 
     uint256 hashProofOfStake = uint256();
-    if (!block.nNonce) {
-        bool fValid = CheckProofOfStake(block, pindex->pprev, hashProofOfStake);
-        LogPrintf("hashProof = %s\n", hashProofOfStake.ToString().c_str());
-        if (!fValid) {
-            LogPrintf("WARNING: %s: check proof-of-stake failed for block %s\n", __func__, block.GetHash().ToString());
-            return false;
-        }
+    if (block.nNonce == 0 && !PoSContextualBlockChecks(block, state, pindex, false)) {
+        pindex->nStatus |= BLOCK_FAILED_VALID;
+        setDirtyBlockIndex.insert(pindex);
+        return error("%s: proof of stake is incorrect", __func__);
     }
 
     // Header is valid/has work, merkle tree and segwit merkle tree are good...RELAY NOW
@@ -3884,7 +3881,7 @@ bool CChainState::AcceptBlock(const std::shared_ptr<const CBlock>& pblock, CVali
     return true;
 }
 
-bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<const CBlock> pblock, bool fForceProcessing, bool *fNewBlock)
+bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<const CBlock> pblock, bool fForceProcessing, bool *fNewBlock, CBlockIndex** ppindex)
 {
     AssertLockNotHeld(cs_main);
 
@@ -3904,6 +3901,10 @@ bool ProcessNewBlock(const CChainParams& chainparams, const std::shared_ptr<cons
             // Store to disk
             ret = ::ChainstateActive().AcceptBlock(pblock, state, chainparams, &pindex, fForceProcessing, nullptr, fNewBlock);
         }
+
+        if (ppindex)
+            *ppindex = ret ? pindex : nullptr;
+
         if (!ret) {
             GetMainSignals().BlockChecked(*pblock, state);
             return error("%s: AcceptBlock FAILED (%s)", __func__, FormatStateMessage(state));

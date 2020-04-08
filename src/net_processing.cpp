@@ -175,6 +175,13 @@ namespace {
     };
     std::map<uint256, std::pair<NodeId, std::list<QueuedBlock>::iterator> > mapBlocksInFlight GUARDED_BY(cs_main);
 
+    /** peercoin: blocks that are waiting to be processed, the key points to previous CBlockIndex entry */
+    struct WaitElement {
+        std::shared_ptr<CBlock> pblock;
+            int64_t time;
+    };
+    std::map<CBlockIndex*, WaitElement> mapBlocksWait;
+
     /** Stack of nodes which we have set to announce using compact blocks */
     std::list<NodeId> lNodesAnnouncingHeaderAndIDs GUARDED_BY(cs_main);
 
@@ -3309,28 +3316,107 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
 
         std::shared_ptr<CBlock> pblock = std::make_shared<CBlock>();
         vRecv >> *pblock;
+        int64_t nTimeNow = GetSystemTimeInSeconds();
 
         LogPrint(BCLog::NET, "received block %s peer=%d\n", pblock->GetHash().ToString(), pfrom->GetId());
 
-        bool forceProcessing = false;
-        const uint256 hash(pblock->GetHash());
         {
+            const uint256 hash2(pblock->GetHash());
             LOCK(cs_main);
-            // Also always process if we requested the block explicitly, as we may
-            // need it even though it is not a candidate for a new best tip.
-            forceProcessing |= MarkBlockAsReceived(hash);
-            // mapBlockSource is only used for sending reject messages and DoS scores,
-            // so the race between here and cs_main in ProcessNewBlock is fine.
-            mapBlockSource.emplace(hash, std::make_pair(pfrom->GetId(), true));
+            bool fRequested = mapBlocksInFlight.count(hash2);
+
+            BlockMap::iterator miPrev = ::BlockIndex().find(pblock->hashPrevBlock);
+            if (miPrev == ::BlockIndex().end()) {
+                return error("previous header not found");
+            }
+
+            if (!fRequested) {
+                if (!miPrev->second->IsValid(BLOCK_VALID_TRANSACTIONS)) {
+                    MarkBlockAsReceived(hash2);
+                    return error("this block does not connect to any valid known blocks");
+                }
+            }
+            // peercoin: store in memory until we can connect it to some chain
+            WaitElement we; we.pblock = pblock; we.time = nTimeNow;
+            mapBlocksWait[miPrev->second] = we;
         }
-        bool fNewBlock = false;
-        ProcessNewBlock(chainparams, pblock, forceProcessing, &fNewBlock);
-        if (fNewBlock) {
-            pfrom->nLastBlockTime = GetTime();
-        } else {
-            LOCK(cs_main);
-            mapBlockSource.erase(pblock->GetHash());
+
+        static CBlockIndex* pindexLastAccepted = nullptr;
+        if (pindexLastAccepted == nullptr)
+            pindexLastAccepted = ::ChainActive().Tip();
+        bool fContinue = true;
+
+        // peercoin: accept as many blocks as we possibly can from mapBlocksWait
+        while (fContinue) {
+            fContinue = false;
+            bool fSelected = false;
+            bool forceProcessing = false;
+            CBlockIndex* pindexPrev;
+            std::shared_ptr<CBlock> pblock;
+
+            {
+                LOCK(cs_main);
+                // peercoin: try to select next block in a constant time
+                std::map<CBlockIndex*, WaitElement>::iterator it = mapBlocksWait.find(pindexLastAccepted);
+                if (it != mapBlocksWait.end() && pindexLastAccepted != nullptr) {
+                    pindexPrev = it->first;
+                    pblock = it->second.pblock;
+                    mapBlocksWait.erase(pindexPrev);
+                    fContinue = true;
+                    fSelected = true;
+                } else {
+                    // otherwise: try to scan for it
+                    for (auto& pair : mapBlocksWait) {
+                        pindexPrev = pair.first;
+                        pblock = pair.second.pblock;
+                        const uint256 hash(pblock->GetHash());
+                        // remove blocks that were not connected in 60 seconds
+                        if (nTimeNow > pair.second.time + 60) {
+                            mapBlocksWait.erase(pindexPrev);
+                            fContinue = true;
+                            MarkBlockAsReceived(hash);
+                            break;
+                        }
+                        if (!pindexPrev->IsValid(BLOCK_VALID_TRANSACTIONS)) {
+                            if (pindexPrev->nStatus & BLOCK_FAILED_MASK) {
+                                mapBlocksWait.erase(pindexPrev);  // prev block was rejected
+                                fContinue = true;
+                                MarkBlockAsReceived(hash);
+                                break;
+                            }
+                            continue;   // prev block was not (yet) accepted on disk, skip to next one
+                        }
+
+                        mapBlocksWait.erase(pindexPrev);
+                        fContinue = true;
+                        fSelected = true;
+                        break;
+                    }
+                }
+                if (!fSelected)
+                    continue;
+
+                const uint256 hash(pblock->GetHash());
+
+                // Also always process if we requested the block explicitly, as we may
+                // need it even though it is not a candidate for a new best tip.
+                forceProcessing |= MarkBlockAsReceived(hash);
+                // mapBlockSource is only used for sending reject messages and DoS scores,
+                // so the race between here and cs_main in ProcessNewBlock is fine.
+                mapBlockSource.emplace(hash, std::make_pair(pfrom->GetId(), true));
+            }   // LOCK(cs_main);
+
+            bool fNewBlock = false;
+            // bool fPoSDuplicate = false;
+            ProcessNewBlock(chainparams, pblock, forceProcessing, &fNewBlock, &pindexLastAccepted);
+            if (fNewBlock) {
+                pfrom->nLastBlockTime = GetTime();
+            } else {
+                LOCK(cs_main);
+                mapBlockSource.erase(pblock->GetHash());
+            }
         }
+
         return true;
     }
 
