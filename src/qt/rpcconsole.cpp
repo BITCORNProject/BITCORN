@@ -487,6 +487,7 @@ RPCConsole::RPCConsole(interfaces::Node& node, const PlatformStyle *_platformSty
     // disable the wallet selector by default
     ui->WalletSelector->setVisible(false);
     ui->WalletSelectorLabel->setVisible(false);
+    connect(ui->WalletSelector, static_cast<void (QComboBox::*)(int)>(&QComboBox::currentIndexChanged), this, &RPCConsole::setCurrentWalletBySelectorIndex);
 
     // set library version labels
 #ifdef ENABLE_WALLET
@@ -1288,6 +1289,14 @@ RPCConsole::TabTypes RPCConsole::tabFocus() const
 void RPCConsole::setTabFocus(enum TabTypes tabType)
 {
     ui->tabWidget->setCurrentIndex(tabType);
+}
+
+void RPCConsole::setCurrentWalletBySelectorIndex(int index)
+{
+    WalletModel* wallet_model = ui->WalletSelector->itemData(index).value<WalletModel*>();
+    if (wallet_model) {
+        ui->wallet_path->setText(wallet_model->getDisplayName());
+    }
 }
 
 QString RPCConsole::tabTitle(TabTypes tab_type) const

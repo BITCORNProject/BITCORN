@@ -147,6 +147,9 @@ public Q_SLOTS:
     void unbanSelectedNode();
     /** set which tab has the focus (is visible) */
     void setTabFocus(enum TabTypes tabType);
+    /** set which wallet is in use */
+    void setCurrentWalletBySelectorIndex(int index);
+
 
 Q_SIGNALS:
     // For RPC command executor
