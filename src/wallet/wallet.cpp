@@ -2186,6 +2186,9 @@ CWallet::ScanResult CWallet::ScanForWalletTransactions(const uint256& start_bloc
 
 void CWallet::ReacceptWalletTransactions(interfaces::Chain::Lock& locked_chain)
 {
+    // If transactions aren't being broadcasted, don't let them into local mempool either
+    if (!fBroadcastTransactions)
+        return;
     std::map<int64_t, CWalletTx*> mapSorted;
 
     // Sort pending wallet transactions based on their initial wallet insertion order
