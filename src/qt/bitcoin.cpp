@@ -42,6 +42,7 @@
 #include <QLibraryInfo>
 #include <QLocale>
 #include <QMessageBox>
+#include <QProcess>
 #include <QSettings>
 #include <QThread>
 #include <QTimer>
@@ -140,6 +141,8 @@ void BitCornCore::handleRunawayException(const std::exception *e)
 
 void BitCornCore::initialize()
 {
+    execute_restart = true;
+
     try
     {
         qDebug() << __func__ << ": Running initialization in thread";
@@ -165,6 +168,25 @@ void BitCornCore::shutdown()
         handleRunawayException(&e);
     } catch (...) {
         handleRunawayException(nullptr);
+    }
+}
+
+void BitCornCore::restart(const QStringList args)
+{
+    if (execute_restart) { // Only restart 1x, no matter how often a user clicks on a restart-button
+        execute_restart = false;
+        try {
+            qDebug() << __func__ << ": Running Restart in thread";
+            m_node.appShutdown();
+            qDebug() << __func__ << ": Shutdown finished";
+            QProcess::startDetached(QApplication::applicationFilePath(), args);
+            qDebug() << __func__ << ": Restart initiated...";
+            Q_EMIT shutdownResult();
+        } catch (std::exception& e) {
+            handleRunawayException(&e);
+        } catch (...) {
+            handleRunawayException(nullptr);
+        }
     }
 }
 
@@ -268,6 +290,7 @@ void BitCornApplication::startThread()
     connect(executor, &BitCornCore::runawayException, this, &BitCornApplication::handleRunawayException);
     connect(this, &BitCornApplication::requestedInitialize, executor, &BitCornCore::initialize);
     connect(this, &BitCornApplication::requestedShutdown, executor, &BitCornCore::shutdown);
+    connect(window, &BitcoinGUI::requestedRestart, executor, &BitCornCore::restart);
     /*  make sure executor object is deleted in its own thread */
     connect(coreThread, &QThread::finished, executor, &QObject::deleteLater);
 

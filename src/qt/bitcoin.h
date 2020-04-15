@@ -38,6 +38,7 @@ public:
 public Q_SLOTS:
     void initialize();
     void shutdown();
+    void restart(const QStringList args);
 
 Q_SIGNALS:
     void initializeResult(bool success);
@@ -45,6 +46,9 @@ Q_SIGNALS:
     void runawayException(const QString &message);
 
 private:
+    /// Flag indicating a restart
+    bool execute_restart;
+
     /// Pass fatal exception message to UI thread
     void handleRunawayException(const std::exception *e);
 
@@ -97,6 +101,7 @@ public Q_SLOTS:
 Q_SIGNALS:
     void requestedInitialize();
     void requestedShutdown();
+    void requestedRestart(const QStringList args);
     void splashFinished();
     void windowShown(BitcoinGUI* window);
 

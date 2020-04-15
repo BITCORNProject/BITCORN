@@ -59,6 +59,15 @@ const struct {
     {nullptr, nullptr}
 };
 
+// Repair parameters
+const QString SALVAGEWALLET("-salvagewallet");
+const QString RESCAN("-rescan");
+const QString ZAPTXES1("-zapwallettxes=1");
+const QString ZAPTXES2("-zapwallettxes=2");
+const QString UPGRADEWALLET("-upgradewallet");
+const QString REINDEX("-reindex");
+const QString RESYNC("-resync");
+
 namespace {
 
 // don't add private key handling cmd's to the history
@@ -1284,4 +1293,84 @@ void RPCConsole::setTabFocus(enum TabTypes tabType)
 QString RPCConsole::tabTitle(TabTypes tab_type) const
 {
     return ui->tabWidget->tabText(tab_type);
+}
+
+/** Restart wallet with "-salvagewallet" */
+void RPCConsole::on_btn_salvagewallet_clicked()
+{
+    buildParameterlist(SALVAGEWALLET);
+}
+
+/** Restart wallet with "-rescan" */
+void RPCConsole::on_btn_rescan_clicked()
+{
+    buildParameterlist(RESCAN);
+}
+
+/** Restart wallet with "-zapwallettxes=1" */
+void RPCConsole::on_btn_zapwallettxes1_clicked()
+{
+    buildParameterlist(ZAPTXES1);
+}
+
+/** Restart wallet with "-zapwallettxes=2" */
+void RPCConsole::on_btn_zapwallettxes2_clicked()
+{
+    buildParameterlist(ZAPTXES2);
+}
+
+/** Restart wallet with "-upgradewallet" */
+void RPCConsole::on_btn_upgradewallet_clicked()
+{
+    buildParameterlist(UPGRADEWALLET);
+}
+
+/** Restart wallet with "-reindex" */
+void RPCConsole::on_btn_reindex_clicked()
+{
+    buildParameterlist(REINDEX);
+}
+
+/** Restart wallet with "-resync" */
+void RPCConsole::on_btn_resync_clicked()
+{
+    QString resyncWarning = tr("This will delete your local blockchain folders and the wallet will synchronize the complete blockchain from scratch.<br /><br />") +
+                            tr("This needs quite some time and downloads a lot of data.<br /><br />") +
+                            tr("Your transactions and funds will be visible again after the download has completed.<br /><br />") +
+                            tr("Do you want to continue?.<br />");
+    QMessageBox::StandardButton retval = QMessageBox::question(this, tr("Confirm blockchain resync"),
+        resyncWarning,
+        QMessageBox::Yes | QMessageBox::Cancel,
+        QMessageBox::Cancel);
+
+    if (retval != QMessageBox::Yes) {
+        // Resync canceled
+        return;
+    }
+
+    // Restart and resync
+    buildParameterlist(RESYNC);
+}
+
+/** Build command-line parameter list for restart */
+void RPCConsole::buildParameterlist(QString arg)
+{
+    // Get command-line arguments and remove the application name
+    QStringList args = QApplication::arguments();
+    args.removeFirst();
+
+    // Remove existing repair-options
+    args.removeAll(SALVAGEWALLET);
+    args.removeAll(RESCAN);
+    args.removeAll(ZAPTXES1);
+    args.removeAll(ZAPTXES2);
+    args.removeAll(UPGRADEWALLET);
+    args.removeAll(REINDEX);
+    args.removeAll(RESYNC);
+
+    // Append repair parameter to command line.
+    args.append(arg);
+
+    // Send command-line arguments to BitcoinGUI::handleRestart()
+    Q_EMIT handleRestart(args);
 }

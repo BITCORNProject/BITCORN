@@ -219,6 +219,8 @@ Q_SIGNALS:
     void receivedURI(const QString &uri);
     /** Signal raised when RPC console shown */
     void consoleShown(RPCConsole* console);
+    /** Signal raised when a restart is requested by debug window repair */
+    void requestedRestart(const QStringList args);
 
 public Q_SLOTS:
     /** Set number of connections shown in the UI */
@@ -246,6 +248,9 @@ public Q_SLOTS:
     */
     void updateWalletStatus();
     void updateStakingStatus();
+
+    /** Get restart command-line parameters and request restart */
+    void handleRestart(QStringList args);
 
 private:
     /** Set the encryption status as shown in the UI.
