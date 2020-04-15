@@ -1577,7 +1577,7 @@
           </font>
          </property>
          <property name="text">
-          <string>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockhain files or missing/obsolete transactions.</string>
+          <string>The buttons below will restart the wallet with command-line options to repair the wallet, fix issues with corrupt blockchain files or missing/obsolete transactions.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -1673,7 +1673,7 @@
        <item row="5" column="3">
         <widget class="QLabel" name="label_repair_rescan">
          <property name="text">
-          <string>Rescan the block chain for missing wallet transactions.</string>
+          <string>Rescan the blockchain for missing wallet transactions.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
@@ -1793,7 +1793,7 @@
        <item row="9" column="3">
         <widget class="QLabel" name="label_repair_reindex">
          <property name="text">
-          <string>Rebuild block chain index from current blk000??.dat files.</string>
+          <string>Rebuild blockchain index from current blk000??.dat files.</string>
          </property>
          <property name="wordWrap">
           <bool>true</bool>
