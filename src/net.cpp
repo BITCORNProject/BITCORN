@@ -2790,6 +2790,10 @@ CNode::CNode(NodeId idIn, ServiceFlags nLocalServicesIn, int nMyStartingHeightIn
         mapRecvBytesPerMsgCmd[msg] = 0;
     mapRecvBytesPerMsgCmd[NET_MESSAGE_COMMAND_OTHER] = 0;
 
+    //! getdata flood init
+    getDataInPastMinute = 0;
+    getDataTimer = GetAdjustedTime();
+
     if (fLogIPs) {
         LogPrint(BCLog::NET, "Added connection to %s peer=%d\n", addrName, id);
     } else {

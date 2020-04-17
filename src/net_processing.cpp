@@ -2208,6 +2208,17 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
         return true;
     }
 
+    //! GETDATA revlimiter
+    if (GetAdjustedTime() - pfrom->getDataTimer > 100) {
+        if (!::ChainstateActive().IsInitialBlockDownload()) {
+            if (pfrom->getDataInPastMinute > 60) {
+                Misbehaving(pfrom->GetId(), 25);
+                LogPrintf("%s - GETDATA counter: %d/req in past minute\n", __func__, pfrom->getDataInPastMinute);
+            }
+        }
+        pfrom->getDataInPastMinute = 0;
+        pfrom->getDataTimer = GetAdjustedTime();
+    }
 
     if (!(pfrom->GetLocalServices() & NODE_BLOOM) &&
               (strCommand == NetMsgType::FILTERLOAD ||
@@ -2642,6 +2653,9 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
     if (strCommand == NetMsgType::GETDATA) {
         std::vector<CInv> vInv;
         vRecv >> vInv;
+
+	pfrom->getDataInPastMinute++;
+
         if (vInv.size() > MAX_INV_SZ)
         {
             LOCK(cs_main);
@@ -4112,7 +4126,7 @@ bool PeerLogicValidation::SendMessages(CNode* pto)
         bool fFetch = state.fPreferredDownload || (nPreferredDownload == 0 && !pto->fClient && !pto->fOneShot); // Download if this is a nice peer, or we have no nice peers and this one might do.
         if (!state.fSyncStarted && !pto->fClient && !fImporting && !fReindex) {
             // Only actively request headers from a single peer, unless we're close to today.
-            if ((nSyncStarted == 0 && fFetch) || pindexBestHeader->GetBlockTime() > GetAdjustedTime() - 24 * 60 * 60) {
+            if ((nSyncStarted < 4 && fFetch) || pindexBestHeader->GetBlockTime() > GetAdjustedTime() - 24 * 60 * 60) {
                 state.fSyncStarted = true;
                 state.nHeadersSyncTimeout = GetTimeMicros() + HEADERS_DOWNLOAD_TIMEOUT_BASE + HEADERS_DOWNLOAD_TIMEOUT_PER_HEADER * (GetAdjustedTime() - pindexBestHeader->GetBlockTime())/(consensusParams.nPowTargetSpacing);
                 nSyncStarted++;
