@@ -1549,7 +1549,10 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
         return DISCONNECT_FAILED;
     }
 
-    g_blockman.m_pos_index.erase(std::remove(g_blockman.m_pos_index.begin(), g_blockman.m_pos_index.end(), pindex->hashProofOfStake), g_blockman.m_pos_index.end());
+    LogPrintf("%s: block=%s hashPoS=%s\n", __func__, pindex->GetBlockHash().ToString(), pindex->hashProofOfStake.ToString());
+    auto itRem = std::remove(g_blockman.m_pos_index.begin(), g_blockman.m_pos_index.end(), pindex->hashProofOfStake);
+    if (g_blockman.m_pos_index.end() != itRem)
+        g_blockman.m_pos_index.erase(itRem, g_blockman.m_pos_index.end());
 
     CBlockUndo blockUndo;
     if (!UndoReadFromDisk(blockUndo, pindex)) {
