@@ -1549,11 +1549,6 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
         return DISCONNECT_FAILED;
     }
 
-    LogPrintf("%s: block=%s hashPoS=%s\n", __func__, pindex->GetBlockHash().ToString(), pindex->hashProofOfStake.ToString());
-    auto itRem = std::remove(g_blockman.m_pos_index.begin(), g_blockman.m_pos_index.end(), pindex->hashProofOfStake);
-    if (g_blockman.m_pos_index.end() != itRem)
-        g_blockman.m_pos_index.erase(itRem, g_blockman.m_pos_index.end());
-
     CBlockUndo blockUndo;
     if (!UndoReadFromDisk(blockUndo, pindex)) {
         error("DisconnectBlock(): failure reading undo data");
@@ -1778,12 +1773,6 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
         return false; // do not error here as we expect this during initial block download
     }
 
-    // make sure we havent seen this stake previously
-    if (pindex->nHeight >= Params().GetConsensus().StakeEnforcement() &&
-        std::find(m_blockman.m_pos_index.begin(), m_blockman.m_pos_index.end(), hashProofOfStake) != m_blockman.m_pos_index.end()) {
-        return error(" * already seen this stake (%s), discarding block..", hashProofOfStake.ToString());
-    }
-
     // compute stake entropy bit for stake modifier
     unsigned int nEntropyBit = GetStakeEntropyBit(block);
 
@@ -1818,9 +1807,6 @@ bool CChainState::PoSContextualBlockChecks(const CBlock& block, CValidationState
 
     if (fJustCheck)
         return true;
-
-    // set stake hash as seen
-    m_blockman.InsertPoSIndex(hashProofOfStake);
 
     // write everything to index
     if (block.IsProofOfStake())
@@ -4169,21 +4155,6 @@ CBlockIndex * BlockManager::InsertBlockIndex(const uint256& hash)
     return pindexNew;
 }
 
-void BlockManager::InsertPoSIndex(const uint256& hash)
-{
-    AssertLockHeld(cs_main);
-
-    if (hash.IsNull())
-        return;
-
-    // Check if exists
-    if (std::find(m_pos_index.begin(), m_pos_index.end(), hash) != m_pos_index.end())
-        return;
-
-    // Create new
-    m_pos_index.push_back(hash);
-}
-
 bool BlockManager::LoadBlockIndex(
     const Consensus::Params& consensus_params,
     CBlockTreeDB& blocktree,
@@ -4193,9 +4164,6 @@ bool BlockManager::LoadBlockIndex(
         consensus_params,
         [this](const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main) {
             CBlockIndex* idx = this->InsertBlockIndex(hash);
-            if (!hash.IsNull() && !(idx->nStatus & BLOCK_FAILED_MASK)) {
-                this->InsertPoSIndex(idx->hashProofOfStake);
-            }
             return idx;
         }))
         return false;
