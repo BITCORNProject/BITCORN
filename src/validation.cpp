@@ -1549,6 +1549,8 @@ DisconnectResult CChainState::DisconnectBlock(const CBlock& block, const CBlockI
         return DISCONNECT_FAILED;
     }
 
+    g_blockman.m_pos_index.erase(std::remove(g_blockman.m_pos_index.begin(), g_blockman.m_pos_index.end(), pindex->hashProofOfStake), g_blockman.m_pos_index.end());
+
     CBlockUndo blockUndo;
     if (!UndoReadFromDisk(blockUndo, pindex)) {
         error("DisconnectBlock(): failure reading undo data");
@@ -4184,7 +4186,15 @@ bool BlockManager::LoadBlockIndex(
     CBlockTreeDB& blocktree,
     std::set<CBlockIndex*, CBlockIndexWorkComparator>& block_index_candidates)
 {
-    if (!blocktree.LoadBlockIndexGuts(consensus_params, [this](const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main) { CBlockIndex* idx = this->InsertBlockIndex(hash); if (!hash.IsNull()) {this->InsertPoSIndex(idx->hashProofOfStake);} return idx; }))
+    if (!blocktree.LoadBlockIndexGuts(
+        consensus_params,
+        [this](const uint256& hash) EXCLUSIVE_LOCKS_REQUIRED(cs_main) {
+            CBlockIndex* idx = this->InsertBlockIndex(hash);
+            if (!hash.IsNull() && !(idx->nStatus & BLOCK_FAILED_MASK)) {
+                this->InsertPoSIndex(idx->hashProofOfStake);
+            }
+            return idx;
+        }))
         return false;
 
     // Calculate nChainWork
