@@ -2204,7 +2204,7 @@ void CWallet::ReacceptWalletTransactions(interfaces::Chain::Lock& locked_chain)
             if (!wtx.IsLockedByInstantSend()) {
                 if (wtx.IsCoinBase() || wtx.IsCoinStake()) {
                     // dont try to put orphaned stakes/coinbase back into mempool
-                    AbandonTransaction(locked_chain, wtxid);
+                    AbandonTransaction(locked_chain, wtx.GetHash());
                     return;
                 } else {
                     mapSorted.insert(std::make_pair(wtx.nOrderPos, &wtx));
@@ -2218,11 +2218,6 @@ void CWallet::ReacceptWalletTransactions(interfaces::Chain::Lock& locked_chain)
         CWalletTx& wtx = *(item.second);
         CValidationState state;
         wtx.AcceptToMemoryPool(locked_chain, state);
-        if (!fSuccess && fFirstLoad && GetTime() - wtx.GetTxTime() > 12*60*60) {
-            //First load of wallet, failed to accept to mempool, and older than 12 hours... not likely to ever
-            //make it in to mempool
-            AbandonTransaction(wtx.GetHash());
-        }
     }
 }
 
