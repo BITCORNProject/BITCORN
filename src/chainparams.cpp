@@ -260,7 +260,8 @@ public:
                 {  69, uint256S("0x000005db56cc4d9beb04ed6bcb0bcf7704616ccb7a0e2eb637d6f0b919155312")},
                 {  89027, uint256S("0x4016f3bdde1b21d16e97df4590bc1320982c4760da2cb5b5ccf689988f3b0438")},
                 {  92149, uint256S("0x7791a6bd2aa37fb309a68180617789388cddcf1dc466212a1fa45ae231aa4ce4")},
-                {  96071, uint256S("0x6b516fed6e4f51e2c386fb3ce5666cc36d4b63708683ed142a14383e934a878d")}
+                {  96071, uint256S("0x6b516fed6e4f51e2c386fb3ce5666cc36d4b63708683ed142a14383e934a878d")},
+                {  97581, uint256S("0xe76775c0e8256c4d9b4e13f88890f11611830fdfea896fe1875fe3c695202c14")}
             }};
 
         chainTxData = ChainTxData{
