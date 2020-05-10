@@ -4817,7 +4817,7 @@ int CMerkleTx::GetDepthInMainChain(interfaces::Chain::Lock& locked_chain) const
 
 int CMerkleTx::GetBlocksToMaturity(interfaces::Chain::Lock& locked_chain) const
 {
-    if (!IsCoinBase())
+    if (!IsCoinBase() && !IsCoinStake())
         return 0;
     int chain_depth = GetDepthInMainChain(locked_chain);
     assert(chain_depth >= 0); // coinbase tx should not be conflicted
