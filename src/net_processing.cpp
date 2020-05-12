@@ -2328,6 +2328,14 @@ bool static ProcessMessage(CNode* pfrom, const std::string& strCommand, CDataStr
             LOCK(pfrom->cs_mnauth);
             vRecv >> pfrom->receivedMNAuthChallenge;
         }
+
+        // Ban bad versions
+        if (cleanSubVer == "/BitCorn:3.1.0/" || cleanSubVer == "/BitCorn:3.1.1/") {
+            LogPrint(BCLog::NET, "peer=%d using unaccepted version %s; disconnecting\n", pfrom->GetId(), cleanSubVer);
+            pfrom->fDisconnect = true;
+            return false;
+        }
+
         // Disconnect if we connected to ourself
         if (pfrom->fInbound && !connman->CheckIncomingNonce(nNonce))
         {
